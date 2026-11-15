@@ -1,0 +1,2295 @@
+{
+  "T01": {
+    "test_id": "T01",
+    "filename": "T01.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "October 2021 – Present",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "explicit 'Present'",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"October 2021 – Present\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true with no end date",
+      "endDate null / ongoing"
+    ],
+    "confirmed_failure_if": "a concrete end date is invented (e.g. end == start, or any end date despite an explicit current-employment keyword)",
+    "inconclusive_if": "current flag absent but end date also left null/absent",
+    "expected_pages": 1
+  },
+  "T02": {
+    "test_id": "T02",
+    "filename": "T02.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "Oct 2021 – Current",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "explicit 'Current'",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"Oct 2021 – Current\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true with no end date",
+      "endDate null / ongoing"
+    ],
+    "confirmed_failure_if": "a concrete end date is invented (e.g. end == start, or any end date despite an explicit current-employment keyword)",
+    "inconclusive_if": "current flag absent but end date also left null/absent",
+    "expected_pages": 1
+  },
+  "T03": {
+    "test_id": "T03",
+    "filename": "T03.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "October 2021 –",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "open-ended dash, NO keyword (ambiguous)",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"October 2021 –\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "unknown",
+      "current": "unknown"
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true",
+      "endDate null / unknown (ideal for an open-ended date)"
+    ],
+    "confirmed_failure_if": "a specific end date is invented (e.g. end == start month)",
+    "inconclusive_if": "end left unknown/null AND current not set — acceptable, not a failure",
+    "expected_pages": 1
+  },
+  "T04": {
+    "test_id": "T04",
+    "filename": "T04.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "Oct 2021 to date",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "'to date' idiom",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"Oct 2021 to date\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true with no end date",
+      "endDate null / ongoing"
+    ],
+    "confirmed_failure_if": "a concrete end date is invented (e.g. end == start, or any end date despite an explicit current-employment keyword)",
+    "inconclusive_if": "current flag absent but end date also left null/absent",
+    "expected_pages": 1
+  },
+  "T05": {
+    "test_id": "T05",
+    "filename": "T05.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "Since October 2021",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "'Since' prefix, no range",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"Since October 2021\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true with no end date",
+      "endDate null / ongoing"
+    ],
+    "confirmed_failure_if": "a concrete end date is invented (e.g. end == start, or any end date despite an explicit current-employment keyword)",
+    "inconclusive_if": "current flag absent but end date also left null/absent",
+    "expected_pages": 1
+  },
+  "T06": {
+    "test_id": "T06",
+    "filename": "T06.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "2021 – Present",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "year-only start + 'Present'",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"2021 – Present\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true, start year precision 2021"
+    ],
+    "confirmed_failure_if": "end date invented despite 'Present'",
+    "inconclusive_if": "current absent and end null",
+    "expected_pages": 1
+  },
+  "T07": {
+    "test_id": "T07",
+    "filename": "T07.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "Oct 2021 – Ongoing",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "'Ongoing' keyword",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"Oct 2021 – Ongoing\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true with no end date",
+      "endDate null / ongoing"
+    ],
+    "confirmed_failure_if": "a concrete end date is invented (e.g. end == start, or any end date despite an explicit current-employment keyword)",
+    "inconclusive_if": "current flag absent but end date also left null/absent",
+    "expected_pages": 1
+  },
+  "T08": {
+    "test_id": "T08",
+    "filename": "T08.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "October 2021 onwards",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "'onwards' keyword",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"October 2021 onwards\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true with no end date",
+      "endDate null / ongoing"
+    ],
+    "confirmed_failure_if": "a concrete end date is invented (e.g. end == start, or any end date despite an explicit current-employment keyword)",
+    "inconclusive_if": "current flag absent but end date also left null/absent",
+    "expected_pages": 1
+  },
+  "T09": {
+    "test_id": "T09",
+    "filename": "T09.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "Started October 2021; currently employed",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "prose 'currently employed'",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"Started October 2021; currently employed\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true with no end date",
+      "endDate null / ongoing"
+    ],
+    "confirmed_failure_if": "a concrete end date is invented (e.g. end == start, or any end date despite an explicit current-employment keyword)",
+    "inconclusive_if": "current flag absent but end date also left null/absent",
+    "expected_pages": 1
+  },
+  "T10": {
+    "test_id": "T10",
+    "filename": "T10.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "October 2021 – Now",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "'Now' keyword",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"October 2021 – Now\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true with no end date",
+      "endDate null / ongoing"
+    ],
+    "confirmed_failure_if": "a concrete end date is invented (e.g. end == start, or any end date despite an explicit current-employment keyword)",
+    "inconclusive_if": "current flag absent but end date also left null/absent",
+    "expected_pages": 1
+  },
+  "T11": {
+    "test_id": "T11",
+    "filename": "T11.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "October 2021 – October 2024",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "COMPLETED control (explicit end)",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"October 2021 – October 2024\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "2024-10",
+      "current": false
+    },
+    "acceptable_alternate_interpretations": [
+      "end 2024-10, current false"
+    ],
+    "confirmed_failure_if": "end date wrong (not 2024-10) or current=true",
+    "inconclusive_if": "n/a",
+    "expected_pages": 1
+  },
+  "T12": {
+    "test_id": "T12",
+    "filename": "T12.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "October 2021",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "single date only (ambiguous)",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"October 2021\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "unknown",
+      "current": "unknown"
+    },
+    "acceptable_alternate_interpretations": [
+      "endDate unknown/null",
+      "role treated as single-point or ongoing"
+    ],
+    "confirmed_failure_if": "a second (end) date is invented",
+    "inconclusive_if": "end left unknown — acceptable, not a failure",
+    "expected_pages": 1
+  },
+  "T13": {
+    "test_id": "T13",
+    "filename": "T13.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "two-column",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "Oct 2021 – Present",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "clear current INSIDE two-column layout",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"Oct 2021 – Present\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true with no end date",
+      "endDate null / ongoing"
+    ],
+    "confirmed_failure_if": "a concrete end date is invented (e.g. end == start, or any end date despite an explicit current-employment keyword)",
+    "inconclusive_if": "current flag absent but end date also left null/absent",
+    "expected_pages": 1
+  },
+  "T14": {
+    "test_id": "T14",
+    "filename": "T14.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "table",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "Oct 2021 – Present",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "clear current INSIDE employment table",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"Oct 2021 – Present\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true with no end date",
+      "endDate null / ongoing"
+    ],
+    "confirmed_failure_if": "a concrete end date is invented (e.g. end == start, or any end date despite an explicit current-employment keyword)",
+    "inconclusive_if": "current flag absent but end date also left null/absent",
+    "expected_pages": 1
+  },
+  "T15": {
+    "test_id": "T15",
+    "filename": "T15.pdf",
+    "phase": 1,
+    "category": "ongoing-employment-dates",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Jordan Avery",
+      "title": "DevOps Engineer",
+      "email": "jordan.avery@examplemail.com",
+      "phone": "+1 (415) 555-0110",
+      "location": "San Francisco, CA"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer_as_written": "Thamesworks Cloud",
+        "date_display": "Oct 2021 – Present",
+        "location": "San Francisco, CA"
+      },
+      {
+        "jobTitle": "Platform Engineer (Part-Time)",
+        "employer_as_written": "Cirrus Labs",
+        "date_display": "Jan 2022 – Present",
+        "location": "Remote"
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer_as_written": "Borough Systems",
+        "date_display": "Feb 2018 – Sep 2021",
+        "location": "San Francisco, CA"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "date_display": "2013 – 2017",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "clear current WITH a second overlapping role",
+    "exact_source_evidence": "DevOps Engineer — Thamesworks Cloud, \"Oct 2021 – Present\"",
+    "expected_parser_behaviour": {
+      "start_iso": "2021-10",
+      "end": "null",
+      "current": true
+    },
+    "acceptable_alternate_interpretations": [
+      "current=true with no end date",
+      "endDate null / ongoing"
+    ],
+    "confirmed_failure_if": "either current role gets an invented end date, or the two roles are merged",
+    "inconclusive_if": "current absent on either role",
+    "expected_pages": 1
+  },
+  "T16": {
+    "test_id": "T16",
+    "filename": "T16.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Freelance Illustrator",
+        "employer_as_written": "Self-Employed",
+        "date_display": "2017 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "freelance labelled 'Self-Employed'",
+    "exact_source_evidence": "freelance labelled 'Self-Employed'",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Freelance Illustrator",
+          "employer_expected": "Self-Employed",
+          "employer_kind": "self_employment"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "employer = 'Self-Employed' / self-employment / null"
+    ],
+    "confirmed_failure_if": "a real company name is invented as the employer",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T17": {
+    "test_id": "T17",
+    "filename": "T17.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Freelance Illustrator",
+        "employer_as_written": "Independent",
+        "date_display": "2017 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "freelance labelled 'Independent'",
+    "exact_source_evidence": "freelance labelled 'Independent'",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Freelance Illustrator",
+          "employer_expected": "Independent",
+          "employer_kind": "self_employment"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "employer = 'Independent' / self-employment / null"
+    ],
+    "confirmed_failure_if": "a real company name is invented as the employer",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T18": {
+    "test_id": "T18",
+    "filename": "T18.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Illustrator",
+        "employer_as_written": "Independent Contractor",
+        "date_display": "2017 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "role labelled 'Independent Contractor'",
+    "exact_source_evidence": "role labelled 'Independent Contractor'",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Illustrator",
+          "employer_expected": "Independent Contractor",
+          "employer_kind": "self_employment"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "employer = 'Independent Contractor' / self-employment / null"
+    ],
+    "confirmed_failure_if": "a real company name is invented as the employer",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T19": {
+    "test_id": "T19",
+    "filename": "T19.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Illustrator",
+        "employer_as_written": "Sole Trader",
+        "date_display": "2017 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "role labelled 'Sole Trader'",
+    "exact_source_evidence": "role labelled 'Sole Trader'",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Illustrator",
+          "employer_expected": "Sole Trader",
+          "employer_kind": "self_employment"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "employer = 'Sole Trader' / self-employment / null"
+    ],
+    "confirmed_failure_if": "a real company name is invented as the employer",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T20": {
+    "test_id": "T20",
+    "filename": "T20.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Freelance Illustrator",
+        "employer_as_written": "",
+        "date_display": "2017 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "freelance role with NO employer line",
+    "exact_source_evidence": "freelance role with NO employer line",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Freelance Illustrator",
+          "employer_expected": null,
+          "employer_kind": "unknown"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "employer null / unknown / 'Freelance'"
+    ],
+    "confirmed_failure_if": "an employer name is invented or borrowed from another record",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T21": {
+    "test_id": "T21",
+    "filename": "T21.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Senior Designer",
+        "employer_as_written": "Meadowlark Software",
+        "date_display": "Jan 2019 – Present",
+        "location": "Brooklyn, NY"
+      },
+      {
+        "jobTitle": "Freelance Illustrator",
+        "employer_as_written": "Self-Employed",
+        "date_display": "2017 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "freelance ALONGSIDE permanent (perm first)",
+    "exact_source_evidence": "freelance ALONGSIDE permanent (perm first)",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "employer_expected": "Meadowlark Software",
+          "employer_kind": "employer"
+        },
+        {
+          "title": "Freelance Illustrator",
+          "employer_expected": "Self-Employed",
+          "employer_kind": "self_employment"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "freelance employer = Self-Employed/null; permanent = Meadowlark Software"
+    ],
+    "confirmed_failure_if": "the freelance role is attributed to 'Meadowlark Software' (employer bleed)",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T22": {
+    "test_id": "T22",
+    "filename": "T22.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Freelance Illustrator",
+        "employer_as_written": "Self-Employed",
+        "date_display": "2017 – Present",
+        "location": "Brooklyn, NY"
+      },
+      {
+        "jobTitle": "Senior Designer",
+        "employer_as_written": "Meadowlark Software",
+        "date_display": "Jan 2019 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "freelance ABOVE permanent",
+    "exact_source_evidence": "freelance ABOVE permanent",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Freelance Illustrator",
+          "employer_expected": "Self-Employed",
+          "employer_kind": "self_employment"
+        },
+        {
+          "title": "Senior Designer",
+          "employer_expected": "Meadowlark Software",
+          "employer_kind": "employer"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "freelance employer = Self-Employed/null; permanent = Meadowlark Software"
+    ],
+    "confirmed_failure_if": "the freelance role is attributed to 'Meadowlark Software' (employer bleed)",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T23": {
+    "test_id": "T23",
+    "filename": "T23.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Senior Designer",
+        "employer_as_written": "Meadowlark Software",
+        "date_display": "Jan 2019 – Present",
+        "location": "Brooklyn, NY"
+      },
+      {
+        "jobTitle": "Freelance Illustrator",
+        "employer_as_written": "Self-Employed",
+        "date_display": "2017 – Dec 2018",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "freelance BELOW permanent",
+    "exact_source_evidence": "freelance BELOW permanent",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "employer_expected": "Meadowlark Software",
+          "employer_kind": "employer"
+        },
+        {
+          "title": "Freelance Illustrator",
+          "employer_expected": "Self-Employed",
+          "employer_kind": "self_employment"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "freelance employer = Self-Employed/null; permanent = Meadowlark Software"
+    ],
+    "confirmed_failure_if": "the freelance role is attributed to 'Meadowlark Software' (employer bleed)",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T24": {
+    "test_id": "T24",
+    "filename": "T24.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Senior Designer",
+        "employer_as_written": "Meadowlark Software",
+        "date_display": "Jan 2019 – Present",
+        "location": "Brooklyn, NY"
+      },
+      {
+        "jobTitle": "Design Lecturer (0.4 FTE)",
+        "employer_as_written": "Pratt Institute",
+        "date_display": "Sep 2020 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "two simultaneous PERMANENT employers",
+    "exact_source_evidence": "two simultaneous PERMANENT employers",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "employer_expected": "Meadowlark Software",
+          "employer_kind": "employer"
+        },
+        {
+          "title": "Design Lecturer (0.4 FTE)",
+          "employer_expected": "Pratt Institute",
+          "employer_kind": "employer"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "both employers distinct and correctly attributed"
+    ],
+    "confirmed_failure_if": "the two employers are merged or swapped between roles",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T25": {
+    "test_id": "T25",
+    "filename": "T25.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Design Consultant",
+        "employer_as_written": "Self-Employed",
+        "date_display": "2018 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "consulting role with MULTIPLE CLIENTS",
+    "exact_source_evidence": "consulting role with MULTIPLE CLIENTS",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Design Consultant",
+          "employer_expected": "Self-Employed",
+          "employer_kind": "self_employment",
+          "clients_not_employer": [
+            "Northwind Retail",
+            "Harbor Bank",
+            "Cedar Foods"
+          ]
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "employer = Self-Employed/null; clients are NOT the employer"
+    ],
+    "confirmed_failure_if": "a client (e.g. 'Northwind Retail') is extracted as the employer",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T26": {
+    "test_id": "T26",
+    "filename": "T26.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Founder & Designer",
+        "employer_as_written": "Chen Creative Studio",
+        "date_display": "2017 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "self-employment listed as a BUSINESS NAME",
+    "exact_source_evidence": "self-employment listed as a BUSINESS NAME",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Founder & Designer",
+          "employer_expected": "Chen Creative Studio",
+          "employer_kind": "self_employment_business"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "employer = 'Chen Creative Studio' (a legitimate business-name employer)"
+    ],
+    "confirmed_failure_if": "the business name is dropped or replaced with another record's employer",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T27": {
+    "test_id": "T27",
+    "filename": "T27.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Contract Designer (via TechStaff Inc.)",
+        "employer_as_written": "TechStaff Inc.",
+        "date_display": "2019 – 2021",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "contract THROUGH A STAFFING AGENCY",
+    "exact_source_evidence": "contract THROUGH A STAFFING AGENCY",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Contract Designer (via TechStaff Inc.)",
+          "employer_expected": "TechStaff Inc.",
+          "employer_kind": "staffing_agency",
+          "client_not_employer": "Harbor Bank"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "employer = agency 'TechStaff Inc.' (acceptable) OR client 'Harbor Bank' (acceptable) — but consistent"
+    ],
+    "confirmed_failure_if": "employer and client are conflated inconsistently or a third org invented",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T28": {
+    "test_id": "T28",
+    "filename": "T28.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Senior Designer",
+        "employer_as_written": "Meadowlark Software",
+        "date_display": "Jan 2020 – Present",
+        "location": "Brooklyn, NY"
+      },
+      {
+        "jobTitle": "Freelance Illustrator",
+        "employer_as_written": "Self-Employed",
+        "date_display": "2018 – Present",
+        "location": "Brooklyn, NY"
+      },
+      {
+        "jobTitle": "Design Mentor",
+        "employer_as_written": "Hatch Collective",
+        "date_display": "Mar 2021 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "THREE concurrent employment records",
+    "exact_source_evidence": "THREE concurrent employment records",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "employer_expected": "Meadowlark Software",
+          "employer_kind": "employer"
+        },
+        {
+          "title": "Freelance Illustrator",
+          "employer_expected": "Self-Employed",
+          "employer_kind": "self_employment"
+        },
+        {
+          "title": "Design Mentor",
+          "employer_expected": "Hatch Collective",
+          "employer_kind": "employer"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "all three roles present with correct, distinct employers"
+    ],
+    "confirmed_failure_if": "any employer is copied across records or a role is dropped",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T29": {
+    "test_id": "T29",
+    "filename": "T29.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "two-column",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Senior Designer",
+        "employer_as_written": "Meadowlark Software",
+        "date_display": "Jan 2019 – Present",
+        "location": "Brooklyn, NY"
+      },
+      {
+        "jobTitle": "Freelance Illustrator",
+        "employer_as_written": "Self-Employed",
+        "date_display": "2017 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "freelance + permanent in TWO-COLUMN layout",
+    "exact_source_evidence": "freelance + permanent in TWO-COLUMN layout",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "employer_expected": "Meadowlark Software",
+          "employer_kind": "employer"
+        },
+        {
+          "title": "Freelance Illustrator",
+          "employer_expected": "Self-Employed",
+          "employer_kind": "self_employment"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "freelance employer = Self-Employed/null; permanent = Meadowlark Software"
+    ],
+    "confirmed_failure_if": "the freelance role is attributed to 'Meadowlark Software' (employer bleed)",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T30": {
+    "test_id": "T30",
+    "filename": "T30.pdf",
+    "phase": 2,
+    "category": "employer-attribution",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Riley Chen",
+      "title": "Designer",
+      "email": "riley.chen@examplemail.com",
+      "phone": "+1 (646) 555-0123",
+      "location": "Brooklyn, NY"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Senior Designer",
+        "employer_as_written": "Meadowlark Software",
+        "date_display": "Jan 2019 – Present",
+        "location": "Brooklyn, NY"
+      },
+      {
+        "jobTitle": "Freelance Illustrator",
+        "employer_as_written": "Self-Employed",
+        "date_display": "2017 – Present",
+        "location": "Brooklyn, NY"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "B.F.A. in Design",
+        "institution": "California College of the Arts",
+        "date_display": "2012 – 2016",
+        "status_note": ""
+      }
+    ],
+    "controlled_variable": "SAME records as T29 in SINGLE-COLUMN layout (paired control)",
+    "exact_source_evidence": "SAME records as T29 in SINGLE-COLUMN layout (paired control)",
+    "expected_parser_behaviour": {
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "employer_expected": "Meadowlark Software",
+          "employer_kind": "employer"
+        },
+        {
+          "title": "Freelance Illustrator",
+          "employer_expected": "Self-Employed",
+          "employer_kind": "self_employment"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "freelance employer = Self-Employed/null; permanent = Meadowlark Software"
+    ],
+    "confirmed_failure_if": "the freelance role is attributed to 'Meadowlark Software' (employer bleed)",
+    "inconclusive_if": "a role's employer is null/omitted where the source gives no employer",
+    "expected_pages": 1
+  },
+  "T31": {
+    "test_id": "T31",
+    "filename": "T31.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Bachelor of Science in Economics",
+        "institution": "University of Illinois",
+        "date_display": "2019 – 2023",
+        "status_note": "Completed 2023."
+      }
+    ],
+    "controlled_variable": "completed (control)",
+    "exact_source_evidence": "completed (control)",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Bachelor of Science in Economics",
+          "status": "completed",
+          "end_expected": "2023"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "recorded as completed, end 2023"
+    ],
+    "confirmed_failure_if": "shown as in-progress, or end date wrong",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T32": {
+    "test_id": "T32",
+    "filename": "T32.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Bachelor of Science in Economics",
+        "institution": "University of Illinois",
+        "date_display": "2022 – present",
+        "status_note": "Currently studying; degree not yet awarded."
+      }
+    ],
+    "controlled_variable": "currently studying",
+    "exact_source_evidence": "currently studying",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Bachelor of Science in Economics",
+          "status": "in_progress",
+          "end_expected": null
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "status in-progress / no completion date",
+      "status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "a completion/award end date is emitted with NO status marker, so the entry reads as a conferred qualification (misleading to a recruiter)",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T33": {
+    "test_id": "T33",
+    "filename": "T33.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Bachelor of Science in Economics",
+        "institution": "University of Illinois",
+        "date_display": "2023 – 2027 (expected)",
+        "status_note": "Expected graduation 2027; in progress."
+      }
+    ],
+    "controlled_variable": "expected graduation 2027",
+    "exact_source_evidence": "expected graduation 2027",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Bachelor of Science in Economics",
+          "status": "expected",
+          "end_expected": "2027 (expected)"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "status expected/in-progress; 2027 marked as expected not conferred",
+      "status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "end 2027 emitted as a conferred graduation date with no 'expected' marker",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T34": {
+    "test_id": "T34",
+    "filename": "T34.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Master of Engineering",
+        "institution": "Northwestern University",
+        "date_display": "2024 – present",
+        "status_note": "In progress."
+      }
+    ],
+    "controlled_variable": "master in progress",
+    "exact_source_evidence": "master in progress",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Master of Engineering",
+          "status": "in_progress",
+          "end_expected": null
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "status in-progress / no completion date",
+      "status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "a completion/award end date is emitted with NO status marker, so the entry reads as a conferred qualification (misleading to a recruiter)",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T35": {
+    "test_id": "T35",
+    "filename": "T35.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Master of Engineering",
+        "institution": "Northwestern University",
+        "date_display": "2021 – 2023",
+        "status_note": "Not completed."
+      }
+    ],
+    "controlled_variable": "master NOT completed",
+    "exact_source_evidence": "master NOT completed",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Master of Engineering",
+          "status": "discontinued",
+          "end_expected": null
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "status discontinued/not-completed/in-progress (NOT completed)",
+      "status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "recorded as a completed master's with a conferral date",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T36": {
+    "test_id": "T36",
+    "filename": "T36.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Juris Doctor",
+        "institution": "DePaul University College of Law",
+        "date_display": "2021 – 2023",
+        "status_note": "Incomplete."
+      }
+    ],
+    "controlled_variable": "J.D. incomplete",
+    "exact_source_evidence": "J.D. incomplete",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Juris Doctor",
+          "status": "discontinued",
+          "end_expected": null
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "status incomplete/discontinued/in-progress (NOT completed)",
+      "status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "recorded as a completed J.D. with a conferral date",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T37": {
+    "test_id": "T37",
+    "filename": "T37.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Juris Doctor",
+        "institution": "DePaul University College of Law",
+        "date_display": "2024 – 2027 (expected)",
+        "status_note": "Expected completion 2027."
+      }
+    ],
+    "controlled_variable": "J.D. expected completion 2027",
+    "exact_source_evidence": "J.D. expected completion 2027",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Juris Doctor",
+          "status": "expected",
+          "end_expected": "2027 (expected)"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "status expected/in-progress; 2027 marked expected not conferred",
+      "status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "end 2027 emitted as a conferred J.D. date with no 'expected' marker",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T38": {
+    "test_id": "T38",
+    "filename": "T38.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "PhD candidate in Chemistry",
+        "institution": "University of Chicago",
+        "date_display": "2021 – present",
+        "status_note": "Research ongoing; not yet awarded."
+      }
+    ],
+    "controlled_variable": "PhD candidate, research ongoing",
+    "exact_source_evidence": "PhD candidate, research ongoing",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "PhD candidate in Chemistry",
+          "status": "in_progress",
+          "end_expected": null
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "status in-progress / candidate; no award date",
+      "status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "recorded as an awarded PhD with a completion date",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T39": {
+    "test_id": "T39",
+    "filename": "T39.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "PhD in Chemistry",
+        "institution": "University of Chicago",
+        "date_display": "2019 – 2024",
+        "status_note": "Awarded 2024."
+      }
+    ],
+    "controlled_variable": "PhD awarded 2024 (control)",
+    "exact_source_evidence": "PhD awarded 2024 (control)",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "PhD in Chemistry",
+          "status": "completed",
+          "end_expected": "2024"
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "recorded as completed/awarded, end 2024"
+    ],
+    "confirmed_failure_if": "shown as in-progress, or end date wrong",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T40": {
+    "test_id": "T40",
+    "filename": "T40.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Bachelor of Commerce",
+        "institution": "University of Michigan",
+        "date_display": "2018 – 2020",
+        "status_note": "Withdrawn."
+      }
+    ],
+    "controlled_variable": "withdrawn",
+    "exact_source_evidence": "withdrawn",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Bachelor of Commerce",
+          "status": "discontinued",
+          "end_expected": null
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "status withdrawn/discontinued (NOT completed)",
+      "status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "recorded as a completed degree with a conferral date",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T41": {
+    "test_id": "T41",
+    "filename": "T41.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Bachelor of Commerce",
+        "institution": "University of Michigan",
+        "date_display": "2022 – present",
+        "status_note": "Deferred."
+      }
+    ],
+    "controlled_variable": "deferred",
+    "exact_source_evidence": "deferred",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Bachelor of Commerce",
+          "status": "deferred",
+          "end_expected": null
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "status deferred/paused/in-progress (NOT completed)",
+      "status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "recorded as a completed degree with a conferral date",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T42": {
+    "test_id": "T42",
+    "filename": "T42.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Diploma of Information Technology",
+        "institution": "RMIT",
+        "date_display": "2019 – 2020",
+        "status_note": "Coursework completed, qualification not awarded."
+      }
+    ],
+    "controlled_variable": "coursework completed, qualification NOT awarded",
+    "exact_source_evidence": "coursework completed, qualification NOT awarded",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Diploma of Information Technology",
+          "status": "not_awarded",
+          "end_expected": null
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "status not-awarded/incomplete (NOT a conferred qualification)",
+      "status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "recorded as an awarded diploma with a conferral date",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T43": {
+    "test_id": "T43",
+    "filename": "T43.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Certificate IV in Cybersecurity",
+        "institution": "TAFE NSW",
+        "date_display": "2024 – present",
+        "status_note": "Currently enrolled."
+      }
+    ],
+    "controlled_variable": "certificate currently enrolled",
+    "exact_source_evidence": "certificate currently enrolled",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Certificate IV in Cybersecurity",
+          "status": "in_progress",
+          "end_expected": null
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "status in-progress/enrolled; no completion date",
+      "status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "a completion/award end date is emitted with NO status marker, so the entry reads as a conferred qualification (misleading to a recruiter)",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T44": {
+    "test_id": "T44",
+    "filename": "T44.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "flow",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Bachelor of Science in Economics",
+        "institution": "University of Illinois",
+        "date_display": "2016 – 2020",
+        "status_note": "Completed 2020."
+      },
+      {
+        "qualification": "Master of Engineering",
+        "institution": "Northwestern University",
+        "date_display": "2023 – present",
+        "status_note": "In progress."
+      }
+    ],
+    "controlled_variable": "TWO qualifications: one completed + one in progress",
+    "exact_source_evidence": "TWO qualifications: one completed + one in progress",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Bachelor of Science in Economics",
+          "status": "completed",
+          "end_expected": "2020"
+        },
+        {
+          "qualification": "Master of Engineering",
+          "status": "in_progress",
+          "end_expected": null
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "BSc completed 2020; MEng in-progress with no completion date",
+      "MEng status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "the in-progress MEng is recorded as completed with a conferral date",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  },
+  "T45": {
+    "test_id": "T45",
+    "filename": "T45.pdf",
+    "phase": 3,
+    "category": "education-completion-status",
+    "layout": "table",
+    "candidate_identity": {
+      "name": "Sam Taylor",
+      "title": "Analyst",
+      "email": "sam.taylor@examplemail.com",
+      "phone": "+1 (312) 555-0164",
+      "location": "Chicago, IL"
+    },
+    "expected_work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer_as_written": "Keystone Group",
+        "date_display": "2023 – Present",
+        "location": "Chicago, IL"
+      }
+    ],
+    "expected_education": [
+      {
+        "qualification": "Bachelor of Science in Economics",
+        "institution": "University of Illinois",
+        "date_display": "2016 – 2020",
+        "status_note": "Completed 2020."
+      },
+      {
+        "qualification": "Master of Engineering",
+        "institution": "Northwestern University",
+        "date_display": "2023 – present",
+        "status_note": "In progress."
+      }
+    ],
+    "controlled_variable": "SAME as T44 in a TABLE layout (paired control)",
+    "exact_source_evidence": "SAME as T44 in a TABLE layout (paired control)",
+    "expected_parser_behaviour": {
+      "education": [
+        {
+          "qualification": "Bachelor of Science in Economics",
+          "status": "completed",
+          "end_expected": "2020"
+        },
+        {
+          "qualification": "Master of Engineering",
+          "status": "in_progress",
+          "end_expected": null
+        }
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "BSc completed 2020; MEng in-progress with no completion date",
+      "MEng status_absent (recoverable in rawText)"
+    ],
+    "confirmed_failure_if": "the in-progress MEng is recorded as completed with a conferral date",
+    "inconclusive_if": "status absent from structured output but correct in rawText (schema may lack a status field — record as 'status_absent')",
+    "expected_pages": 1
+  }
+}

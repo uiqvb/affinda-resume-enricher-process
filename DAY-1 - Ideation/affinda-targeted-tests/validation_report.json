@@ -1,0 +1,596 @@
+{
+  "summary": {
+    "total": 45,
+    "pass": 45,
+    "fail": 0
+  },
+  "render_dpi": 150,
+  "contact_sheet": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-targeted-tests\\contact_sheet.png",
+  "results": [
+    {
+      "id": "T01",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "explicit 'Present'",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2815,
+      "page_count": 1
+    },
+    {
+      "id": "T02",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "explicit 'Current'",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2823,
+      "page_count": 1
+    },
+    {
+      "id": "T03",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "open-ended dash, NO keyword (ambiguous)",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2819,
+      "page_count": 1
+    },
+    {
+      "id": "T04",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "'to date' idiom",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2820,
+      "page_count": 1
+    },
+    {
+      "id": "T05",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "'Since' prefix, no range",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2818,
+      "page_count": 1
+    },
+    {
+      "id": "T06",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "year-only start + 'Present'",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2818,
+      "page_count": 1
+    },
+    {
+      "id": "T07",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "'Ongoing' keyword",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2823,
+      "page_count": 1
+    },
+    {
+      "id": "T08",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "'onwards' keyword",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2823,
+      "page_count": 1
+    },
+    {
+      "id": "T09",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "prose 'currently employed'",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2833,
+      "page_count": 1
+    },
+    {
+      "id": "T10",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "'Now' keyword",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2821,
+      "page_count": 1
+    },
+    {
+      "id": "T11",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "COMPLETED control (explicit end)",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2813,
+      "page_count": 1
+    },
+    {
+      "id": "T12",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "single date only (ambiguous)",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2815,
+      "page_count": 1
+    },
+    {
+      "id": "T13",
+      "phase": 1,
+      "layout": "two-column",
+      "controlled": "clear current INSIDE two-column layout",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2876,
+      "page_count": 1
+    },
+    {
+      "id": "T14",
+      "phase": 1,
+      "layout": "table",
+      "controlled": "clear current INSIDE employment table",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2705,
+      "page_count": 1
+    },
+    {
+      "id": "T15",
+      "phase": 1,
+      "layout": "flow",
+      "controlled": "clear current WITH a second overlapping role",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled date expression present"
+      ],
+      "size_bytes": 2963,
+      "page_count": 1
+    },
+    {
+      "id": "T16",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "freelance labelled 'Self-Employed'",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2505,
+      "page_count": 1
+    },
+    {
+      "id": "T17",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "freelance labelled 'Independent'",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2501,
+      "page_count": 1
+    },
+    {
+      "id": "T18",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "role labelled 'Independent Contractor'",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2501,
+      "page_count": 1
+    },
+    {
+      "id": "T19",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "role labelled 'Sole Trader'",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2493,
+      "page_count": 1
+    },
+    {
+      "id": "T20",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "freelance role with NO employer line",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled no-employer (by design) present"
+      ],
+      "size_bytes": 2527,
+      "page_count": 1
+    },
+    {
+      "id": "T21",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "freelance ALONGSIDE permanent (perm first)",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2639,
+      "page_count": 1
+    },
+    {
+      "id": "T22",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "freelance ABOVE permanent",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2642,
+      "page_count": 1
+    },
+    {
+      "id": "T23",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "freelance BELOW permanent",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2646,
+      "page_count": 1
+    },
+    {
+      "id": "T24",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "two simultaneous PERMANENT employers",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2659,
+      "page_count": 1
+    },
+    {
+      "id": "T25",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "consulting role with MULTIPLE CLIENTS",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2574,
+      "page_count": 1
+    },
+    {
+      "id": "T26",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "self-employment listed as a BUSINESS NAME",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2532,
+      "page_count": 1
+    },
+    {
+      "id": "T27",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "contract THROUGH A STAFFING AGENCY",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2517,
+      "page_count": 1
+    },
+    {
+      "id": "T28",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "THREE concurrent employment records",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2717,
+      "page_count": 1
+    },
+    {
+      "id": "T29",
+      "phase": 2,
+      "layout": "two-column",
+      "controlled": "freelance + permanent in TWO-COLUMN layout",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2684,
+      "page_count": 1
+    },
+    {
+      "id": "T30",
+      "phase": 2,
+      "layout": "flow",
+      "controlled": "SAME records as T29 in SINGLE-COLUMN layout (paired control)",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled employer label present"
+      ],
+      "size_bytes": 2639,
+      "page_count": 1
+    },
+    {
+      "id": "T31",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "completed (control)",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2510,
+      "page_count": 1
+    },
+    {
+      "id": "T32",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "currently studying",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2535,
+      "page_count": 1
+    },
+    {
+      "id": "T33",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "expected graduation 2027",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2533,
+      "page_count": 1
+    },
+    {
+      "id": "T34",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "master in progress",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2495,
+      "page_count": 1
+    },
+    {
+      "id": "T35",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "master NOT completed",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2501,
+      "page_count": 1
+    },
+    {
+      "id": "T36",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "J.D. incomplete",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2492,
+      "page_count": 1
+    },
+    {
+      "id": "T37",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "J.D. expected completion 2027",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2512,
+      "page_count": 1
+    },
+    {
+      "id": "T38",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "PhD candidate, research ongoing",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2501,
+      "page_count": 1
+    },
+    {
+      "id": "T39",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "PhD awarded 2024 (control)",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2482,
+      "page_count": 1
+    },
+    {
+      "id": "T40",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "withdrawn",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2505,
+      "page_count": 1
+    },
+    {
+      "id": "T41",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "deferred",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2501,
+      "page_count": 1
+    },
+    {
+      "id": "T42",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "coursework completed, qualification NOT awarded",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2523,
+      "page_count": 1
+    },
+    {
+      "id": "T43",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "certificate currently enrolled",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2501,
+      "page_count": 1
+    },
+    {
+      "id": "T44",
+      "phase": 3,
+      "layout": "flow",
+      "controlled": "TWO qualifications: one completed + one in progress",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2609,
+      "page_count": 1
+    },
+    {
+      "id": "T45",
+      "phase": 3,
+      "layout": "table",
+      "controlled": "SAME as T44 in a TABLE layout (paired control)",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "controlled education status note present"
+      ],
+      "size_bytes": 2551,
+      "page_count": 1
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Parser vs Enrichment</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+/* Layout: a centered explainer built on contrast cards — same-category résumé lines the parser treated differently, with the enrichment that normalizes them. */
+:root{
+  --bg:#f4f5f7; --surface:#ffffff; --panel:#fbfcfd; --line:#dde2e9;
+  --fg:#1a1e26; --muted:#5c6572; --faint:#8d96a4;
+  --accent:#4350c7;
+  --bad:#b0472b; --bad-bg:#fbe9e2; --bad-line:#f0c9ba;
+  --ok:#1f7a52; --ok-bg:#e4f4ea; --ok-line:#b6e0c8;
+  --code-bg:#f2f4f8;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#11141a; --surface:#1a1e26; --panel:#161a21; --line:#2c333f;
+  --fg:#e7eaf0; --muted:#9aa4b2; --faint:#687080; --accent:#8e99f0;
+  --bad:#f0a085; --bad-bg:#2e1b14; --bad-line:#5a3023;
+  --ok:#6cd6a0; --ok-bg:#13301f; --ok-line:#2d5a3f;
+  --code-bg:#1f242d; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#11141a; --surface:#1a1e26; --panel:#161a21; --line:#2c333f;
+  --fg:#e7eaf0; --muted:#9aa4b2; --faint:#687080; --accent:#8e99f0;
+  --bad:#f0a085; --bad-bg:#2e1b14; --bad-line:#5a3023;
+  --ok:#6cd6a0; --ok-bg:#13301f; --ok-line:#2d5a3f;
+  --code-bg:#1f242d; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif;line-height:1.5}
+.wrap{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));padding-block:0;max-width:900px;margin:0 auto}
+header{padding-block:26px 4px}
+.eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:600}
+h1{font-family:"Space Grotesk",Inter,sans-serif;font-size:1.72rem;line-height:1.15;margin:.3rem 0 .5rem;letter-spacing:-.02em;text-wrap:balance}
+.lede{color:var(--muted);font-size:.98rem;max-width:66ch}
+.lede b{color:var(--fg)}
+.core{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 2px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 13px;flex:1 1 160px;min-width:0}
+.stat b{font-family:"Space Grotesk";font-size:1.3rem;color:var(--bad)}
+.stat span{display:block;color:var(--muted);font-size:.76rem;margin-top:1px}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;
+  display:flex;flex-wrap:wrap;gap:7px;border-bottom:1px solid var(--line);margin-top:14px}
+.tabs button{font:inherit;font-size:.84rem;border:1px solid var(--line);background:var(--surface);color:var(--muted);
+  padding:6px 13px;border-radius:999px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.themebtn{margin-left:auto;font-size:.95rem;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:5px 11px;cursor:pointer}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;margin:18px 0}
+.cHead{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:7px}
+.pill{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:2px 9px;border-radius:999px;background:var(--code-bg);color:var(--muted)}
+.cat{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--faint)}
+.hl{font-family:"Space Grotesk";font-weight:600;font-size:1.12rem;line-height:1.3;margin:2px 0 6px;text-wrap:balance}
+.plain{color:var(--muted);font-size:.9rem;margin-bottom:14px;max-width:72ch}
+.cmp{display:grid;grid-template-columns:1.2fr 1.3fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:11px;overflow:hidden}
+.cmp>div{background:var(--panel);padding:10px 12px;min-width:0}
+.ch{background:var(--surface)!important;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:600}
+.rline{font-size:.88rem}
+.rline .q{color:var(--faint);font-size:.76rem;display:block;margin-bottom:1px}
+.rline b{color:var(--accent)}
+.rid{font-family:"JetBrains Mono",monospace;font-size:.68rem;color:var(--faint);display:block;margin-top:3px}
+.parser{font-family:"JetBrains Mono",monospace;font-size:.78rem;line-height:1.4}
+.parser.bad{color:var(--bad)} .parser.ok{color:var(--fg)}
+.reads{font-size:.74rem;margin-top:4px}
+.parser.bad .reads{color:var(--bad)} .parser.ok .reads{color:var(--muted)}
+.fix{font-family:"JetBrains Mono",monospace;font-size:.76rem;color:var(--ok);background:var(--ok-bg);
+  border:1px solid var(--ok-line);border-radius:6px;padding:3px 7px;display:inline-block;line-height:1.35}
+.fix.none{color:var(--faint);background:transparent;border-color:var(--line)}
+.takeaway{margin-top:13px;font-size:.84rem;color:var(--ok);display:flex;gap:7px;align-items:flex-start}
+.takeaway b{color:var(--ok)}
+@media(max-width:600px){.cmp{grid-template-columns:1fr}.ch{display:none}
+  .cmp>div{border-bottom:1px solid var(--line)}
+  .rline::before{content:"On the résumé";font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);display:block}
+  .parser::before{content:"Parser returned";font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);display:block;font-family:Inter}
+  .fixcell::before{content:"Enrichment adds";font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);display:block;margin-bottom:3px}}
+.foot{color:var(--faint);font-size:.78rem;padding:14px 0 30px;max-width:72ch;line-height:1.6;border-top:1px solid var(--line);margin-top:22px}
+.kbd{font-family:"JetBrains Mono",monospace;background:var(--code-bg);padding:1px 5px;border-radius:4px;font-size:.9em}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">ResumeGuard &middot; the important bits</div>
+  <h1>Where the parser gave two different answers for the same kind of case</h1>
+  <p class="lede">Affinda extracts the degree, the cert, the skill &mdash; cleanly. But it drops the <b>qualifier</b> next to each (expired, withdrawn, "no experience with"), and it doesn't even drop it <b>consistently</b>: inside one taxonomy category, near-identical résumé lines come back treated differently. Each card below is one category where that happened, with the real parser output. Your enrichment layer keeps everything Affinda returned and adds one consistent label back.</p>
+  <div class="core">
+    <div class="stat"><b>0 / 100</b><span>education entries with a completion status</span></div>
+    <div class="stat"><b>0 / 100</b><span>certifications with a validity status</span></div>
+    <div class="stat"><b>0 / 100</b><span>skills with a strength / negation marker</span></div>
+  </div>
+</header>
+
+<div class="tabs" id="tabs">
+  <button data-f="all" aria-pressed="true">All</button>
+  <button data-f="Education">Education</button>
+  <button data-f="Certification">Certification</button>
+  <button data-f="Skill">Skill</button>
+  <button class="themebtn" id="theme" title="Toggle light/dark">&#9680;</button>
+</div>
+
+<div id="cards"></div>
+
+<p class="foot">Every &ldquo;Parser returned&rdquo; cell is the <b>real</b> Affinda Sandbox output for that résumé. <span style="color:var(--bad)">Red</span> = the parser lost or dropped something; the enrichment column shows the single label your layer would add under a <span class="kbd">__resumeGuard</span> key, with the original fields untouched. Two of these cards also expose a <b>separate</b> problem from the missing-qualifier one: the parser dropping whole entries (Spark/Azure skills, &ldquo;Bar admission&rdquo;) &mdash; worth a flag, but not something enrichment can relabel.</p>
+</div>
+
+<script>
+const DATA = [
+  {
+    "issue": "Education",
+    "category": "incomplete / discontinued",
+    "headline": "Same 'did not finish' wording — the parser invents a graduation year for one and not the other",
+    "plain": "Both résumés say the degree was never completed. For one, Affinda stamped a conferral year onto it (so it reads as earned); for the other it left the date off. Neither carries an 'incomplete' status. Your layer labels both the same way, consistently.",
+    "rows": [
+      {
+        "line": "Master of Engineering, Northgate Institute, left before finishing (2019)",
+        "id": "E042",
+        "parser": "Master of Engineering · end date 2019",
+        "bad": true,
+        "reads": "looks conferred 2019",
+        "fix": "completionStatus: incomplete"
+      },
+      {
+        "line": "Diploma in Accounting, Summit State University — discontinued before completion",
+        "id": "E039",
+        "parser": "Diploma · no end date",
+        "bad": false,
+        "reads": "no status, no date",
+        "fix": "completionStatus: incomplete"
+      }
+    ]
+  },
+  {
+    "issue": "Skill",
+    "category": "exposure",
+    "headline": "Word-for-word the same claim — some skills are kept, some vanish",
+    "plain": "Every line here is 'exposure to X'. Python comes through (but with no strength marker, so it ranks like real expertise). Spark and Azure are dropped from the skills list altogether. The strength gap and a separate extraction blind-spot both show up in one category.",
+    "rows": [
+      {
+        "line": "Brief exposure to Python",
+        "id": "S037",
+        "parser": "extracted as skill: \"Python (Programming Language)\"",
+        "bad": false,
+        "reads": "ranks like an expert",
+        "fix": "claimStrength: weak_exposure"
+      },
+      {
+        "line": "Exposure to Spark",
+        "id": "S035",
+        "parser": "NOT extracted — skill dropped entirely",
+        "bad": true,
+        "reads": "disappears from the résumé",
+        "fix": "(can't label what was dropped)"
+      },
+      {
+        "line": "Exposure to Azure",
+        "id": "S041",
+        "parser": "NOT extracted — skill dropped entirely",
+        "bad": true,
+        "reads": "disappears from the résumé",
+        "fix": "(can't label what was dropped)"
+      }
+    ]
+  },
+  {
+    "issue": "Certification",
+    "category": "no status (name + date only)",
+    "headline": "One named credential is a total blind spot — 'Bar admission' is dropped in every category",
+    "plain": "A legal Bar admission is a real, licensable credential, but Affinda doesn't recognise the phrase and drops it completely — across expired, revoked, suspended, valid, every category we tried. A sibling cert in the same category (here PMP) is kept fine. This is a different failure from the validity gap: the whole entry is missing, not just its status.",
+    "rows": [
+      {
+        "line": "CPA — 2019",
+        "id": "C077",
+        "parser": "extracted: CPA",
+        "bad": false,
+        "reads": "on the record (status still absent)",
+        "fix": "validityStatus: unknown"
+      },
+      {
+        "line": "Bar admission",
+        "id": "C082",
+        "parser": "NOT extracted — certification dropped",
+        "bad": true,
+        "reads": "credential missing entirely",
+        "fix": "(nothing to enrich — flag: dropped credential)"
+      }
+    ]
+  },
+  {
+    "issue": "Certification",
+    "category": "active + expired (same cert, one résumé)",
+    "headline": "The same certificate appears twice — active and expired — and both come back looking valid",
+    "plain": "This résumé lists one cert as current and the same cert as expired (a renewal history). Affinda keeps both entries but there's no status on either, so they're indistinguishable. Your layer tags one active and one expired, so the renewal story is preserved.",
+    "rows": [
+      {
+        "line": "(same résumé) AWS Certified Solutions Architect  ·  date 2027",
+        "id": "entry 1",
+        "parser": "AWS Certified Solutions Architect · 2027",
+        "bad": true,
+        "reads": "both look like valid certs",
+        "fix": "validityStatus: active"
+      },
+      {
+        "line": "(same résumé) AWS Certified Solutions Architect  ·  date 2018",
+        "id": "entry 2",
+        "parser": "AWS Certified Solutions Architect · 2018",
+        "bad": true,
+        "reads": "both look like valid certs",
+        "fix": "validityStatus: expired"
+      }
+    ]
+  }
+];
+function esc(s){return String(s).replace(/[&<>]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[m]));}
+function hlLine(s){return esc(s).replace(/(expired|withdrawn|revoked|discontinued|left before finishing|exposure to|No experience with|active|valid until|exam scheduled|recertified)/gi,'<b>$1</b>');}
+
+function card(d){
+  const rows = d.rows.map(r=>{
+    const fixCls = /can't|nothing/.test(r.fix)?"fix none":"fix";
+    return `<div class="rline"><span class="q">On the résumé</span>&ldquo;${hlLine(r.line)}&rdquo;<span class="rid">${esc(r.id)}</span></div>
+      <div class="parser ${r.bad?'bad':'ok'}">${esc(r.parser)}<div class="reads">&rarr; ${esc(r.reads)}</div></div>
+      <div class="fixcell"><span class="${fixCls}">${esc(r.fix)}</span></div>`;
+  }).join("");
+  return `<div class="card" data-issue="${d.issue}">
+    <div class="cHead"><span class="pill">${d.issue}</span><span class="cat">category: ${esc(d.category)}</span></div>
+    <div class="hl">${esc(d.headline)}</div>
+    <div class="plain">${esc(d.plain)}</div>
+    <div class="cmp">
+      <div class="ch">On the résumé</div><div class="ch">What Affinda returned</div><div class="ch">Enrichment adds</div>
+      ${rows}
+    </div>
+    <div class="takeaway">&#10003;&nbsp;<span><b>Consistent after enrichment:</b> every row in this category carries the same kind of label, so a downstream filter reads them the same way.</span></div>
+  </div>`;
+}
+function draw(f){
+  document.getElementById("cards").innerHTML = DATA.filter(d=>f==="all"||d.issue===f).map(card).join("");
+}
+draw("all");
+document.getElementById("tabs").addEventListener("click",e=>{
+  const b=e.target.closest("button[data-f]"); if(!b)return;
+  document.querySelectorAll("#tabs button[data-f]").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  draw(b.dataset.f);
+});
+document.getElementById("theme").addEventListener("click",()=>{
+  const cur=document.documentElement.getAttribute("data-theme");
+  const dark=cur?cur==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+  document.documentElement.setAttribute("data-theme",dark?"light":"dark");
+});
+</script>

@@ -1,0 +1,1528 @@
+{
+  "A01": {
+    "test_id": "A01",
+    "filename": "A01.pdf",
+    "category": "A",
+    "difficulty": "baseline",
+    "candidate_name": "Daniel Okafor",
+    "expected_contact": {
+      "emails": [
+        "daniel.okafor@examplemail.com"
+      ],
+      "phone": "+1 (415) 555-0142",
+      "location": "San Francisco, CA",
+      "links": {
+        "LinkedIn": "linkedin.com/in/danielokafor"
+      }
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Senior Software Engineer",
+        "employer": "Northwind Technologies",
+        "location": "San Francisco, CA",
+        "startDate_display": "Mar 2021",
+        "endDate_display": "Present",
+        "startDate_iso": "2021-03",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Brightwave Labs",
+        "location": "Oakland, CA",
+        "startDate_display": "Jul 2017",
+        "endDate_display": "Feb 2021",
+        "startDate_iso": "2017-07",
+        "endDate_iso": "2021-02",
+        "isCurrent": false
+      },
+      {
+        "jobTitle": "Junior Developer",
+        "employer": "Cobalt Systems",
+        "location": "San Jose, CA",
+        "startDate_display": "Aug 2015",
+        "endDate_display": "Jun 2017",
+        "startDate_iso": "2015-08",
+        "endDate_iso": "2017-06",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.S. in Computer Science",
+        "institution": "University of California, Davis",
+        "location": "Davis, CA",
+        "startDate": "2011",
+        "endDate": "2015",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Go",
+      "Python",
+      "PostgreSQL",
+      "Kubernetes",
+      "gRPC",
+      "AWS",
+      "Distributed Systems",
+      "CI/CD"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "None — clean baseline.",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "name",
+      "emails",
+      "phoneNumbers",
+      "workExperience",
+      "education",
+      "skills"
+    ],
+    "layout": "flow"
+  },
+  "A02": {
+    "test_id": "A02",
+    "filename": "A02.pdf",
+    "category": "A",
+    "difficulty": "baseline",
+    "candidate_name": "Priya Nair",
+    "expected_contact": {
+      "emails": [
+        "priya.nair@examplemail.com"
+      ],
+      "phone": "+1 (617) 555-0188",
+      "location": "Boston, MA",
+      "links": {}
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Registered Nurse, Medical-Surgical Unit",
+        "employer": "Charles River Medical Center",
+        "location": "Boston, MA",
+        "startDate_display": "Jun 2020",
+        "endDate_display": "Present",
+        "startDate_iso": "2020-06",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Staff Nurse, Telemetry",
+        "employer": "Granite State Hospital",
+        "location": "Manchester, NH",
+        "startDate_display": "Aug 2018",
+        "endDate_display": "May 2020",
+        "startDate_iso": "2018-08",
+        "endDate_iso": "2020-05",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "Bachelor of Science in Nursing (BSN)",
+        "institution": "Northeastern University",
+        "location": "Boston, MA",
+        "startDate": "2014",
+        "endDate": "2018",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Acute Care",
+      "Telemetry",
+      "IV Therapy",
+      "Patient Education",
+      "Epic EHR",
+      "ACLS",
+      "BLS",
+      "Care Coordination"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "None — clean baseline.",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "name",
+      "emails",
+      "phoneNumbers",
+      "workExperience",
+      "education",
+      "skills",
+      "certifications"
+    ],
+    "layout": "flow"
+  },
+  "A03": {
+    "test_id": "A03",
+    "filename": "A03.pdf",
+    "category": "A",
+    "difficulty": "baseline",
+    "candidate_name": "Thomas Belanger",
+    "expected_contact": {
+      "emails": [
+        "thomas.belanger@examplemail.com"
+      ],
+      "phone": "+1 (212) 555-0173",
+      "location": "New York, NY",
+      "links": {
+        "LinkedIn": "linkedin.com/in/thomasbelanger"
+      }
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Financial Analyst",
+        "employer": "Hudson Capital Partners",
+        "location": "New York, NY",
+        "startDate_display": "Sep 2020",
+        "endDate_display": "Present",
+        "startDate_iso": "2020-09",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Investment Banking Analyst",
+        "employer": "Meridian Securities",
+        "location": "New York, NY",
+        "startDate_display": "Jul 2018",
+        "endDate_display": "Aug 2020",
+        "startDate_iso": "2018-07",
+        "endDate_iso": "2020-08",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.B.A. in Finance",
+        "institution": "New York University, Stern School of Business",
+        "location": "New York, NY",
+        "startDate": "2014",
+        "endDate": "2018",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Financial Modelling",
+      "Valuation",
+      "Excel",
+      "Bloomberg Terminal",
+      "DCF Analysis",
+      "Variance Analysis",
+      "Power BI"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "None — clean baseline.",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "name",
+      "emails",
+      "phoneNumbers",
+      "workExperience",
+      "education",
+      "skills"
+    ],
+    "layout": "flow"
+  },
+  "A04": {
+    "test_id": "A04",
+    "filename": "A04.pdf",
+    "category": "A",
+    "difficulty": "baseline",
+    "candidate_name": "Sofia Reyes",
+    "expected_contact": {
+      "emails": [
+        "sofia.reyes@examplemail.com"
+      ],
+      "phone": "+1 (305) 555-0129",
+      "location": "Miami, FL",
+      "links": {
+        "Portfolio": "sofiareyes.example.com"
+      }
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Marketing Specialist",
+        "employer": "Coral Bay Brands",
+        "location": "Miami, FL",
+        "startDate_display": "Jan 2021",
+        "endDate_display": "Present",
+        "startDate_iso": "2021-01",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Digital Marketing Coordinator",
+        "employer": "Sunline Media",
+        "location": "Fort Lauderdale, FL",
+        "startDate_display": "Mar 2018",
+        "endDate_display": "Dec 2020",
+        "startDate_iso": "2018-03",
+        "endDate_iso": "2020-12",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.A. in Communications",
+        "institution": "University of Florida",
+        "location": "Gainesville, FL",
+        "startDate": "2013",
+        "endDate": "2017",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Campaign Management",
+      "SEO",
+      "Google Analytics",
+      "HubSpot",
+      "Paid Social",
+      "Email Marketing",
+      "Copywriting"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "None — clean baseline.",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "name",
+      "emails",
+      "phoneNumbers",
+      "websites",
+      "workExperience",
+      "education",
+      "skills"
+    ],
+    "layout": "flow"
+  },
+  "A05": {
+    "test_id": "A05",
+    "filename": "A05.pdf",
+    "category": "A",
+    "difficulty": "baseline",
+    "candidate_name": "Marcus Lindqvist",
+    "expected_contact": {
+      "emails": [
+        "marcus.lindqvist@examplemail.com"
+      ],
+      "phone": "+1 (206) 555-0164",
+      "location": "Seattle, WA",
+      "links": {
+        "LinkedIn": "linkedin.com/in/marcuslindqvist"
+      }
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Senior Project Manager",
+        "employer": "Cascade Digital",
+        "location": "Seattle, WA",
+        "startDate_display": "Apr 2019",
+        "endDate_display": "Present",
+        "startDate_iso": "2019-04",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Project Manager",
+        "employer": "Rainier Software",
+        "location": "Bellevue, WA",
+        "startDate_display": "Jun 2015",
+        "endDate_display": "Mar 2019",
+        "startDate_iso": "2015-06",
+        "endDate_iso": "2019-03",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.S. in Industrial Engineering",
+        "institution": "University of Washington",
+        "location": "Seattle, WA",
+        "startDate": "2010",
+        "endDate": "2014",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Project Management",
+      "Agile",
+      "Scrum",
+      "Stakeholder Management",
+      "Risk Management",
+      "Jira",
+      "MS Project",
+      "Budgeting"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "None — clean baseline.",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "name",
+      "emails",
+      "phoneNumbers",
+      "workExperience",
+      "education",
+      "skills",
+      "certifications"
+    ],
+    "layout": "flow"
+  },
+  "D01": {
+    "test_id": "D01",
+    "filename": "D01.pdf",
+    "category": "D",
+    "difficulty": "complex-history",
+    "candidate_name": "Elena Visser",
+    "expected_contact": {
+      "emails": [
+        "elena.visser@examplemail.com"
+      ],
+      "phone": "+31 20 555 0197",
+      "location": "Amsterdam, Netherlands",
+      "links": {
+        "LinkedIn": "linkedin.com/in/elenavisser"
+      }
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Senior Data Scientist",
+        "employer": "Tulip Analytics",
+        "location": "Amsterdam, Netherlands",
+        "startDate_display": "Feb 2021",
+        "endDate_display": "Present",
+        "startDate_iso": "2021-02",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Part-Time Lecturer, Statistics (0.4 FTE)",
+        "employer": "Amsterdam Data Institute",
+        "location": "Amsterdam, Netherlands",
+        "startDate_display": "Sep 2022",
+        "endDate_display": "Jul 2023",
+        "startDate_iso": "2022-09",
+        "endDate_iso": "2023-07",
+        "isCurrent": false
+      },
+      {
+        "jobTitle": "Data Analyst",
+        "employer": "Canalpoint BV",
+        "location": "Utrecht, Netherlands",
+        "startDate_display": "Jun 2018",
+        "endDate_display": "Jan 2021",
+        "startDate_iso": "2018-06",
+        "endDate_iso": "2021-01",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "M.Sc. in Statistics",
+        "institution": "Utrecht University",
+        "location": "Utrecht, Netherlands",
+        "startDate": "2016",
+        "endDate": "2018",
+        "note": "",
+        "isComplete": true
+      },
+      {
+        "degree": "B.Sc. in Mathematics",
+        "institution": "Utrecht University",
+        "location": "Utrecht, Netherlands",
+        "startDate": "2013",
+        "endDate": "2016",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Python",
+      "R",
+      "Machine Learning",
+      "SQL",
+      "Forecasting",
+      "Experimentation",
+      "Teaching"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Sep 2022–Jul 2023 lectureship overlaps the ongoing Tulip Analytics role (both concurrent and valid).",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [
+      "Both roles listed as separate concurrent positions."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "workExperience",
+      "workExperience[].startDate",
+      "workExperience[].endDate"
+    ],
+    "layout": "flow"
+  },
+  "D02": {
+    "test_id": "D02",
+    "filename": "D02.pdf",
+    "category": "D",
+    "difficulty": "complex-history",
+    "candidate_name": "Kwame Mensah",
+    "expected_contact": {
+      "emails": [
+        "kwame.mensah@examplemail.com"
+      ],
+      "phone": "+1 (312) 555-0151",
+      "location": "Chicago, IL",
+      "links": {}
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Director of Operations",
+        "employer": "Lakeshore Logistics",
+        "location": "Chicago, IL",
+        "startDate_display": "Jan 2022",
+        "endDate_display": "Present",
+        "startDate_iso": "2022-01",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Operations Manager",
+        "employer": "Lakeshore Logistics",
+        "location": "Chicago, IL",
+        "startDate_display": "Mar 2019",
+        "endDate_display": "Dec 2021",
+        "startDate_iso": "2019-03",
+        "endDate_iso": "2021-12",
+        "isCurrent": false
+      },
+      {
+        "jobTitle": "Operations Coordinator",
+        "employer": "Lakeshore Logistics",
+        "location": "Chicago, IL",
+        "startDate_display": "Jun 2017",
+        "endDate_display": "Feb 2019",
+        "startDate_iso": "2017-06",
+        "endDate_iso": "2019-02",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.S. in Supply Chain Management",
+        "institution": "University of Illinois",
+        "location": "Urbana-Champaign, IL",
+        "startDate": "2012",
+        "endDate": "2016",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Operations Management",
+      "Supply Chain",
+      "P&L Ownership",
+      "Team Leadership",
+      "Process Improvement",
+      "SAP"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Same employer (Lakeshore Logistics) across all three roles; continuous Jun 2017–present.",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [
+      "Three separate positions all under one employer.",
+      "One employer grouping with three title/date sub-entries."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "workExperience[].organization",
+      "workExperience[].jobTitle",
+      "workExperience[].startDate"
+    ],
+    "layout": "flow"
+  },
+  "D03": {
+    "test_id": "D03",
+    "filename": "D03.pdf",
+    "category": "D",
+    "difficulty": "complex-history",
+    "candidate_name": "Hana Takahashi",
+    "expected_contact": {
+      "emails": [
+        "hana.takahashi@examplemail.com"
+      ],
+      "phone": "+1 (408) 555-0138",
+      "location": "San Jose, CA",
+      "links": {
+        "Portfolio": "hanatakahashi.example.com"
+      }
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Senior UX Designer",
+        "employer": "Meadowlark Software",
+        "location": "San Jose, CA",
+        "startDate_display": "May 2020",
+        "endDate_display": "Present",
+        "startDate_iso": "2020-05",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Freelance Illustrator (Self-Employed)",
+        "employer": "Independent",
+        "location": "Remote",
+        "startDate_display": "Jan 2019",
+        "endDate_display": "Present",
+        "startDate_iso": "2019-01",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "UX Designer",
+        "employer": "Pinecrest Digital",
+        "location": "Santa Clara, CA",
+        "startDate_display": "Aug 2017",
+        "endDate_display": "Apr 2020",
+        "startDate_iso": "2017-08",
+        "endDate_iso": "2020-04",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.F.A. in Interaction Design",
+        "institution": "California College of the Arts",
+        "location": "San Francisco, CA",
+        "startDate": "2013",
+        "endDate": "2017",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "UX Design",
+      "Figma",
+      "Design Systems",
+      "Illustration",
+      "User Research",
+      "Prototyping"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Two simultaneously-current roles (one permanent, one self-employed freelance).",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [
+      "Two current positions with overlapping present end dates."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "workExperience",
+      "workExperience[].endDate"
+    ],
+    "layout": "flow"
+  },
+  "D04": {
+    "test_id": "D04",
+    "filename": "D04.pdf",
+    "category": "D",
+    "difficulty": "complex-history",
+    "candidate_name": "Oliver Grant",
+    "expected_contact": {
+      "emails": [
+        "oliver.grant@examplemail.com"
+      ],
+      "phone": "+44 20 7946 0320",
+      "location": "London, United Kingdom",
+      "links": {
+        "LinkedIn": "linkedin.com/in/olivergrant"
+      }
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer": "Thamesworks Cloud",
+        "location": "London, UK",
+        "startDate_display": "Oct 2021",
+        "endDate_display": "(none stated)",
+        "startDate_iso": "2021-10",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Systems Administrator",
+        "employer": "Borough Systems",
+        "location": "London, UK",
+        "startDate_display": "Feb 2018",
+        "endDate_display": "Sep 2021",
+        "startDate_iso": "2018-02",
+        "endDate_iso": "2021-09",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.Eng. in Software Engineering",
+        "institution": "University of Manchester",
+        "location": "Manchester, UK",
+        "startDate": "2013",
+        "endDate": "2017",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "CI/CD",
+      "Linux",
+      "Prometheus"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Current role shows start month only; no 'Present' label and no end date.",
+    "known_ambiguities": [
+      "Current role end date is absent (not the word 'Present')."
+    ],
+    "acceptable_interpretations": [
+      "endDate null / ongoing / current.",
+      "isCurrent = true."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "workExperience[0].endDate",
+      "workExperience[0].isCurrent"
+    ],
+    "layout": "flow"
+  },
+  "D05": {
+    "test_id": "D05",
+    "filename": "D05.pdf",
+    "category": "D",
+    "difficulty": "complex-history",
+    "candidate_name": "Natalia Kowalski",
+    "expected_contact": {
+      "emails": [
+        "natalia.kowalski@examplemail.com"
+      ],
+      "phone": "+48 22 555 0176",
+      "location": "Warsaw, Poland",
+      "links": {}
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Mechanical Engineer",
+        "employer": "Vistula Industrial",
+        "location": "Warsaw, Poland",
+        "startDate_display": "Q2 2021",
+        "endDate_display": "present",
+        "startDate_iso": "2021-04",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Design Engineer",
+        "employer": "Baltic Manufacturing",
+        "location": "Gdansk, Poland",
+        "startDate_display": "2018-03",
+        "endDate_display": "2021-03",
+        "startDate_iso": "2018-03",
+        "endDate_iso": "2021-03",
+        "isCurrent": false
+      },
+      {
+        "jobTitle": "Graduate Engineer",
+        "employer": "Carpathia Motors",
+        "location": "Krakow, Poland",
+        "startDate_display": "Sep '16",
+        "endDate_display": "Feb '18",
+        "startDate_iso": "2016-09",
+        "endDate_iso": "2018-02",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "M.Sc. in Mechanical Engineering",
+        "institution": "Warsaw University of Technology",
+        "location": "Warsaw, Poland",
+        "startDate": "2011",
+        "endDate": "2016",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "SolidWorks",
+      "FEA",
+      "GD&T",
+      "CAD",
+      "Tolerance Analysis",
+      "Manufacturing"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Three different valid date notations across three roles.",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [
+      "Q2 2021 interpreted as April 2021 (or anywhere Apr–Jun 2021).",
+      "Sep '16 interpreted as September 2016."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "workExperience[].startDate",
+      "workExperience[].endDate"
+    ],
+    "layout": "flow"
+  },
+  "E01": {
+    "test_id": "E01",
+    "filename": "E01.pdf",
+    "category": "E",
+    "difficulty": "layout-complex",
+    "candidate_name": "Ravi Subramanian",
+    "expected_contact": {
+      "emails": [
+        "ravi.subramanian@examplemail.com"
+      ],
+      "phone": "+1 (737) 555-0119",
+      "location": "Austin, TX",
+      "links": {
+        "LinkedIn": "linkedin.com/in/ravisubramanian",
+        "GitHub": "github.com/ravisub"
+      }
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Full-Stack Developer",
+        "employer": "Lonestar Apps",
+        "location": "Austin, TX",
+        "startDate_display": "Jul 2020",
+        "endDate_display": "Present",
+        "startDate_iso": "2020-07",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Web Developer",
+        "employer": "Hill Country Digital",
+        "location": "Austin, TX",
+        "startDate_display": "Jun 2018",
+        "endDate_display": "Jun 2020",
+        "startDate_iso": "2018-06",
+        "endDate_iso": "2020-06",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.S. in Computer Science",
+        "institution": "University of Texas at Austin",
+        "location": "Austin, TX",
+        "startDate": "2014",
+        "endDate": "2018",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "GraphQL",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Two-column layout: sidebar (contact/skills/education) + main (experience).",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [
+      "Sidebar and main-column content both extracted and attributed to the right sections."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "name",
+      "emails",
+      "skills",
+      "education",
+      "workExperience"
+    ],
+    "layout": "two-column"
+  },
+  "E02": {
+    "test_id": "E02",
+    "filename": "E02.pdf",
+    "category": "E",
+    "difficulty": "layout-complex",
+    "candidate_name": "Grace Bennett",
+    "expected_contact": {
+      "emails": [
+        "grace.bennett@examplemail.com"
+      ],
+      "phone": "+1 (614) 555-0145",
+      "location": "Columbus, OH",
+      "links": {}
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Senior Accountant",
+        "employer": "Buckeye Financial Group",
+        "location": "Columbus, OH",
+        "startDate_display": "Mar 2020",
+        "endDate_display": "Present",
+        "startDate_iso": "2020-03",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Staff Accountant",
+        "employer": "Scioto Advisors",
+        "location": "Columbus, OH",
+        "startDate_display": "Jul 2017",
+        "endDate_display": "Feb 2020",
+        "startDate_iso": "2017-07",
+        "endDate_iso": "2020-02",
+        "isCurrent": false
+      },
+      {
+        "jobTitle": "Junior Accountant",
+        "employer": "Olentangy Books",
+        "location": "Dublin, OH",
+        "startDate_display": "Aug 2015",
+        "endDate_display": "Jun 2017",
+        "startDate_iso": "2015-08",
+        "endDate_iso": "2017-06",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.S. in Accounting",
+        "institution": "Ohio State University",
+        "location": "Columbus, OH",
+        "startDate": "2011",
+        "endDate": "2015",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "GAAP",
+      "Month-End Close",
+      "QuickBooks",
+      "Excel",
+      "Audit",
+      "Reconciliation"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Employment history rendered as a bordered table, not paragraphs.",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [
+      "Each table row mapped to a separate work-experience entry."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "workExperience",
+      "workExperience[].jobTitle",
+      "workExperience[].organization"
+    ],
+    "layout": "table"
+  },
+  "E03": {
+    "test_id": "E03",
+    "filename": "E03.pdf",
+    "category": "E",
+    "difficulty": "layout-complex",
+    "candidate_name": "Jonas Weber",
+    "expected_contact": {
+      "emails": [
+        "jonas.weber@examplemail.com"
+      ],
+      "phone": "+49 30 555 0162",
+      "location": "Berlin, Germany",
+      "links": {}
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Civil Engineer",
+        "employer": "Spree Infrastructure GmbH",
+        "location": "Berlin, Germany",
+        "startDate_display": "Apr 2019",
+        "endDate_display": "Present",
+        "startDate_iso": "2019-04",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Structural Engineer",
+        "employer": "Rhein Bau AG",
+        "location": "Cologne, Germany",
+        "startDate_display": "Sep 2015",
+        "endDate_display": "Mar 2019",
+        "startDate_iso": "2015-09",
+        "endDate_iso": "2019-03",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "Dipl.-Ing. in Civil Engineering",
+        "institution": "Technical University of Berlin",
+        "location": "Berlin, Germany",
+        "startDate": "2009",
+        "endDate": "2015",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "AutoCAD",
+      "Structural Analysis",
+      "Eurocode",
+      "Project Supervision",
+      "Revit"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "No embedded text layer at all — the page is a single rasterised image.",
+    "known_ambiguities": [
+      "Extraction depends entirely on the parser's OCR; fields may be degraded."
+    ],
+    "acceptable_interpretations": [
+      "OCR-based extraction with minor character errors is acceptable.",
+      "If the parser has no OCR, near-empty extraction is the expected (documented) failure mode."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "rawText",
+      "name",
+      "workExperience"
+    ],
+    "layout": "scanned"
+  },
+  "E04": {
+    "test_id": "E04",
+    "filename": "E04.pdf",
+    "category": "E",
+    "difficulty": "layout-complex",
+    "candidate_name": "Amara Diallo",
+    "expected_contact": {
+      "emails": [
+        "amara.diallo@examplemail.com"
+      ],
+      "phone": "+1 (919) 555-0183",
+      "location": "Durham, NC",
+      "links": {
+        "LinkedIn": "linkedin.com/in/amaradiallo"
+      }
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Senior Research Scientist",
+        "employer": "Triangle Biosciences",
+        "location": "Durham, NC",
+        "startDate_display": "Jan 2020",
+        "endDate_display": "Present",
+        "startDate_iso": "2020-01",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Postdoctoral Fellow",
+        "employer": "Duke University",
+        "location": "Durham, NC",
+        "startDate_display": "Aug 2016",
+        "endDate_display": "Dec 2019",
+        "startDate_iso": "2016-08",
+        "endDate_iso": "2019-12",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "Ph.D. in Biochemistry",
+        "institution": "Duke University",
+        "location": "Durham, NC",
+        "startDate": "2011",
+        "endDate": "2016",
+        "note": "",
+        "isComplete": true
+      },
+      {
+        "degree": "B.S. in Chemistry",
+        "institution": "Spelman College",
+        "location": "Atlanta, GA",
+        "startDate": "2007",
+        "endDate": "2011",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Molecular Biology",
+      "Protein Purification",
+      "Mass Spectrometry",
+      "Python",
+      "R",
+      "Grant Writing",
+      "Scientific Writing"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Three pages; experience p1, publications p2, grants/references p3.",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [
+      "Content from all three pages represented; publications may land in a generic section."
+    ],
+    "expected_page_count": 3,
+    "fields_to_inspect": [
+      "workExperience",
+      "education",
+      "publications",
+      "rawText"
+    ],
+    "layout": "three-page"
+  },
+  "E05": {
+    "test_id": "E05",
+    "filename": "E05.pdf",
+    "category": "E",
+    "difficulty": "layout-complex",
+    "candidate_name": "Felix Andersson",
+    "expected_contact": {
+      "emails": [
+        "felix.andersson@examplemail.com"
+      ],
+      "phone": "+46 8 555 0190",
+      "location": "Stockholm, Sweden",
+      "links": {
+        "Portfolio": "felixandersson.example.com"
+      }
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Product Designer",
+        "employer": "Nordic Interfaces",
+        "location": "Stockholm, Sweden",
+        "startDate_display": "Mar 2021",
+        "endDate_display": "Present",
+        "startDate_iso": "2021-03",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "UX/UI Designer",
+        "employer": "Baltic Studio",
+        "location": "Malmo, Sweden",
+        "startDate_display": "Jun 2018",
+        "endDate_display": "Feb 2021",
+        "startDate_iso": "2018-06",
+        "endDate_iso": "2021-02",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "M.A. in Design",
+        "institution": "Konstfack University",
+        "location": "Stockholm, Sweden",
+        "startDate": "2014",
+        "endDate": "2018",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Product Design",
+      "Figma",
+      "Prototyping",
+      "Design Systems",
+      "Usability Testing",
+      "Interaction Design"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Visually clear layout where the identity block is positioned below the experience block.",
+    "known_ambiguities": [],
+    "acceptable_interpretations": [
+      "Name and contact extracted despite being placed lower on the page."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "name",
+      "emails",
+      "phoneNumbers",
+      "workExperience"
+    ],
+    "layout": "unusual-order"
+  },
+  "F01": {
+    "test_id": "F01",
+    "filename": "F01.pdf",
+    "category": "F",
+    "difficulty": "ambiguous",
+    "candidate_name": "Isabelle Moreau",
+    "expected_contact": {
+      "emails": [
+        "isabelle.moreau@examplemail.com"
+      ],
+      "phone": "+33 1 55 50 01 99",
+      "location": "Paris, France",
+      "links": {}
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "HR Business Partner",
+        "employer": "Seine Consulting Group",
+        "location": "Paris, France",
+        "startDate_display": "Jan 2019",
+        "endDate_display": "Present",
+        "startDate_iso": "2019-01",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "HR Generalist",
+        "employer": "Rive Gauche Media",
+        "location": "Paris, France",
+        "startDate_display": "Sep 2015",
+        "endDate_display": "Dec 2018",
+        "startDate_iso": "2015-09",
+        "endDate_iso": "2018-12",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "Master in Human Resources",
+        "institution": "Sorbonne University",
+        "location": "Paris, France",
+        "startDate": "2011",
+        "endDate": "2015",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Talent Management",
+      "Employee Relations",
+      "Workforce Planning",
+      "HRIS",
+      "Recruitment"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Same role has two different stated start dates (2019 vs 2020).",
+    "known_ambiguities": [
+      "HR Business Partner start date is stated as both Jan 2019 and 2020."
+    ],
+    "acceptable_interpretations": [
+      "Either 2019 or 2020 extracted, ideally with low confidence or a flagged conflict.",
+      "NOT acceptable: inventing a third date."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "workExperience[0].startDate"
+    ],
+    "layout": "flow"
+  },
+  "F02": {
+    "test_id": "F02",
+    "filename": "F02.pdf",
+    "category": "F",
+    "difficulty": "ambiguous",
+    "candidate_name": "Daniel Park",
+    "expected_contact": {
+      "emails": [
+        "daniel.park@examplemail.com",
+        "d.park.work@examplemail.com"
+      ],
+      "phone": "+1 (213) 555-0147",
+      "location": "Los Angeles, CA",
+      "links": {}
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Sales Manager",
+        "employer": "Pacific Crest Solutions",
+        "location": "Los Angeles, CA",
+        "startDate_display": "Feb 2020",
+        "endDate_display": "Present",
+        "startDate_iso": "2020-02",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Account Executive",
+        "employer": "Sunset Systems",
+        "location": "Los Angeles, CA",
+        "startDate_display": "Jun 2016",
+        "endDate_display": "Jan 2020",
+        "startDate_iso": "2016-06",
+        "endDate_iso": "2020-01",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.A. in Business Administration",
+        "institution": "UCLA",
+        "location": "Los Angeles, CA",
+        "startDate": "2012",
+        "endDate": "2016",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "B2B Sales",
+      "Account Management",
+      "Salesforce",
+      "Forecasting",
+      "Negotiation"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Two distinct, valid email addresses in the contact block.",
+    "known_ambiguities": [
+      "Which email is 'primary' is not stated."
+    ],
+    "acceptable_interpretations": [
+      "Both emails extracted.",
+      "Either email treated as primary is acceptable; dropping one is a miss."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "emails"
+    ],
+    "layout": "flow"
+  },
+  "F03": {
+    "test_id": "F03",
+    "filename": "F03.pdf",
+    "category": "F",
+    "difficulty": "ambiguous",
+    "candidate_name": "Lucia Romano",
+    "expected_contact": {
+      "emails": [
+        "lucia.romano@examplemail.com"
+      ],
+      "phone": "+39 06 555 0121",
+      "location": "Rome, Italy",
+      "links": {}
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Communications Lead (formerly Communications Manager)",
+        "employer": "Tiber Media House",
+        "location": "Rome, Italy",
+        "startDate_display": "Mar 2019",
+        "endDate_display": "Present",
+        "startDate_iso": "2019-03",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "PR Specialist",
+        "employer": "Forum Communications",
+        "location": "Rome, Italy",
+        "startDate_display": "Sep 2015",
+        "endDate_display": "Feb 2019",
+        "startDate_iso": "2015-09",
+        "endDate_iso": "2019-02",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.A. in Communication Studies",
+        "institution": "Sapienza University of Rome",
+        "location": "Rome, Italy",
+        "startDate": "2011",
+        "endDate": "2015",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Public Relations",
+      "Media Relations",
+      "Content Strategy",
+      "Crisis Communications"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "Two job titles ('Communications Manager' and 'Communications Lead') for one continuous Mar 2019–present tenure.",
+    "known_ambiguities": [
+      "Whether to record one position with a title change, or two sub-positions, is open."
+    ],
+    "acceptable_interpretations": [
+      "One continuous position, either title recorded.",
+      "Two sub-entries sharing the employer and adjacent dates."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "workExperience[0].jobTitle",
+      "workExperience[0].startDate"
+    ],
+    "layout": "flow"
+  },
+  "F04": {
+    "test_id": "F04",
+    "filename": "F04.pdf",
+    "category": "F",
+    "difficulty": "ambiguous",
+    "candidate_name": "Omar Haddad",
+    "expected_contact": {
+      "emails": [
+        "omar.haddad@examplemail.com"
+      ],
+      "phone": "+1 (647) 555-0115",
+      "location": "Toronto, Canada",
+      "links": {
+        "GitHub": "github.com/omarhaddad"
+      }
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Maple Grid Technologies",
+        "location": "Toronto, Canada",
+        "startDate_display": "May 2020",
+        "endDate_display": "Present",
+        "startDate_iso": "2020-05",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Junior Developer",
+        "employer": "Lakeview Software",
+        "location": "Toronto, Canada",
+        "startDate_display": "Aug 2018",
+        "endDate_display": "Apr 2020",
+        "startDate_iso": "2018-08",
+        "endDate_iso": "2020-04",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "B.A.Sc. in Computer Engineering",
+        "institution": "University of Toronto",
+        "location": "Toronto, Canada",
+        "startDate": "2014",
+        "endDate": "2018",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Rust",
+      "Kafka",
+      "Docker",
+      "Kubernetes",
+      "Python",
+      "PostgreSQL",
+      "React",
+      "TypeScript"
+    ],
+    "skills_source": "experience_bullets",
+    "intentional_complexity": "No skills section; skills appear only inside experience bullets.",
+    "known_ambiguities": [
+      "Whether the parser infers skills from prose is implementation-dependent."
+    ],
+    "acceptable_interpretations": [
+      "Skills list populated from inferred terms (Rust, Kafka, Docker, etc.).",
+      "Empty skills list is a documented miss, not a contradiction."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "skills",
+      "rawText"
+    ],
+    "layout": "flow"
+  },
+  "F05": {
+    "test_id": "F05",
+    "filename": "F05.pdf",
+    "category": "F",
+    "difficulty": "ambiguous",
+    "candidate_name": "Chloe Fitzgerald",
+    "expected_contact": {
+      "emails": [
+        "chloe.fitzgerald@examplemail.com"
+      ],
+      "phone": "+1 (773) 555-0158",
+      "location": "Chicago, IL",
+      "links": {}
+    },
+    "expected_employment": [
+      {
+        "jobTitle": "Senior Paralegal",
+        "employer": "Harbor & Vance LLP",
+        "location": "Chicago, IL",
+        "startDate_display": "Jan 2019",
+        "endDate_display": "Present",
+        "startDate_iso": "2019-01",
+        "endDate_iso": "present",
+        "isCurrent": true
+      },
+      {
+        "jobTitle": "Paralegal",
+        "employer": "Lakeside Legal",
+        "location": "Chicago, IL",
+        "startDate_display": "Jul 2016",
+        "endDate_display": "Dec 2018",
+        "startDate_iso": "2016-07",
+        "endDate_iso": "2018-12",
+        "isCurrent": false
+      }
+    ],
+    "expected_education": [
+      {
+        "degree": "J.D. (Juris Doctor) — INCOMPLETE, expected 2026",
+        "institution": "DePaul University College of Law",
+        "location": "Chicago, IL",
+        "startDate": "2023",
+        "endDate": "(none stated)",
+        "note": "Part-time; degree not yet conferred (in progress).",
+        "isComplete": false
+      },
+      {
+        "degree": "B.A. in Political Science",
+        "institution": "Loyola University Chicago",
+        "location": "Chicago, IL",
+        "startDate": "2012",
+        "endDate": "2016",
+        "note": "",
+        "isComplete": true
+      }
+    ],
+    "expected_skills": [
+      "Legal Research",
+      "E-Discovery",
+      "Litigation Support",
+      "Westlaw",
+      "Case Management"
+    ],
+    "skills_source": "skills_section",
+    "intentional_complexity": "J.D. explicitly marked incomplete/in-progress with no conferral date.",
+    "known_ambiguities": [
+      "Whether the J.D. is counted as an attained qualification is the point of the test."
+    ],
+    "acceptable_interpretations": [
+      "J.D. recorded as in-progress / incomplete / no end date.",
+      "NOT acceptable: J.D. recorded as a completed, conferred degree."
+    ],
+    "expected_page_count": 1,
+    "fields_to_inspect": [
+      "education",
+      "education[].isCurrent",
+      "education[].endDate"
+    ],
+    "layout": "flow"
+  }
+}

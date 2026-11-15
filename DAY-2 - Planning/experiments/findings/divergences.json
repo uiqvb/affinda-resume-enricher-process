@@ -1,0 +1,106 @@
+[
+  {
+    "issue": "Education",
+    "category": "incomplete / discontinued",
+    "headline": "Same 'did not finish' wording — the parser invents a graduation year for one and not the other",
+    "plain": "Both résumés say the degree was never completed. For one, Affinda stamped a conferral year onto it (so it reads as earned); for the other it left the date off. Neither carries an 'incomplete' status. Your layer labels both the same way, consistently.",
+    "rows": [
+      {
+        "line": "Master of Engineering, Northgate Institute, left before finishing (2019)",
+        "id": "E042",
+        "parser": "Master of Engineering · end date 2019",
+        "bad": true,
+        "reads": "looks conferred 2019",
+        "fix": "completionStatus: incomplete"
+      },
+      {
+        "line": "Diploma in Accounting, Summit State University — discontinued before completion",
+        "id": "E039",
+        "parser": "Diploma · no end date",
+        "bad": false,
+        "reads": "no status, no date",
+        "fix": "completionStatus: incomplete"
+      }
+    ]
+  },
+  {
+    "issue": "Skill",
+    "category": "exposure",
+    "headline": "Word-for-word the same claim — some skills are kept, some vanish",
+    "plain": "Every line here is 'exposure to X'. Python comes through (but with no strength marker, so it ranks like real expertise). Spark and Azure are dropped from the skills list altogether. The strength gap and a separate extraction blind-spot both show up in one category.",
+    "rows": [
+      {
+        "line": "Brief exposure to Python",
+        "id": "S037",
+        "parser": "extracted as skill: \"Python (Programming Language)\"",
+        "bad": false,
+        "reads": "ranks like an expert",
+        "fix": "claimStrength: weak_exposure"
+      },
+      {
+        "line": "Exposure to Spark",
+        "id": "S035",
+        "parser": "NOT extracted — skill dropped entirely",
+        "bad": true,
+        "reads": "disappears from the résumé",
+        "fix": "(can't label what was dropped)"
+      },
+      {
+        "line": "Exposure to Azure",
+        "id": "S041",
+        "parser": "NOT extracted — skill dropped entirely",
+        "bad": true,
+        "reads": "disappears from the résumé",
+        "fix": "(can't label what was dropped)"
+      }
+    ]
+  },
+  {
+    "issue": "Certification",
+    "category": "no status (name + date only)",
+    "headline": "One named credential is a total blind spot — 'Bar admission' is dropped in every category",
+    "plain": "A legal Bar admission is a real, licensable credential, but Affinda doesn't recognise the phrase and drops it completely — across expired, revoked, suspended, valid, every category we tried. A sibling cert in the same category (here PMP) is kept fine. This is a different failure from the validity gap: the whole entry is missing, not just its status.",
+    "rows": [
+      {
+        "line": "CPA — 2019",
+        "id": "C077",
+        "parser": "extracted: CPA",
+        "bad": false,
+        "reads": "on the record (status still absent)",
+        "fix": "validityStatus: unknown"
+      },
+      {
+        "line": "Bar admission",
+        "id": "C082",
+        "parser": "NOT extracted — certification dropped",
+        "bad": true,
+        "reads": "credential missing entirely",
+        "fix": "(nothing to enrich — flag: dropped credential)"
+      }
+    ]
+  },
+  {
+    "issue": "Certification",
+    "category": "active + expired (same cert, one résumé)",
+    "headline": "The same certificate appears twice — active and expired — and both come back looking valid",
+    "plain": "This résumé lists one cert as current and the same cert as expired (a renewal history). Affinda keeps both entries but there's no status on either, so they're indistinguishable. Your layer tags one active and one expired, so the renewal story is preserved.",
+    "rows": [
+      {
+        "line": "(same résumé) AWS Certified Solutions Architect  ·  date 2027",
+        "id": "entry 1",
+        "parser": "AWS Certified Solutions Architect · 2027",
+        "bad": true,
+        "reads": "both look like valid certs",
+        "fix": "validityStatus: active"
+      },
+      {
+        "line": "(same résumé) AWS Certified Solutions Architect  ·  date 2018",
+        "id": "entry 2",
+        "parser": "AWS Certified Solutions Architect · 2018",
+        "bad": true,
+        "reads": "both look like valid certs",
+        "fix": "validityStatus: expired"
+      }
+    ]
+  }
+]

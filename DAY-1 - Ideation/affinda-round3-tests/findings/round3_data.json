@@ -1,0 +1,623 @@
+{
+  "tally": {
+    "correct": 22,
+    "confirmed": 5,
+    "ambiguous": 12,
+    "unsupported": 8,
+    "miss": 1
+  },
+  "by_category": {
+    "negated_skills": {
+      "correct": 1,
+      "confirmed": 5,
+      "ambiguous": 2
+    },
+    "work_authorisation": {
+      "correct": 7,
+      "unsupported": 1
+    },
+    "skill_ownership": {
+      "correct": 2,
+      "ambiguous": 6
+    },
+    "experience_duration": {
+      "correct": 8
+    },
+    "certification_status": {
+      "correct": 1,
+      "ambiguous": 3,
+      "unsupported": 3,
+      "miss": 1
+    },
+    "employment_type": {
+      "correct": 3,
+      "unsupported": 4,
+      "ambiguous": 1
+    }
+  },
+  "per_test": {
+    "R301": {
+      "verdict": "correct",
+      "skills_checked": [
+        {
+          "skill": "Python",
+          "should_be_present": true,
+          "extracted_as_skill": true,
+          "result": "correct"
+        },
+        {
+          "skill": "SQL",
+          "should_be_present": true,
+          "extracted_as_skill": true,
+          "result": "correct"
+        },
+        {
+          "skill": "Docker",
+          "should_be_present": true,
+          "extracted_as_skill": true,
+          "result": "correct"
+        }
+      ],
+      "existing_field": "skills",
+      "category": "negated_skills",
+      "controlled": "positive control: plain skills list"
+    },
+    "R302": {
+      "verdict": "confirmed",
+      "skills_checked": [
+        {
+          "skill": "Java",
+          "should_be_absent": true,
+          "extracted_as_skill": true,
+          "result": "confirmed_failure"
+        },
+        {
+          "skill": "Python",
+          "should_be_present": true,
+          "extracted_as_skill": true,
+          "result": "correct"
+        }
+      ],
+      "existing_field": "skills",
+      "category": "negated_skills",
+      "controlled": "negative control: denied skill in prose"
+    },
+    "R303": {
+      "verdict": "confirmed",
+      "skills_checked": [
+        {
+          "skill": "C++",
+          "should_be_absent": true,
+          "extracted_as_skill": true,
+          "result": "confirmed_failure"
+        },
+        {
+          "skill": "Go",
+          "should_be_present": true,
+          "extracted_as_skill": true,
+          "result": "correct"
+        }
+      ],
+      "existing_field": "skills",
+      "category": "negated_skills",
+      "controlled": "negated proficiency"
+    },
+    "R304": {
+      "verdict": "ambiguous",
+      "skills_checked": [],
+      "existing_field": "skills",
+      "category": "negated_skills",
+      "controlled": "AMBIGUOUS partial exposure"
+    },
+    "R305": {
+      "verdict": "confirmed",
+      "skills_checked": [
+        {
+          "skill": "R",
+          "should_be_absent": true,
+          "extracted_as_skill": true,
+          "result": "confirmed_failure"
+        },
+        {
+          "skill": "Python",
+          "should_be_present": true,
+          "extracted_as_skill": true,
+          "result": "correct"
+        }
+      ],
+      "existing_field": "skills",
+      "category": "negated_skills",
+      "controlled": "paired: expert + denied in one line"
+    },
+    "R306": {
+      "verdict": "confirmed",
+      "skills_checked": [
+        {
+          "skill": "Azure",
+          "should_be_absent": true,
+          "extracted_as_skill": true,
+          "result": "confirmed_failure"
+        },
+        {
+          "skill": "AWS",
+          "should_be_present": true,
+          "extracted_as_skill": true,
+          "result": "correct"
+        }
+      ],
+      "existing_field": "skills",
+      "category": "negated_skills",
+      "controlled": "contrastive 'but not'"
+    },
+    "R307": {
+      "verdict": "ambiguous",
+      "skills_checked": [],
+      "existing_field": "skills",
+      "category": "negated_skills",
+      "controlled": "AMBIGUOUS past/discontinued use"
+    },
+    "R308": {
+      "verdict": "confirmed",
+      "skills_checked": [
+        {
+          "skill": "Tableau",
+          "should_be_absent": true,
+          "extracted_as_skill": true,
+          "result": "confirmed_failure"
+        },
+        {
+          "skill": "Python",
+          "should_be_present": true,
+          "extracted_as_skill": true,
+          "result": "correct"
+        },
+        {
+          "skill": "SQL",
+          "should_be_present": true,
+          "extracted_as_skill": true,
+          "result": "correct"
+        }
+      ],
+      "existing_field": "skills",
+      "category": "negated_skills",
+      "controlled": "negation inside the skills list"
+    },
+    "R309": {
+      "verdict": "correct",
+      "existing_field": "workAuthorization",
+      "detail": "work auth captured in field 'workAuthorization'",
+      "category": "work_authorisation",
+      "controlled": "citizen"
+    },
+    "R310": {
+      "verdict": "correct",
+      "existing_field": "workAuthorization",
+      "detail": "work auth captured in field 'workAuthorization'",
+      "category": "work_authorisation",
+      "controlled": "permanent resident"
+    },
+    "R311": {
+      "verdict": "correct",
+      "existing_field": "workAuthorization",
+      "detail": "work auth captured in field 'workAuthorization'",
+      "category": "work_authorisation",
+      "controlled": "needs sponsorship"
+    },
+    "R312": {
+      "verdict": "correct",
+      "existing_field": "workAuthorization",
+      "detail": "work auth captured in field 'workAuthorization'",
+      "category": "work_authorisation",
+      "controlled": "authorised, no sponsorship"
+    },
+    "R313": {
+      "verdict": "correct",
+      "existing_field": "workAuthorization",
+      "detail": "work auth captured in field 'workAuthorization'",
+      "category": "work_authorisation",
+      "controlled": "visa with expiry"
+    },
+    "R314": {
+      "verdict": "correct",
+      "existing_field": "workAuthorization",
+      "detail": "work auth captured in field 'workAuthorization'",
+      "category": "work_authorisation",
+      "controlled": "expired authorisation"
+    },
+    "R315": {
+      "verdict": "correct",
+      "existing_field": null,
+      "detail": "no statement in source; none invented (unknown control)",
+      "category": "work_authorisation",
+      "controlled": "unknown (no statement)"
+    },
+    "R316": {
+      "verdict": "unsupported",
+      "existing_field": null,
+      "detail": "no work-authorisation field in response; statement present in rawText only",
+      "category": "work_authorisation",
+      "controlled": "AMBIGUOUS non-statement"
+    },
+    "R317": {
+      "verdict": "correct",
+      "skill": "Spark",
+      "attributed": true,
+      "has_sources": true,
+      "detail": "personal skill attributed",
+      "category": "skill_ownership",
+      "controlled": "personal (positive control)"
+    },
+    "R318": {
+      "verdict": "ambiguous",
+      "skill": "Python",
+      "attributed_to_candidate": true,
+      "has_sources": true,
+      "detail": "managed/ambiguous skill attributed to candidate (over-attribution); ownership not modelled — records observation, not a hard failure",
+      "category": "skill_ownership",
+      "controlled": "managed others (negative)"
+    },
+    "R319": {
+      "verdict": "ambiguous",
+      "skill": "TensorFlow",
+      "attributed_to_candidate": true,
+      "has_sources": true,
+      "detail": "managed/ambiguous skill attributed to candidate (over-attribution); ownership not modelled — records observation, not a hard failure",
+      "category": "skill_ownership",
+      "controlled": "led team using tool"
+    },
+    "R320": {
+      "verdict": "ambiguous",
+      "skill": "Kubernetes",
+      "attributed_to_candidate": true,
+      "has_sources": true,
+      "detail": "managed/ambiguous skill attributed to candidate (over-attribution); ownership not modelled — records observation, not a hard failure",
+      "category": "skill_ownership",
+      "controlled": "oversaw work by others"
+    },
+    "R321": {
+      "verdict": "correct",
+      "skill": "Go",
+      "attributed": true,
+      "has_sources": true,
+      "detail": "personal skill attributed",
+      "category": "skill_ownership",
+      "controlled": "paired personal"
+    },
+    "R322": {
+      "verdict": "ambiguous",
+      "skill": "Go",
+      "attributed_to_candidate": true,
+      "has_sources": true,
+      "detail": "managed/ambiguous skill attributed to candidate (over-attribution); ownership not modelled — records observation, not a hard failure",
+      "category": "skill_ownership",
+      "controlled": "paired managed"
+    },
+    "R323": {
+      "verdict": "ambiguous",
+      "skill": "Java",
+      "attributed_to_candidate": true,
+      "has_sources": true,
+      "detail": "managed/ambiguous skill attributed to candidate (over-attribution); ownership not modelled — records observation, not a hard failure",
+      "category": "skill_ownership",
+      "controlled": "AMBIGUOUS responsibility"
+    },
+    "R324": {
+      "verdict": "ambiguous",
+      "skill": "Go",
+      "attributed_to_candidate": true,
+      "has_sources": true,
+      "detail": "managed/ambiguous skill attributed to candidate (over-attribution); ownership not modelled — records observation, not a hard failure",
+      "category": "skill_ownership",
+      "controlled": "mixed in one role"
+    },
+    "R325": {
+      "verdict": "correct",
+      "employmentMetrics_present": true,
+      "employmentMetrics": {
+        "averageTenureMonths": 71.5,
+        "currentRoleTenureMonths": 95,
+        "gaps": [],
+        "longestTenureMonths": 95,
+        "totalExperienceMonths": 131
+      },
+      "employmentTypes": [
+        "full_time",
+        "full_time"
+      ],
+      "durationsMonths": [
+        95,
+        48
+      ],
+      "detail": "aggregate/metrics field present; inspect for double-count / part-time / claim-vs-dates",
+      "category": "experience_duration",
+      "controlled": "explicit claim vs computable dates"
+    },
+    "R326": {
+      "verdict": "correct",
+      "employmentMetrics_present": true,
+      "employmentMetrics": {
+        "averageTenureMonths": 83,
+        "currentRoleTenureMonths": 83,
+        "gaps": [],
+        "longestTenureMonths": 83,
+        "totalExperienceMonths": 83
+      },
+      "employmentTypes": [
+        "full_time"
+      ],
+      "durationsMonths": [
+        83
+      ],
+      "detail": "aggregate/metrics field present; inspect for double-count / part-time / claim-vs-dates",
+      "category": "experience_duration",
+      "controlled": "part-time hours"
+    },
+    "R327": {
+      "verdict": "correct",
+      "employmentMetrics_present": true,
+      "employmentMetrics": {
+        "averageTenureMonths": 83,
+        "currentRoleTenureMonths": 83,
+        "gaps": [],
+        "longestTenureMonths": 83,
+        "totalExperienceMonths": 83
+      },
+      "employmentTypes": [
+        "full_time",
+        "full_time"
+      ],
+      "durationsMonths": [
+        83,
+        83
+      ],
+      "detail": "aggregate/metrics field present; inspect for double-count / part-time / claim-vs-dates",
+      "category": "experience_duration",
+      "controlled": "overlapping roles (double-count risk)"
+    },
+    "R328": {
+      "verdict": "correct",
+      "employmentMetrics_present": true,
+      "employmentMetrics": {
+        "averageTenureMonths": 77.5,
+        "currentRoleTenureMonths": 95,
+        "gaps": [
+          {
+            "durationMonths": 12,
+            "end": {
+              "date": "2018-12-01",
+              "precision": "month"
+            },
+            "start": {
+              "date": "2018-01-01",
+              "precision": "month"
+            }
+          }
+        ],
+        "longestTenureMonths": 95,
+        "totalExperienceMonths": 155
+      },
+      "employmentTypes": [
+        "full_time",
+        "full_time"
+      ],
+      "durationsMonths": [
+        95,
+        60
+      ],
+      "detail": "aggregate/metrics field present; inspect for double-count / part-time / claim-vs-dates",
+      "category": "experience_duration",
+      "controlled": "career gap"
+    },
+    "R329": {
+      "verdict": "correct",
+      "employmentMetrics_present": true,
+      "employmentMetrics": {
+        "gaps": []
+      },
+      "employmentTypes": [
+        "full_time"
+      ],
+      "durationsMonths": [
+        null
+      ],
+      "detail": "aggregate/metrics field present; inspect for double-count / part-time / claim-vs-dates",
+      "category": "experience_duration",
+      "controlled": "approximate duration"
+    },
+    "R330": {
+      "verdict": "correct",
+      "employmentMetrics_present": true,
+      "employmentMetrics": {
+        "averageTenureMonths": 48,
+        "gaps": [],
+        "longestTenureMonths": 48,
+        "totalExperienceMonths": 48
+      },
+      "employmentTypes": [
+        "full_time"
+      ],
+      "durationsMonths": [
+        48
+      ],
+      "detail": "aggregate/metrics field present; inspect for double-count / part-time / claim-vs-dates",
+      "category": "experience_duration",
+      "controlled": "explicit claim contradicts dates"
+    },
+    "R331": {
+      "verdict": "correct",
+      "employmentMetrics_present": true,
+      "employmentMetrics": {
+        "averageTenureMonths": 48,
+        "gaps": [],
+        "longestTenureMonths": 48,
+        "totalExperienceMonths": 48
+      },
+      "employmentTypes": [
+        "full_time"
+      ],
+      "durationsMonths": [
+        48
+      ],
+      "detail": "aggregate/metrics field present; inspect for double-count / part-time / claim-vs-dates",
+      "category": "experience_duration",
+      "controlled": "seasonal/intermittent"
+    },
+    "R332": {
+      "verdict": "correct",
+      "employmentMetrics_present": true,
+      "employmentMetrics": {
+        "averageTenureMonths": 48,
+        "gaps": [],
+        "longestTenureMonths": 48,
+        "totalExperienceMonths": 48
+      },
+      "employmentTypes": [
+        "full_time"
+      ],
+      "durationsMonths": [
+        48
+      ],
+      "detail": "aggregate/metrics field present; inspect for double-count / part-time / claim-vs-dates",
+      "category": "experience_duration",
+      "controlled": "paired full-time vs part-time (same dates)"
+    },
+    "R333": {
+      "verdict": "correct",
+      "certifications_field_present": true,
+      "captured": {
+        "date": {
+          "date": "2026-01-01",
+          "precision": "year"
+        },
+        "name": "AWS Certified Solutions Architect"
+      },
+      "detail": "active cert captured",
+      "category": "certification_status",
+      "controlled": "active (positive control)"
+    },
+    "R334": {
+      "verdict": "ambiguous",
+      "certifications_field_present": true,
+      "captured": null,
+      "detail": "certification not matched but no status/expiry field — 'expired' recoverable only from text",
+      "category": "certification_status",
+      "controlled": "expired"
+    },
+    "R335": {
+      "verdict": "ambiguous",
+      "certifications_field_present": true,
+      "captured": null,
+      "detail": "certification not matched but no status/expiry field — 'pending' recoverable only from text",
+      "category": "certification_status",
+      "controlled": "pending"
+    },
+    "R336": {
+      "verdict": "ambiguous",
+      "certifications_field_present": false,
+      "captured": null,
+      "detail": "certification not matched but no status/expiry field — 'failed' recoverable only from text",
+      "category": "certification_status",
+      "controlled": "failed"
+    },
+    "R337": {
+      "verdict": "unsupported",
+      "certifications_field_present": true,
+      "captured": {
+        "name": "State license"
+      },
+      "detail": "certification captured but no status/expiry field — 'revoked' recoverable only from text",
+      "category": "certification_status",
+      "controlled": "revoked"
+    },
+    "R338": {
+      "verdict": "unsupported",
+      "certifications_field_present": true,
+      "captured": {
+        "name": "AWS training completed"
+      },
+      "detail": "certification captured but no status/expiry field — 'training_only' recoverable only from text",
+      "category": "certification_status",
+      "controlled": "training only"
+    },
+    "R339": {
+      "verdict": "unsupported",
+      "certifications_field_present": true,
+      "captured": {
+        "name": "Security+ coursework completed"
+      },
+      "detail": "certification captured but no status/expiry field — 'not_awarded' recoverable only from text",
+      "category": "certification_status",
+      "controlled": "coursework, not awarded"
+    },
+    "R340": {
+      "verdict": "miss",
+      "certifications_field_present": true,
+      "captured": null,
+      "detail": "active cert missing",
+      "category": "certification_status",
+      "controlled": "paired active vs expired (same cert)"
+    },
+    "R341": {
+      "verdict": "correct",
+      "employmentType": "full_time",
+      "detail": "permanent control; employmentType=full_time",
+      "category": "employment_type",
+      "controlled": "permanent (control)"
+    },
+    "R342": {
+      "verdict": "unsupported",
+      "employmentType": "part_time",
+      "expected": "contract",
+      "detail": "employmentType='part_time'; expected to reflect 'contract' (not distinguished — may be full_time/generic)",
+      "category": "employment_type",
+      "controlled": "contract"
+    },
+    "R343": {
+      "verdict": "correct",
+      "employmentType": "internship",
+      "expected": "internship",
+      "detail": "employmentType='internship'; expected to reflect 'internship' (matched)",
+      "category": "employment_type",
+      "controlled": "internship"
+    },
+    "R344": {
+      "verdict": "unsupported",
+      "employmentType": "internship",
+      "expected": "volunteer",
+      "detail": "employmentType='internship'; expected to reflect 'volunteer' (not distinguished — may be full_time/generic)",
+      "category": "employment_type",
+      "controlled": "volunteer (unpaid)"
+    },
+    "R345": {
+      "verdict": "unsupported",
+      "employmentType": "self_employed",
+      "expected": "freelance",
+      "detail": "employmentType='self_employed'; expected to reflect 'freelance' (not distinguished — may be full_time/generic)",
+      "category": "employment_type",
+      "controlled": "freelance"
+    },
+    "R346": {
+      "verdict": "unsupported",
+      "employmentType": "part_time",
+      "expected": "temporary",
+      "detail": "employmentType='part_time'; expected to reflect 'temporary' (not distinguished — may be full_time/generic)",
+      "category": "employment_type",
+      "controlled": "temporary/seasonal"
+    },
+    "R347": {
+      "verdict": "ambiguous",
+      "employmentType": "full_time",
+      "detail": "ambiguous label; employmentType=full_time",
+      "category": "employment_type",
+      "controlled": "AMBIGUOUS 'Consultant'"
+    },
+    "R348": {
+      "verdict": "correct",
+      "employmentType": "internship",
+      "expected": "internship",
+      "detail": "employmentType='internship'; expected to reflect 'internship' (matched)",
+      "category": "employment_type",
+      "controlled": "paired: SAME role as internship vs permanent"
+    }
+  }
+}

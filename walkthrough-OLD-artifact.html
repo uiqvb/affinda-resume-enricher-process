@@ -1,0 +1,733 @@
+<title>ResumeGuard Walkthrough</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+/* Layout concept: a "pipeline debugger" — narrative on the left, the real code + a live
+   data inspector on the right, stepped through one stage at a time. */
+:root{
+  --bg:#f5f6f9; --surface:#ffffff; --surface-2:#eef1f6; --code-bg:#f8f9fc;
+  --ink:#192231; --muted:#5b6678; --faint:#8a94a6; --line:#e3e7ee;
+  --accent:#4a63e7; --accent-tint:rgba(74,99,231,.12);
+  --warn:#c9781f; --warn-tint:rgba(201,120,31,.14);
+  --good:#1f9b63; --good-tint:rgba(31,155,99,.13);
+  --hl:rgba(74,99,231,.13); --hl-bar:#4a63e7;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:'Inter',system-ui,sans-serif; --disp:'Space Grotesk',var(--sans);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1118; --surface:#161b25; --surface-2:#1c2330; --code-bg:#12161f;
+  --ink:#e7ebf3; --muted:#97a2b6; --faint:#6d7892; --line:#263040;
+  --accent:#8097ff; --accent-tint:rgba(128,151,255,.15);
+  --warn:#e2a564; --warn-tint:rgba(226,165,100,.15);
+  --good:#58cf97; --good-tint:rgba(88,207,151,.15);
+  --hl:rgba(128,151,255,.15); --hl-bar:#8097ff; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0e1118; --surface:#161b25; --surface-2:#1c2330; --code-bg:#12161f;
+  --ink:#e7ebf3; --muted:#97a2b6; --faint:#6d7892; --line:#263040;
+  --accent:#8097ff; --accent-tint:rgba(128,151,255,.15);
+  --warn:#e2a564; --warn-tint:rgba(226,165,100,.15);
+  --good:#58cf97; --good-tint:rgba(88,207,151,.15);
+  --hl:rgba(128,151,255,.15); --hl-bar:#8097ff; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;
+  margin:0;-webkit-font-smoothing:antialiased}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));max-width:1180px;margin:0 auto}
+
+/* ---------- header ---------- */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);
+  border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);
+  background:var(--surface);z-index:21}
+.head-in{padding-block:12px 0}
+.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.brand h1{font-family:var(--disp);font-size:16px;font-weight:700;margin:0;letter-spacing:-.01em}
+.brand .sub{font-size:12.5px;color:var(--muted)}
+.rail{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 0}
+.chip{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.02em;
+  padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--faint);
+  background:transparent;cursor:pointer;transition:.15s;white-space:nowrap}
+.chip:hover{color:var(--ink);border-color:var(--muted)}
+.chip.done{color:var(--muted);border-color:var(--line)}
+.chip.active{color:#fff;background:var(--accent);border-color:var(--accent)}
+:root[data-theme="dark"] .chip.active,
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip.active{color:#0e1118}}
+.progress{height:3px;background:var(--surface-2);margin-top:10px;border-radius:2px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s ease}
+
+/* ---------- main ---------- */
+main{padding-block:22px 120px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:22px;align-items:start}
+@media(max-width:860px){.grid{grid-template-columns:1fr;gap:16px}}
+
+.step-no{font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:700;
+  letter-spacing:.04em}
+.step-title{font-family:var(--disp);font-size:23px;font-weight:700;margin:4px 0 14px;
+  line-height:1.2;text-wrap:balance;letter-spacing:-.015em}
+.prose{font-size:15px;color:var(--ink)}
+.prose p{margin:0 0 12px}
+.prose b{font-weight:600}
+.prose .q{color:var(--muted)}
+.prose .big{font-size:15.5px}
+.key{background:var(--accent-tint);color:var(--accent);font-family:var(--mono);font-size:.86em;
+  padding:1px 5px;border-radius:5px;font-weight:500;white-space:nowrap}
+
+/* inspector */
+.insp{margin-top:16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;
+  padding:14px 15px}
+.insp-h{font-family:var(--mono);font-size:10px;letter-spacing:.11em;color:var(--faint);
+  text-transform:uppercase;margin:0 0 11px;display:flex;align-items:center;gap:7px}
+.insp-h::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.insp p{margin:0 0 9px;font-size:13.5px}
+.insp p:last-child{margin-bottom:0}
+.tag{display:inline-block;font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:6px;
+  border:1px solid var(--line);background:var(--surface-2);margin:2px 4px 2px 0}
+.tag.e{border-color:var(--accent);color:var(--accent);background:var(--accent-tint)}
+.textblock{font-family:var(--mono);font-size:12.5px;line-height:1.75;background:var(--code-bg);
+  border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--muted);
+  word-break:break-word}
+.textblock mark{background:var(--accent-tint);color:var(--ink);padding:1px 3px;border-radius:4px;
+  font-weight:600}
+.textblock mark.w{background:var(--warn-tint)}
+.arrow{color:var(--faint);text-align:center;font-size:15px;margin:7px 0;font-family:var(--mono)}
+.pieces{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 2px}
+.piece{font-family:var(--mono);font-size:12px;padding:7px 9px;border-radius:8px;border:1px solid var(--line);
+  background:var(--surface-2);color:var(--muted);position:relative}
+.piece.kept{border-color:var(--accent);background:var(--accent-tint);color:var(--ink);font-weight:500}
+.piece.walled{opacity:.5}
+.piece small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.06em;
+  text-transform:uppercase;margin-top:3px;color:var(--faint)}
+.piece.kept small{color:var(--accent)}
+.badge{display:inline-flex;align-items:center;font-family:var(--mono);font-size:11px;font-weight:600;
+  padding:2px 8px;border-radius:999px;letter-spacing:.02em}
+.badge.warn{background:var(--warn-tint);color:var(--warn)}
+.badge.info{background:var(--good-tint);color:var(--good)}
+.json{font-family:var(--mono);font-size:12.5px;line-height:1.8;background:var(--code-bg);
+  border:1px solid var(--line);border-radius:8px;padding:11px 13px;overflow-x:auto}
+.json .k{color:var(--faint)}
+.json .s{color:var(--good)}
+.json .n{color:var(--accent)}
+.json .warnv{color:var(--warn);font-weight:600}
+.resgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+@media(max-width:520px){.resgrid{grid-template-columns:1fr}}
+.rescard{border:1px solid var(--line);border-radius:9px;padding:9px 10px;background:var(--surface-2)}
+.rescard .nm{font-family:var(--mono);font-size:12.5px;font-weight:700;margin-bottom:5px}
+.rescard .st{font-family:var(--mono);font-size:11.5px;margin-bottom:6px}
+.rescard.warn{border-left:3px solid var(--warn)}
+.rescard.info{border-left:3px solid var(--good)}
+.note{font-size:12.5px;color:var(--muted);border-left:2px solid var(--line);padding-left:11px;
+  margin-top:12px}
+.note b{color:var(--ink)}
+
+/* code panel */
+.codepane{background:var(--code-bg);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  position:sticky;top:132px}
+@media(max-width:860px){.codepane{position:static}}
+.codetab{display:flex;align-items:center;gap:8px;padding:9px 13px;border-bottom:1px solid var(--line);
+  background:var(--surface)}
+.codetab .dot{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.codetab .fname{font-family:var(--mono);font-size:12px;color:var(--muted);font-weight:500}
+.codetab .fname b{color:var(--ink);font-weight:700}
+.code{margin:0;overflow-x:auto;padding:12px 0;max-height:min(62vh,560px);overflow-y:auto}
+.cline{display:grid;grid-template-columns:34px 1fr;font-family:var(--mono);font-size:12.5px;
+  line-height:1.62;white-space:pre}
+.cline .ln{color:var(--faint);opacity:.55;text-align:right;padding-right:12px;user-select:none;
+  font-size:11px}
+.cline .tx{padding-right:14px;color:var(--ink)}
+.cline.hl{background:var(--hl);box-shadow:inset 3px 0 0 var(--hl-bar)}
+.cline.hl .ln{opacity:.9;color:var(--accent)}
+.codecap{font-size:12px;color:var(--muted);padding:9px 13px;border-top:1px solid var(--line);
+  background:var(--surface);font-style:italic}
+
+/* footer nav */
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);
+  border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+.nav-in{display:flex;align-items:center;gap:12px;padding-block:11px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  max-width:1180px;margin:0 auto}
+.btn{font-family:var(--sans);font-size:14px;font-weight:600;padding:9px 18px;border-radius:9px;
+  border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;transition:.15s}
+.btn:hover:not(:disabled){border-color:var(--muted)}
+.btn:disabled{opacity:.4;cursor:default}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.primary{color:#0e1118}}
+:root[data-theme="dark"] .btn.primary{color:#0e1118}
+.navmid{flex:1;text-align:center;min-width:0}
+.navmid .s{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.03em}
+.navmid .t{font-size:13px;color:var(--muted);font-weight:500;overflow:hidden;text-overflow:ellipsis;
+  white-space:nowrap}
+.kbd{font-family:var(--mono);font-size:10px;border:1px solid var(--line);border-radius:4px;
+  padding:1px 4px;color:var(--faint)}
+@media(max-width:600px){.navmid .t{display:none}.navkbd{display:none}}
+</style>
+
+<header>
+  <div class="wrap head-in">
+    <div class="brand">
+      <h1>ResumeGuard</h1>
+      <span class="sub">how the enricher runs — one skill, start to finish</span>
+    </div>
+    <div class="rail" id="rail"></div>
+    <div class="progress"><i id="bar"></i></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="grid">
+    <section>
+      <div class="step-no" id="stepno"></div>
+      <h2 class="step-title" id="title"></h2>
+      <div class="prose" id="prose"></div>
+      <div id="inspwrap"></div>
+    </section>
+    <aside>
+      <div class="codepane">
+        <div class="codetab"><span class="dot"></span><span class="fname" id="fname"></span></div>
+        <div class="code" id="code"></div>
+        <div class="codecap" id="codecap" hidden></div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<nav class="nav">
+  <div class="nav-in">
+    <button class="btn" id="prev">&larr; Back</button>
+    <div class="navmid">
+      <div class="s" id="counter"></div>
+      <div class="t" id="stagelbl"></div>
+    </div>
+    <span class="navkbd" style="color:var(--faint);font-size:11px">use <span class="kbd">&larr;</span> <span class="kbd">&rarr;</span></span>
+    <button class="btn primary" id="next">Next &rarr;</button>
+  </div>
+</nav>
+
+<!-- ======================= STEP DATA ======================= -->
+<!-- Each step: data-stage / data-file / data-hl (highlighted line numbers) / data-title.
+     Code lives in <script type="text/plain"> so backslashes + regex stay literal. -->
+<div id="store" hidden>
+
+<template class="step" data-stage="Input" data-file="main.py" data-hl="2,3,4,5,20,21,22" data-title="The job, in one picture">
+  <div class="prose">
+    <p class="big">Affinda already read this résumé and pulled out the facts. Our tool takes that output and adds one thing it's missing: <b>what each fact really means.</b></p>
+    <p>We'll follow a single skill — <span class="key">SQL</span> — through every file. The résumé says <i>"no experience with SQL, expert in Python, learning Excel."</i> A naïve tool would just tag SQL as a skill this person <b>has</b>. Watch how we catch that they actually <b>denied</b> it.</p>
+    <p class="q">On the right is the input: Affinda's three lists (skills / education / certifications) plus the raw résumé text where the real story is hidden.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">The input résumé</div>
+    <p><span class="tag e">SQL</span><span class="tag e">Python</span><span class="tag e">Excel</span> &nbsp;← skills Affinda found</p>
+    <div class="textblock">"Skills: <mark>no experience with SQL</mark>, expert in Python, learning Excel. Education: BSc Computer Science (withdrew 2016). Certifications: AWS Certified Solutions Architect (expired 2021)."</div>
+    <p class="q" style="margin-top:9px">Affinda kept the words in its raw text — but none of its tidy lists say SQL was denied. That gap is our whole job.</p>
+  </div>
+  <script type="text/plain" class="code">SAMPLE = {
+    "data": {
+        "skills": [
+            {"name": "SQL"},
+            {"name": "Python"},
+            {"name": "Excel"},
+        ],
+        "education": [
+            {"qualification": "BSc Computer Science"},
+        ],
+        "certifications": [
+            {"name": "AWS Certified Solutions Architect"},
+        ],
+        "rawText": (
+            "Skills: no experience with SQL, expert in Python, "
+            "learning Excel. Education: BSc Computer Science "
+            "(withdrew 2016). Certifications: AWS Certified "
+            "Solutions Architect (expired 2021)."
+        ),
+    }
+}</script>
+</template>
+
+<template class="step" data-stage="Input" data-file="app/enrich.py" data-hl="4,5,10,11,12,13" data-title="Meet the manager">
+  <div class="prose">
+    <p>Everything runs through one function: <span class="key">enrich()</span>. Think of it as a manager that does six things in order and never does the detailed work itself — it hands that to helpers.</p>
+    <p>Here's the whole thing. The six numbered comments are the six stages we're about to walk through, one per step:</p>
+    <p class="q">1. check the input &nbsp;·&nbsp; 2. make a safe copy &nbsp;·&nbsp; 3. run each check &nbsp;·&nbsp; 4. write the summary &nbsp;·&nbsp; 5. prove we changed nothing &nbsp;·&nbsp; 6. hand back the result.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">The manager's to-do list</div>
+    <p><span class="badge info" style="margin-right:6px">1</span> validate — is the input broken?</p>
+    <p><span class="badge info" style="margin-right:6px">2</span> deep-copy — work on a photocopy</p>
+    <p><span class="badge info" style="margin-right:6px">3</span> loop the checks — skill, education, cert</p>
+    <p><span class="badge info" style="margin-right:6px">4</span> build summary — the warnings in plain English</p>
+    <p><span class="badge info" style="margin-right:6px">5</span> audit — confirm the original is untouched</p>
+    <p><span class="badge info" style="margin-right:6px">6</span> return — original + our enrichment</p>
+  </div>
+  <script type="text/plain" class="code">def enrich(affinda, modules=None):
+    names = list(modules) if modules else list(REGISTRY.keys())
+
+    validate_input(affinda)                 # 1. not broken?
+    original = deep_copy(affinda)           # 2. safe copy
+    data = original.get("data") or {}
+    raw_text = data.get("rawText") or ""
+
+    enrichment = {"version": "1.0", "checksRun": names,
+                  "skills": [], "education": [],
+                  "certifications": [], "summary": []}
+
+    for name in names:                      # 3. run each check
+        run_fn, input_key, output_key = REGISTRY[name]
+        enrichment[output_key] = run_fn(data.get(input_key) or [], raw_text)
+
+    enrichment["summary"] = _build_summary(enrichment)  # 4.
+    ensure_untouched(affinda, original)     # 5. changed nothing
+    return {"originalJSON": original,       # 6.
+            "enrichmentJSON": enrichment}</script>
+</template>
+
+<template class="step" data-stage="Validate" data-file="shared/validators.py" data-hl="2,3,4,5,6" data-title="Guard 1 — the bouncer">
+  <div class="prose">
+    <p>Before touching anything, <span class="key">validate_input</span> checks the data isn't broken. Is it a dictionary? Does it have a <span class="key">data</span> section? If a skills/education/certs section <i>exists</i>, is it a list?</p>
+    <p><b>Missing is fine.</b> A résumé with no certificates isn't an error — it just means nothing to check there. We only stop if the shape is genuinely wrong (e.g. someone handed us a number instead of a résumé).</p>
+    <p class="q">Our sample is a proper dictionary with a proper data section, so it sails through.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">Checks run on our sample</div>
+    <p><span class="badge info">PASS</span> &nbsp;it's a dictionary</p>
+    <p><span class="badge info">PASS</span> &nbsp;it has a <span class="key">data</span> section</p>
+    <p><span class="badge info">PASS</span> &nbsp;<span class="key">skills</span> is a list</p>
+    <p class="q">No exception raised → the manager moves on.</p>
+  </div>
+  <script type="text/plain" class="code">def validate_input(affinda):
+    if not isinstance(affinda, dict):
+        raise ValueError("The resume data should be a dictionary.")
+    if "data" not in affinda:
+        raise ValueError("The resume data is missing its 'data' section.")
+
+    data = affinda["data"]
+    if not isinstance(data, dict):
+        raise ValueError("The 'data' section should be a dictionary.")
+
+    # If a section exists, it must be a list. Missing or empty is OK.
+    for key in ("skills", "education", "certifications"):
+        if key in data and not isinstance(data[key], list):
+            raise ValueError(f"'{key}' should be a list, but it isn't.")</script>
+</template>
+
+<template class="step" data-stage="Copy" data-file="shared/validators.py" data-hl="6,7" data-title="Guard 2 — the photocopier">
+  <div class="prose">
+    <p>Our core promise: <b>we never change Affinda's data.</b> So we make a photocopy and only ever read from the copy.</p>
+    <p>It's a <span class="key">deep</span> copy — it copies everything nested inside too (the lists, the little dicts), not just the outer shell. That way, even if a bug tried to scribble on the copy, it could never reach back and touch the real original.</p>
+    <p class="q">From here on, every helper reads the copy. The original sits in a drawer, pristine, until the very end.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">One becomes two</div>
+    <p><span class="tag">original</span> &nbsp;Affinda's response — locked away, read-only</p>
+    <div class="arrow">↓ &nbsp;photocopy &nbsp;↓</div>
+    <p><span class="tag e">copy</span> &nbsp;identical, separate — this is what we work on</p>
+    <p class="q" style="margin-top:9px">At the end (step 14) we compare them. If they ever differ, we crash on purpose rather than quietly hand back changed data.</p>
+  </div>
+  <script type="text/plain" class="code">import copy
+
+def deep_copy(data):
+    """A completely separate copy, so edits can't touch
+    the original. 'Deep' = copies the nested lists and
+    dicts too, not just the outer shell."""
+    return copy.deepcopy(data)</script>
+</template>
+
+<template class="step" data-stage="Dispatch" data-file="app/registry.py" data-hl="3,4,5" data-title="One list of checks to run">
+  <div class="prose">
+    <p>What checks exist? They live in <b>one place</b> — the <span class="key">REGISTRY</span>. Three entries today: skill, education, certification.</p>
+    <p>Each line is a little recipe: <i>the function to call</i>, <i>which Affinda list it reads</i>, and <i>which of our lists it fills</i>. The manager just loops this.</p>
+    <p class="big"><b>This is the payoff of the design:</b> adding a whole new check later — say <span class="key">languages</span> — is <b>one new line here</b> plus one new folder. Nothing else in the project changes.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">The registry, read aloud</div>
+    <p><span class="tag e">skill</span> → run <span class="key">skill.run</span>, read <span class="key">skills</span>, fill <span class="key">skills</span></p>
+    <p><span class="tag e">education</span> → run <span class="key">education.run</span>, read <span class="key">education</span></p>
+    <p><span class="tag e">certification</span> → run <span class="key">certification.run</span>, read <span class="key">certifications</span></p>
+    <p class="note"><b>Want a 4th check?</b> Add <span class="key">"language": (language.run, "languages", "languages")</span> — and you're done.</p>
+  </div>
+  <script type="text/plain" class="code">from resumeguard.modules import certification, education, skill
+
+REGISTRY = {
+    "skill":         (skill.run,         "skills",         "skills"),
+    "education":     (education.run,      "education",      "education"),
+    "certification": (certification.run, "certifications", "certifications"),
+}
+# name -> (its run function, Affinda input key, our output key)</script>
+</template>
+
+<template class="step" data-stage="Dispatch" data-file="modules/skill/__init__.py" data-hl="2,3,4,5,6" data-title="Into the skill check">
+  <div class="prose">
+    <p>The manager calls <span class="key">skill.run(skills, rawText)</span>. This loops over every skill Affinda found and does the same three moves for each one:</p>
+    <p class="q">① <b>find</b> it in the résumé text &nbsp; ② <b>decide</b> its status &nbsp; ③ <b>build</b> one tidy record (an "Enrichment").</p>
+    <p>We're on the first skill, <span class="key">SQL</span> (index <span class="key">0</span>). The next three steps zoom into moves ① and ②.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">The loop, right now</div>
+    <p><span class="badge info">i = 0</span> &nbsp;<span class="tag e">SQL</span> ← we are here</p>
+    <p><span class="badge" style="background:var(--surface-2);color:var(--faint)">i = 1</span> &nbsp;<span class="tag">Python</span> ← next time round</p>
+    <p><span class="badge" style="background:var(--surface-2);color:var(--faint)">i = 2</span> &nbsp;<span class="tag">Excel</span></p>
+    <p class="q" style="margin-top:9px">Note line 4: we search using the skill's <span class="key">text</span> if present, otherwise its <span class="key">name</span>.</p>
+  </div>
+  <script type="text/plain" class="code">def run(skills, raw_text):
+    out = []
+    for i, skill in enumerate(skills):
+        name = skill.get("name") or ""
+        clause, clause_start, span = locate(skill.get("text") or name, raw_text)
+        if clause is None:
+            status, matched, pos = "plain", None, None   # not found -> stay quiet
+        else:
+            status, matched, pos = classify_skill(clause, name)
+        out.append(Enrichment(... ).to_dict())   # built in step 10
+    return out</script>
+</template>
+
+<template class="step" data-stage="Locate" data-file="shared/matching.py" data-hl="3,4,5,6,7" data-title="Find it — first, clean the text">
+  <div class="prose">
+    <p>Résumé text is messy: odd spacing, line breaks, stray punctuation, and Affinda's little "(Programming Language)" notes. To find <span class="key">SQL</span> reliably, we <b>clean both</b> the search word and the text.</p>
+    <p>Cleaning = lowercase everything, and squash every run of spaces/punctuation into a <b>single space</b>. So "S Q L" or "SQL," all line up.</p>
+    <p class="big">The clever bit: while cleaning, we keep an <span class="key">index map</span> — a note of where every cleaned letter came from in the <b>original</b> text. That's what lets our highlight stay pixel-exact later.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">Clean, but remember the origin</div>
+    <p>needle <span class="tag">SQL</span> → <span class="tag e">sql</span></p>
+    <div class="arrow">↓</div>
+    <div class="textblock">"Skills: no experience with sql, expert in python, learning excel. ..."</div>
+    <p class="q" style="margin-top:9px"><span class="key">index_map[i]</span> = where cleaned-letter <i>i</i> sits back in the real text. Clean to search; map to point.</p>
+  </div>
+  <script type="text/plain" class="code">def normalize_mapped(text):
+    """Clean text AND remember where each kept character
+    came from (the index map)."""
+    out, index_map, prev_space = [], [], True
+    for i, ch in enumerate(text):
+        c = ch.lower()
+        if c.isalnum():              # a real letter/digit -> keep
+            out.append(c)
+            index_map.append(i)      # <- remember its origin
+            prev_space = False
+        elif not prev_space:         # punctuation/space -> ONE space
+            out.append(" ")
+            index_map.append(i)
+            prev_space = True
+    return "".join(out), index_map</script>
+</template>
+
+<template class="step" data-stage="Locate" data-file="shared/locator.py" data-hl="4,5,6,7,8,9" data-title="Find it — grab the sentence">
+  <div class="prose">
+    <p>Now <span class="key">locate</span> finds <span class="key">sql</span> as a <b>whole word</b> (so it would never match the "c" buried inside "communi<b>c</b>ation"). Found it.</p>
+    <p>Then it grows left and right until it hits a sentence boundary, giving us the <b>clause</b> — the little sentence around the word. That clause is what the rules will read next.</p>
+    <p class="q">It also returns the exact character <b>span</b> of SQL in the original text (via that index map), so we can highlight it precisely.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">What locate hands back</div>
+    <p><b>clause</b> (the sentence to read):</p>
+    <div class="textblock">"no experience with <mark>SQL</mark>, expert in Python, learning Excel"</div>
+    <p style="margin-top:10px"><b>span</b> → characters <span class="key">[27, 30]</span> of the raw text = "SQL"</p>
+    <p class="q">If the word simply can't be found, locate returns nothing — and the caller stays safe (status "plain", confidence "low", no highlight). Honest beats guessing.</p>
+  </div>
+  <script type="text/plain" class="code">def locate(entity_text, raw_text):
+    needle = normalize(entity_text or "")
+    if not needle:
+        return None, None, None
+    clean, index_map = normalize_mapped(raw_text or "")
+
+    pos = exact_token_find(clean, needle)      # whole-word find
+    if pos != -1:
+        c_start, c_end = pos, pos + len(needle) - 1
+    else:
+        found = fuzzy_spaceless_find(clean, needle)  # "S Q L" backup
+        if found is None:
+            return None, None, None
+        c_start, c_end = found
+
+    start = index_map[c_start]                 # map back to original
+    end = index_map[c_end] + 1
+    clause, clause_start = clause_around(raw_text, start, end)
+    return clause, clause_start, (start, end)</script>
+</template>
+
+<template class="step" data-stage="Guard" data-file="modules/skill/_classify.py" data-hl="2,3,4,5,6,7,8" data-title="The precision guard — the clever bit">
+  <div class="prose">
+    <p class="big">Here's the trap. Our clause is <i>"no experience with SQL, <b>expert</b> in Python, <b>learning</b> Excel."</i> If we read the <b>whole</b> clause looking for SQL's strength, we'd spot "expert" and wrongly call SQL <b>strong</b>.</p>
+    <p>So we don't. We cut the sentence at <b>walls</b> — commas, semicolons, and joining words like <i>but, and, while</i>. Those are the natural fences between one skill's description and the next.</p>
+    <p>Then we keep <b>only the piece that contains "sql"</b> and judge from that piece alone. Python's "expert" is now walled off and can't leak in.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">Cut at the walls, keep SQL's piece</div>
+    <div class="pieces">
+      <div class="piece kept">no experience with sql<small>kept — has SQL</small></div>
+      <div class="piece walled">expert in python<small>walled off</small></div>
+      <div class="piece walled">learning excel<small>walled off</small></div>
+    </div>
+    <p class="note"><b>Why it matters:</b> this single idea is what makes the tool trustworthy. Without it, one messy sentence would mislabel every skill in it. We proved on the real run that Python still comes out <b>strong</b>, untouched by SQL's "no experience".</p>
+  </div>
+  <script type="text/plain" class="code"># A "wall" = punctuation, or a joining word.
+_WALL = re.compile(r"[;,:|]|\b(?:and|but|however|whereas|while|though|also|plus)\b", re.IGNORECASE)
+
+def _piece_around(clause, skill_name):
+    """Return the one piece of the sentence that holds
+    this skill (fall back to the whole sentence if unsure)."""
+    low = (skill_name or "").lower()
+    for start, text in _pieces(clause):      # _pieces cuts at every wall
+        if low and low in text.lower():
+            return start, text
+    return 0, clause</script>
+</template>
+
+<template class="step" data-stage="Match" data-file="modules/skill/_rules.py" data-hl="2,3,4,5" data-title="Match the cue word">
+  <div class="prose">
+    <p>Now we read <b>only</b> SQL's piece — <i>"no experience with sql"</i> — against the skill rulebook.</p>
+    <p>The rules are tried <b>worst-signal first</b>, and the <b>first match wins</b>. The very first rule, <span class="key">no_experience</span>, looks for "no experience" — and there it is. We stop. Status = <span class="key">no_experience</span>.</p>
+    <p class="q">If nothing had matched, the skill would just be "plain" — still recorded, just with no concerns. We never invent a problem that isn't written down.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">First rule to match wins</div>
+    <p><span class="badge warn">① no_experience</span> &nbsp;<b>✓ matches</b> "no experience" → <b>stop here</b></p>
+    <p style="opacity:.5"><span class="badge" style="background:var(--surface-2);color:var(--faint)">② learning</span> &nbsp;never reached</p>
+    <p style="opacity:.5"><span class="badge" style="background:var(--surface-2);color:var(--faint)">③ lapsed … ④ basic … ⑥ strong</span> &nbsp;never reached</p>
+    <p class="q" style="margin-top:9px">Matched words: <span class="key">"no experience"</span> — we remember exactly where they sit, for the proof.</p>
+  </div>
+  <script type="text/plain" class="code">SKILL_RULES = [
+    ("no_experience", [r"\bno\s+(experience|exposure|background|knowledge)\b",
+                       r"\bwithout\s+(any\s+)?\w*\s*(experience|background)\b",
+                       r"\bnot\s+(proficient|experienced|familiar)\b",
+                       r"\bnever\s+(used|worked with|touched)\b",
+                       r":\s*none\b"]),
+    ("learning",      [r"\b(currently\s+)?(learning|studying)\b", ...]),
+    ("lapsed",        [r"\b(previously|formerly|used to)\b", ...]),
+    ("basic",         [r"\bbasic\b", r"\bfamiliar with\b", ...]),
+    ("intermediate",  [r"\bworking knowledge\b", r"\bhands[- ]on\b", ...]),
+    ("strong",        [r"\bexpert\b", r"\badvanced\b", r"\b\d+\+?\s*years?\b", ...]),
+]
+# nothing matches -> "plain" (still recorded, just no concern)</script>
+</template>
+
+<template class="step" data-stage="Build" data-file="shared/models.py" data-hl="3,4,5,6,7,8" data-title="Package the verdict">
+  <div class="prose">
+    <p>We wrap the verdict into our standard form — an <span class="key">Enrichment</span>. Every item we ever judge becomes one of these, so skills, degrees and certs all speak the same language.</p>
+    <p>Two small helpers finish it off: <span class="key">severity_of</span> looks up whether this status is a <b>warning</b> or just <b>info</b> (and crashes loudly if we ever typo a status), and <span class="key">build_evidence</span> lines up the proof — the words "no experience" and their exact position.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">The SQL enrichment (real output)</div>
+    <div class="json"><span class="k">entryIndex:</span> <span class="n">0</span>
+<span class="k">entity:</span> <span class="s">"SQL"</span>
+<span class="k">status:</span> <span class="warnv">"no_experience"</span>
+<span class="k">confidence:</span> <span class="s">"high"</span>
+<span class="k">severity:</span> <span class="warnv">"warning"</span>
+<span class="k">evidence:</span> {
+  <span class="k">text:</span> <span class="s">"no experience"</span>,
+  <span class="k">rawTextSpan:</span> [<span class="n">8</span>, <span class="n">21</span>]
+}</div>
+    <p class="q" style="margin-top:9px">One naïve "SQL = a skill they have" just became "SQL = explicitly denied," with receipts.</p>
+  </div>
+  <script type="text/plain" class="code">@dataclass
+class Enrichment:
+    entryIndex: int    # position in Affinda's list (0 = first)
+    entity: str        # the item's name, e.g. "SQL"
+    status: str        # what we found, e.g. "no_experience"
+    confidence: str    # "high" if we pinned the exact spot
+    severity: str      # "warning" or "info" — for easy filtering
+    evidence: Evidence # the proof: the words + their position
+
+def severity_of(kind, status):
+    try:
+        return STATUS_SEVERITY[kind][status]   # table lookup
+    except KeyError:
+        raise ValueError(f"unknown {kind} status '{status}'")</script>
+</template>
+
+<template class="step" data-stage="Build" data-file="modules/skill/__init__.py" data-hl="" data-title="...and the other two skills">
+  <div class="prose">
+    <p>The same loop runs again for Python and Excel — and this is where the precision guard pays off:</p>
+    <p><b>Python's</b> piece is <i>"expert in python"</i> → <span class="key">strong</span> → severity <b>info</b>. The "no experience" from SQL never bled across the wall. <b>Excel's</b> piece <i>"learning excel"</i> → <span class="key">learning</span> → <b>warning</b>.</p>
+    <p class="q">Three skills in one messy sentence, three correct labels. That's the full skill check done.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">All three skills, judged</div>
+    <div class="resgrid">
+      <div class="rescard warn"><div class="nm">SQL</div><div class="st warnv" style="color:var(--warn)">no_experience</div><span class="badge warn">warning</span></div>
+      <div class="rescard info"><div class="nm">Python</div><div class="st" style="color:var(--good)">strong</div><span class="badge info">info</span></div>
+      <div class="rescard warn"><div class="nm">Excel</div><div class="st" style="color:var(--warn)">learning</div><span class="badge warn">warning</span></div>
+    </div>
+    <p class="note"><b>The guard worked:</b> Python sits right next to "no experience" in the text, yet came out <b>strong</b>. That's the difference between a tool you can trust and one you can't.</p>
+  </div>
+  <script type="text/plain" class="code">#  text:  "...no experience with SQL, expert in Python, learning Excel."
+#
+#  SQL     piece "no experience with sql"  -> no_experience  (warning)
+#  Python  piece "expert in python"        -> strong         (info)
+#  Excel   piece "learning excel"          -> learning       (warning)
+#
+#  Each becomes one Enrichment, appended to the list `run()` returns.</script>
+</template>
+
+<template class="step" data-stage="Engine" data-file="shared/status_engine.py" data-hl="2,3,4,5,6,7,8,9" data-title="Education + certs share one brain">
+  <div class="prose">
+    <p>Education and certifications ask the <b>same question</b> — "what's the status of this item?" — so they share one engine instead of repeating the logic twice.</p>
+    <p>Same pattern as skills: locate the item, read its sentence, first matching cue wins. <b>BSc</b> → finds "withdrew" → <span class="key">incomplete</span>. <b>AWS cert</b> → finds "expired" → <span class="key">expired</span>. Both warnings.</p>
+    <p class="q">Two small differences from skills: no wall-splitting (these sentences hold one item each), and education's "expected" only counts if a <b>future year</b> is nearby — so a past year can't be mistaken for an unfinished degree.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">The other two checks</div>
+    <div class="resgrid" style="grid-template-columns:1fr">
+      <div class="rescard warn"><div class="nm">BSc Computer Science</div><div class="st" style="color:var(--warn)">incomplete &nbsp;·&nbsp; from "withdrew"</div><span class="badge warn">warning</span></div>
+      <div class="rescard warn"><div class="nm">AWS Certified Solutions Architect</div><div class="st" style="color:var(--warn)">expired &nbsp;·&nbsp; from "expired"</div><span class="badge warn">warning</span></div>
+    </div>
+    <p class="q" style="margin-top:9px">Same shape as the skill records — one Enrichment each, severity-stamped.</p>
+  </div>
+  <script type="text/plain" class="code">def classify_status(clause, entry, rules, current_year):
+    """Read the sentence, return the first matching status.
+    'expected' is special: only if a FUTURE year is present."""
+    future = _has_future_year(clause, current_year)
+    for status, patterns in rules:
+        for pattern in patterns:
+            match = re.search(pattern, clause, re.IGNORECASE)
+            if match:
+                if status == "expected" and not future:
+                    continue
+                return status, match.group(0), match.start()
+    return "unknown", None, None     # no cue matched</script>
+</template>
+
+<template class="step" data-stage="Summary" data-file="app/enrich.py" data-hl="2,3,4,5,6,7" data-title="Write the summary, then the final audit">
+  <div class="prose">
+    <p>Every check is done. Now <span class="key">_build_summary</span> sweeps all the records and writes one plain-English line per <b>warning</b> — the stuff a recruiter should actually see. The "info" items (like Python) stay quietly on file.</p>
+    <p class="big">Then the final guard, <span class="key">ensure_untouched</span>: compare our working copy against the original we stashed in step 3. If a single character differs, it crashes on purpose. Ours matches exactly — promise kept.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">The summary (real output)</div>
+    <div class="textblock" style="color:var(--ink);line-height:2">• Skill 'SQL' looks no experience.<br>• Skill 'Excel' looks learning.<br>• Degree 'BSc Computer Science' looks incomplete.<br>• Certificate 'AWS Certified Solutions Architect' looks expired.</div>
+    <p class="note" style="margin-top:12px"><b>ensure_untouched:</b> copy == original → <span class="badge info">PASS</span>. We added a whole layer and changed <b>nothing</b> of Affinda's.</p>
+  </div>
+  <script type="text/plain" class="code">def _build_summary(enrichment):
+    """One plain-English line per WARNING."""
+    lines = []
+    for key, label in _LABELS.items():       # Skill / Degree / Certificate
+        for e in enrichment[key]:
+            if e["severity"] == "warning":
+                pretty = e["status"].replace("_", " ")
+                lines.append(f"{label} '{e['entity']}' looks {pretty}.")
+    return lines</script>
+</template>
+
+<template class="step" data-stage="Output" data-file="app/enrich.py" data-hl="1,2" data-title="Hand it back — detect, don't decide">
+  <div class="prose">
+    <p>Finally the manager returns one package with two parts:</p>
+    <p><span class="key">originalJSON</span> — Affinda's response, byte-for-byte untouched. <span class="key">enrichmentJSON</span> — everything we added: a label for every item, each with its proof and a warning/info tag.</p>
+    <p class="big">The customer reads our labels, filters on <b>severity</b>, and decides what to do with their own rules. <b>We detected the status; they decide what it means for their roles.</b> That line is the whole product.</p>
+  </div>
+  <div class="insp">
+    <div class="insp-h">The final package</div>
+    <p><span class="tag">originalJSON</span> &nbsp;Affinda, untouched (the audit proved it)</p>
+    <p><span class="tag e">enrichmentJSON</span> &nbsp;3 skills + 1 degree + 1 cert, each labelled + 4 warnings</p>
+    <div class="note" style="margin-top:12px"><b>From one naïve input to a full verdict:</b> SQL — denied. Python — strong. Excel — learning. Degree — incomplete. Cert — expired. None of which Affinda's tidy lists said out loud.</div>
+    <p class="q" style="margin-top:12px;text-align:center"><b>↺ That's the whole pipeline.</b> Use Back to revisit any stage.</p>
+  </div>
+  <script type="text/plain" class="code">    return {"originalJSON": original,
+            "enrichmentJSON": enrichment}
+
+# originalJSON  = Affinda's response, never changed
+# enrichmentJSON = { version, checksRun,
+#                    skills[], education[], certifications[],
+#                    summary[] }   <- everything WE added</script>
+</template>
+
+</div>
+
+<script>
+(function(){
+  const STAGES = ["Input","Validate","Copy","Dispatch","Locate","Guard","Match","Build","Engine","Summary","Output"];
+  const tpls = [...document.querySelectorAll("template.step")];
+  const steps = tpls.map(t=>{
+    const codeEl = t.content.querySelector("script");
+    let code = codeEl ? codeEl.textContent.replace(/^\n/,"").replace(/\s+$/,"") : "";
+    const proseEl = t.content.querySelector(".prose");
+    const inspEl  = t.content.querySelector(".insp");
+    return {
+      stage: t.getAttribute("data-stage"),
+      file:  t.getAttribute("data-file"),
+      title: t.getAttribute("data-title"),
+      hl:    (t.getAttribute("data-hl")||"").split(",").map(s=>parseInt(s,10)).filter(n=>!isNaN(n)),
+      prose: proseEl ? proseEl.innerHTML : "",
+      insp:  inspEl ? inspEl.outerHTML : "",
+      code
+    };
+  });
+  const N = steps.length;
+  let i = 0;
+
+  // build stage rail
+  const rail = document.getElementById("rail");
+  STAGES.forEach((s,idx)=>{
+    const b=document.createElement("button");
+    b.className="chip"; b.textContent=s; b.dataset.stage=s;
+    b.addEventListener("click",()=>{
+      const target = steps.findIndex(st=>st.stage===s);
+      if(target>=0){ i=target; render(); }
+    });
+    rail.appendChild(b);
+  });
+  const chips=[...rail.children];
+
+  const elNo=document.getElementById("stepno"),
+        elTitle=document.getElementById("title"),
+        elProse=document.getElementById("prose"),
+        elInsp=document.getElementById("inspwrap"),
+        elFname=document.getElementById("fname"),
+        elCode=document.getElementById("code"),
+        elBar=document.getElementById("bar"),
+        elCounter=document.getElementById("counter"),
+        elStage=document.getElementById("stagelbl"),
+        prev=document.getElementById("prev"),
+        next=document.getElementById("next");
+
+  function renderCode(step){
+    elCode.innerHTML="";
+    const lines = step.code.split("\n");
+    lines.forEach((ln,idx)=>{
+      const n=idx+1;
+      const row=document.createElement("div");
+      row.className="cline"+(step.hl.includes(n)?" hl":"");
+      const num=document.createElement("span"); num.className="ln"; num.textContent=n;
+      const tx=document.createElement("span"); tx.className="tx"; tx.textContent=ln.length?ln:" ";
+      row.appendChild(num); row.appendChild(tx);
+      elCode.appendChild(row);
+    });
+  }
+
+  function render(){
+    const s=steps[i];
+    elNo.textContent="STEP "+(i+1).toString().padStart(2,"0")+" / "+N;
+    elTitle.textContent=s.title;
+    elProse.innerHTML=s.prose;
+    elInsp.innerHTML=s.insp;
+    // file name: bold the leaf
+    const parts=s.file.split("/");
+    elFname.innerHTML = parts.slice(0,-1).join("/")+(parts.length>1?"/":"")+"<b>"+parts[parts.length-1]+"</b>";
+    renderCode(s);
+    // rail state
+    const stageIdx=STAGES.indexOf(s.stage);
+    chips.forEach((c,idx)=>{
+      c.classList.toggle("active",idx===stageIdx);
+      c.classList.toggle("done",idx<stageIdx);
+    });
+    elBar.style.width=((i)/(N-1)*100)+"%";
+    elCounter.textContent="Step "+(i+1)+" of "+N;
+    elStage.textContent=s.stage+" stage";
+    prev.disabled=(i===0);
+    next.textContent = i===N-1 ? "Start over ↺" : "Next →";
+    // scroll the narrative back to top on change
+    window.scrollTo({top:0,behavior:"smooth"});
+    elCode.scrollTop=0;
+  }
+
+  prev.addEventListener("click",()=>{ if(i>0){i--;render();} });
+  next.addEventListener("click",()=>{ if(i<N-1){i++;} else {i=0;} render(); });
+  document.addEventListener("keydown",e=>{
+    if(e.key==="ArrowRight"){ if(i<N-1){i++;render();} }
+    else if(e.key==="ArrowLeft"){ if(i>0){i--;render();} }
+  });
+
+  render();
+})();
+</script>

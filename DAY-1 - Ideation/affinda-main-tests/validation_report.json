@@ -1,0 +1,378 @@
+{
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "warn": 0,
+    "fail": 0
+  },
+  "render_dpi": 150,
+  "contact_sheet": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\contact_sheet.png",
+  "results": [
+    {
+      "id": "A01",
+      "category": "A",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 3210,
+      "page_count": 1,
+      "total_text_chars": 1189,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\A01_p1.png"
+      ]
+    },
+    {
+      "id": "A02",
+      "category": "A",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2991,
+      "page_count": 1,
+      "total_text_chars": 980,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\A02_p1.png"
+      ]
+    },
+    {
+      "id": "A03",
+      "category": "A",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2953,
+      "page_count": 1,
+      "total_text_chars": 989,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\A03_p1.png"
+      ]
+    },
+    {
+      "id": "A04",
+      "category": "A",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2959,
+      "page_count": 1,
+      "total_text_chars": 939,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\A04_p1.png"
+      ]
+    },
+    {
+      "id": "A05",
+      "category": "A",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 3022,
+      "page_count": 1,
+      "total_text_chars": 1043,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\A05_p1.png"
+      ]
+    },
+    {
+      "id": "D01",
+      "category": "D",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 3064,
+      "page_count": 1,
+      "total_text_chars": 1143,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\D01_p1.png"
+      ]
+    },
+    {
+      "id": "D02",
+      "category": "D",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2939,
+      "page_count": 1,
+      "total_text_chars": 986,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\D02_p1.png"
+      ]
+    },
+    {
+      "id": "D03",
+      "category": "D",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 3061,
+      "page_count": 1,
+      "total_text_chars": 1027,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\D03_p1.png"
+      ]
+    },
+    {
+      "id": "D04",
+      "category": "D",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2776,
+      "page_count": 1,
+      "total_text_chars": 763,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\D04_p1.png"
+      ]
+    },
+    {
+      "id": "D05",
+      "category": "D",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2990,
+      "page_count": 1,
+      "total_text_chars": 1012,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\D05_p1.png"
+      ]
+    },
+    {
+      "id": "E01",
+      "category": "E",
+      "layout": "two-column",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2924,
+      "page_count": 1,
+      "total_text_chars": 828,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\E01_p1.png"
+      ]
+    },
+    {
+      "id": "E02",
+      "category": "E",
+      "layout": "table",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2905,
+      "page_count": 1,
+      "total_text_chars": 690,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\E02_p1.png"
+      ]
+    },
+    {
+      "id": "E03",
+      "category": "E",
+      "layout": "scanned",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "image-only PDF (no text layer) \u2014 content checks rely on OCR; this is the intended design for E03."
+      ],
+      "expected_pages": 1,
+      "size_bytes": 11223570,
+      "page_count": 1,
+      "total_text_chars": 0,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\E03_p1.png"
+      ]
+    },
+    {
+      "id": "E04",
+      "category": "E",
+      "layout": "three-page",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 3,
+      "size_bytes": 5229,
+      "page_count": 3,
+      "total_text_chars": 2148,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\E04_p1.png",
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\E04_p2.png",
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\E04_p3.png"
+      ]
+    },
+    {
+      "id": "E05",
+      "category": "E",
+      "layout": "unusual-order",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2604,
+      "page_count": 1,
+      "total_text_chars": 646,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\E05_p1.png"
+      ]
+    },
+    {
+      "id": "F01",
+      "category": "F",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2864,
+      "page_count": 1,
+      "total_text_chars": 900,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\F01_p1.png"
+      ]
+    },
+    {
+      "id": "F02",
+      "category": "F",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2724,
+      "page_count": 1,
+      "total_text_chars": 712,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\F02_p1.png"
+      ]
+    },
+    {
+      "id": "F03",
+      "category": "F",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2788,
+      "page_count": 1,
+      "total_text_chars": 855,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\F03_p1.png"
+      ]
+    },
+    {
+      "id": "F04",
+      "category": "F",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "no skills section by design (skills embedded in experience)."
+      ],
+      "expected_pages": 1,
+      "size_bytes": 2862,
+      "page_count": 1,
+      "total_text_chars": 865,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\F04_p1.png"
+      ]
+    },
+    {
+      "id": "F05",
+      "category": "F",
+      "layout": "flow",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "expected_pages": 1,
+      "size_bytes": 2950,
+      "page_count": 1,
+      "total_text_chars": 898,
+      "overlaps": [],
+      "clipped": [],
+      "broken_chars": [],
+      "previews": [
+        "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-main-tests\\previews\\F05_p1.png"
+      ]
+    }
+  ]
+}

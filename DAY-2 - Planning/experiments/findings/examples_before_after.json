@@ -1,0 +1,270 @@
+[
+  {
+    "issue": "Education",
+    "id": "E027",
+    "category": "expected",
+    "resume_line": "MBA, Northgate Institute — expected 2029",
+    "why": "The parser turned the future graduation year into an END date, so a degree the person hasn't earned yet looks already conferred.",
+    "before": {
+      "qualification": "MBA",
+      "institution": "Northgate Institute",
+      "level": "master",
+      "dateRange": {
+        "end": {
+          "date": "2029-01-01",
+          "precision": "year"
+        }
+      }
+    },
+    "after": {
+      "qualification": "MBA",
+      "institution": "Northgate Institute",
+      "level": "master",
+      "dateRange": {
+        "end": {
+          "date": "2029-01-01",
+          "precision": "year"
+        }
+      },
+      "__resumeGuard": {
+        "completionStatus": "expected",
+        "evidence": "MBA, Northgate Institute — expected 2029"
+      }
+    },
+    "field": "completionStatus"
+  },
+  {
+    "issue": "Education",
+    "id": "E053",
+    "category": "withdrawn",
+    "resume_line": "Juris Doctor (JD), Lakeside College — withdrawn 2020",
+    "why": "The year they LEFT became a conferral end date, so a dropped-out degree looks completed.",
+    "before": {
+      "qualification": "Juris Doctor (JD",
+      "institution": "Lakeside College",
+      "level": "master",
+      "dateRange": {
+        "end": {
+          "date": "2020-01-01",
+          "precision": "year"
+        }
+      }
+    },
+    "after": {
+      "qualification": "Juris Doctor (JD",
+      "institution": "Lakeside College",
+      "level": "master",
+      "dateRange": {
+        "end": {
+          "date": "2020-01-01",
+          "precision": "year"
+        }
+      },
+      "__resumeGuard": {
+        "completionStatus": "incomplete_withdrawn",
+        "evidence": "Juris Doctor (JD), Lakeside College — withdrawn 2020"
+      }
+    },
+    "field": "completionStatus"
+  },
+  {
+    "issue": "Education",
+    "id": "E011",
+    "category": "in_progress",
+    "resume_line": "Bachelor of Science in Computer Science, Riverside University — currently enrolled",
+    "why": "No fake date this time (good) — but there is still no field saying it's in progress, so a filter can't tell it from a finished degree.",
+    "before": {
+      "qualification": "Bachelor of Science",
+      "institution": "Riverside University",
+      "level": "bachelor",
+      "dateRange": {
+        "end": {
+          "current": true
+        }
+      }
+    },
+    "after": {
+      "qualification": "Bachelor of Science",
+      "institution": "Riverside University",
+      "level": "bachelor",
+      "dateRange": {
+        "end": {
+          "current": true
+        }
+      },
+      "__resumeGuard": {
+        "completionStatus": "in_progress",
+        "evidence": "Bachelor of Science in Computer Science, Riverside University — currently enrolled"
+      }
+    },
+    "field": "completionStatus"
+  },
+  {
+    "issue": "Certification",
+    "id": "C025",
+    "category": "expired",
+    "resume_line": "AWS Certified Solutions Architect — expired 2022",
+    "why": "The cert comes back with just a name and date — the word 'expired' is gone, so an invalid cert looks valid.",
+    "before": {
+      "name": "AWS Certified Solutions Architect",
+      "date": {
+        "date": "2022-01-01",
+        "precision": "year"
+      }
+    },
+    "after": {
+      "name": "AWS Certified Solutions Architect",
+      "date": {
+        "date": "2022-01-01",
+        "precision": "year"
+      },
+      "__resumeGuard": {
+        "validityStatus": "expired",
+        "evidence": "AWS Certified Solutions Architect — expired 2022"
+      }
+    },
+    "field": "validityStatus"
+  },
+  {
+    "issue": "Certification",
+    "id": "C031",
+    "category": "revoked",
+    "resume_line": "Forklift operator licence — revoked 2018",
+    "why": "A revoked credential returns identical to an active one. In a licensed role that's a compliance liability.",
+    "before": {
+      "name": "Forklift operator licence",
+      "date": {
+        "date": "2018-01-01",
+        "precision": "year"
+      }
+    },
+    "after": {
+      "name": "Forklift operator licence",
+      "date": {
+        "date": "2018-01-01",
+        "precision": "year"
+      },
+      "__resumeGuard": {
+        "validityStatus": "revoked",
+        "evidence": "Forklift operator licence — revoked 2018"
+      }
+    },
+    "field": "validityStatus"
+  },
+  {
+    "issue": "Certification",
+    "id": "C051",
+    "category": "pending_scheduled",
+    "resume_line": "CISSP — exam scheduled 2029",
+    "why": "An exam only SCHEDULED comes back looking like a credential the person already holds.",
+    "before": {
+      "name": "CISSP",
+      "date": {
+        "date": "2029-01-01",
+        "precision": "year"
+      }
+    },
+    "after": {
+      "name": "CISSP",
+      "date": {
+        "date": "2029-01-01",
+        "precision": "year"
+      },
+      "__resumeGuard": {
+        "validityStatus": "pending_not_held",
+        "evidence": "CISSP — exam scheduled 2029"
+      }
+    },
+    "field": "validityStatus"
+  },
+  {
+    "issue": "Skill",
+    "id": "S075",
+    "category": "denied",
+    "resume_line": "No experience with SQL",
+    "why": "The resume literally says NO experience with this skill — but it still shows up in the skills list as if they have it.",
+    "before": {
+      "name": "SQL (Programming Language)",
+      "text": "SQL"
+    },
+    "after": {
+      "name": "SQL (Programming Language)",
+      "text": "SQL",
+      "__resumeGuard": {
+        "claimStrength": "denied",
+        "evidence": "No experience with SQL"
+      }
+    },
+    "field": "claimStrength"
+  },
+  {
+    "issue": "Skill",
+    "id": "S036",
+    "category": "exposure",
+    "resume_line": "Limited exposure to TypeScript",
+    "why": "'Limited exposure to X' is extracted identical to '8-year expert in X' — the strength is gone, so ranking treats them the same.",
+    "before": {
+      "name": "TypeScript",
+      "text": "TypeScript"
+    },
+    "after": {
+      "name": "TypeScript",
+      "text": "TypeScript",
+      "__resumeGuard": {
+        "claimStrength": "weak_exposure",
+        "evidence": "Limited exposure to TypeScript"
+      }
+    },
+    "field": "claimStrength"
+  },
+  {
+    "issue": "Skill",
+    "id": "S048",
+    "category": "learning",
+    "resume_line": "Studying TypeScript",
+    "why": "'Currently learning X' becomes a possessed skill — a goal is counted as a capability.",
+    "before": {
+      "name": "TypeScript",
+      "text": "TypeScript"
+    },
+    "after": {
+      "name": "TypeScript",
+      "text": "TypeScript",
+      "__resumeGuard": {
+        "claimStrength": "aspirational_learning",
+        "evidence": "Studying TypeScript"
+      }
+    },
+    "field": "claimStrength"
+  },
+  {
+    "issue": "Skill",
+    "id": "S095",
+    "category": "distractor_fp_trap",
+    "resume_line": "No experience with Java; expert in Spark",
+    "why": "The parser keeps BOTH the affirmed and the denied skill, with no way to tell them apart. The enrichment keeps both too — but labels which is real. (This is the precision trap our detector must not fail.)",
+    "before": {
+      "skills": [
+        "Apache Spark",
+        "Java (Programming Language)"
+      ]
+    },
+    "after": {
+      "skills": [
+        {
+          "name": "Apache Spark",
+          "__resumeGuard": {
+            "claimStrength": "affirmed"
+          }
+        },
+        {
+          "name": "Java (Programming Language)",
+          "__resumeGuard": {
+            "claimStrength": "denied"
+          }
+        }
+      ]
+    },
+    "field": "claimStrength"
+  }
+]

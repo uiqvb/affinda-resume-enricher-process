@@ -1,0 +1,2633 @@
+{
+  "_meta": {
+    "reference_date": "2026-11-12",
+    "note": "Expectations are from synthetic source data, not parser output."
+  },
+  "R401": {
+    "test_id": "R401",
+    "filename": "R401.pdf",
+    "category": "negated_skills",
+    "controlled_variable": "negation: \"No hands-on experience with Kubernetes.\"",
+    "exact_source_statement": "\"No hands-on experience with Kubernetes.\"",
+    "candidate_identity": {
+      "name": "Ada Mercer",
+      "title": "Software Engineer",
+      "email": "ada.mercer@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Brightwave Labs",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Python"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skills_affirmed": [
+        "Python"
+      ],
+      "skills_denied": [
+        "Kubernetes"
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "denied skills absent, or present but tagged negative/low; affirmed skills present"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources / provenance)",
+    "confirmed_failure_if": "Kubernetes extracted as a possessed skill",
+    "partial_information_loss_if": "Kubernetes present but no negative provenance",
+    "inconclusive_if": "Kubernetes absent — acceptable",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R402": {
+    "test_id": "R402",
+    "filename": "R402.pdf",
+    "category": "negated_skills",
+    "controlled_variable": "negation: \"Python: advanced. Java: none.\"",
+    "exact_source_statement": "\"Python: advanced. Java: none.\"",
+    "candidate_identity": {
+      "name": "Ben Rhodes",
+      "title": "Software Engineer",
+      "email": "ben.rhodes@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Brightwave Labs",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Python"
+    ],
+    "skills_line_note": "Python: advanced. Java: none.",
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skills_affirmed": [
+        "Python"
+      ],
+      "skills_denied": [
+        "Java"
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "denied skills absent, or present but tagged negative/low; affirmed skills present"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources / provenance)",
+    "confirmed_failure_if": "Java extracted as a possessed skill despite 'Java: none'",
+    "partial_information_loss_if": "Java present without the 'none' qualifier",
+    "inconclusive_if": "Java absent — acceptable",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R403": {
+    "test_id": "R403",
+    "filename": "R403.pdf",
+    "category": "negated_skills",
+    "controlled_variable": "negation: \"Experienced in AWS, but have never used Azure.\"",
+    "exact_source_statement": "\"Experienced in AWS, but have never used Azure.\"",
+    "candidate_identity": {
+      "name": "Cara Lin",
+      "title": "Software Engineer",
+      "email": "cara.lin@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Brightwave Labs",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "AWS"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skills_affirmed": [
+        "AWS"
+      ],
+      "skills_denied": [
+        "Azure"
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "denied skills absent, or present but tagged negative/low; affirmed skills present"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources / provenance)",
+    "confirmed_failure_if": "Azure extracted as a possessed skill",
+    "partial_information_loss_if": "Azure present without negative provenance",
+    "inconclusive_if": "Azure absent — acceptable",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R404": {
+    "test_id": "R404",
+    "filename": "R404.pdf",
+    "category": "negated_skills",
+    "controlled_variable": "negation: \"Theoretical knowledge of Docker but no practical Docker experience.\"",
+    "exact_source_statement": "\"Theoretical knowledge of Docker but no practical Docker experience.\"",
+    "candidate_identity": {
+      "name": "Dev Kapoor",
+      "title": "Software Engineer",
+      "email": "dev.kapoor@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Brightwave Labs",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Python"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skills_affirmed": [
+        "Python"
+      ],
+      "skills_denied": [
+        "Docker (practical)"
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "denied skills absent, or present but tagged negative/low; affirmed skills present"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources / provenance)",
+    "confirmed_failure_if": "Docker extracted as a hands-on skill with no theoretical/partial qualifier",
+    "partial_information_loss_if": "Docker present but partial/theoretical not distinguished",
+    "inconclusive_if": "Docker handled as partial — acceptable; this is a PARTIAL vs ZERO case",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R405": {
+    "test_id": "R405",
+    "filename": "R405.pdf",
+    "category": "negated_skills",
+    "controlled_variable": "negation: \"Previously used React, but have not used it in five years.\"",
+    "exact_source_statement": "\"Previously used React, but have not used it in five years.\"",
+    "candidate_identity": {
+      "name": "Ella Ford",
+      "title": "Software Engineer",
+      "email": "ella.ford@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Brightwave Labs",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Python"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skills_affirmed": [
+        "Python"
+      ],
+      "skills_denied": [
+        "React (recent)"
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "denied skills absent, or present but tagged negative/low; affirmed skills present"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources / provenance)",
+    "confirmed_failure_if": "n/a (stale skill — inclusion defensible)",
+    "partial_information_loss_if": "React present without recency qualifier",
+    "inconclusive_if": "React handled either way — ambiguous/partial",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R406": {
+    "test_id": "R406",
+    "filename": "R406.pdf",
+    "category": "negated_skills",
+    "controlled_variable": "negation: \"Without any SQL background.\"",
+    "exact_source_statement": "\"Without any SQL background.\"",
+    "candidate_identity": {
+      "name": "Finn Oyelaran",
+      "title": "Software Engineer",
+      "email": "finn.oyelaran@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Brightwave Labs",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Python"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skills_affirmed": [
+        "Python"
+      ],
+      "skills_denied": [
+        "SQL"
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "denied skills absent, or present but tagged negative/low; affirmed skills present"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources / provenance)",
+    "confirmed_failure_if": "SQL extracted as a possessed skill despite 'without any SQL background'",
+    "partial_information_loss_if": "SQL present without negative provenance",
+    "inconclusive_if": "SQL absent — acceptable",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R407": {
+    "test_id": "R407",
+    "filename": "R407.pdf",
+    "category": "negated_skills",
+    "controlled_variable": "negation: \"Not certified in AWS, but use AWS daily.\"",
+    "exact_source_statement": "\"Not certified in AWS, but use AWS daily.\"",
+    "candidate_identity": {
+      "name": "Gia Romano",
+      "title": "Software Engineer",
+      "email": "gia.romano@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Brightwave Labs",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "AWS"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skills_affirmed": [
+        "AWS"
+      ],
+      "skills_denied": []
+    },
+    "acceptable_alternate_interpretations": [
+      "denied skills absent, or present but tagged negative/low; affirmed skills present"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources / provenance)",
+    "confirmed_failure_if": "AWS recorded as a held certification (it is a used skill, NOT a certification)",
+    "partial_information_loss_if": "AWS skill present but 'not certified' not distinguished from certified",
+    "inconclusive_if": "AWS as skill (yes) and not as certification — correct",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R408": {
+    "test_id": "R408",
+    "filename": "R408.pdf",
+    "category": "negated_skills",
+    "controlled_variable": "negation: \"No experience with JavaScript. Extensive Java experience.\"",
+    "exact_source_statement": "\"No experience with JavaScript. Extensive Java experience.\"",
+    "candidate_identity": {
+      "name": "Hugo Vance",
+      "title": "Software Engineer",
+      "email": "hugo.vance@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Brightwave Labs",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Java"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skills_affirmed": [
+        "Java"
+      ],
+      "skills_denied": [
+        "JavaScript"
+      ]
+    },
+    "acceptable_alternate_interpretations": [
+      "denied skills absent, or present but tagged negative/low; affirmed skills present"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources / provenance)",
+    "confirmed_failure_if": "JavaScript extracted as a skill, OR Java/JavaScript conflated",
+    "partial_information_loss_if": "JavaScript present without negative provenance",
+    "inconclusive_if": "JavaScript absent and Java present — correct",
+    "paired_test_id": "R402",
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R409": {
+    "test_id": "R409",
+    "filename": "R409.pdf",
+    "category": "negated_skills",
+    "controlled_variable": "negation: \"I do not manage Kubernetes clusters, but develop applications deployed to Kubernetes.\"",
+    "exact_source_statement": "\"I do not manage Kubernetes clusters, but develop applications deployed to Kubernetes.\"",
+    "candidate_identity": {
+      "name": "Ivy Zhang",
+      "title": "Software Engineer",
+      "email": "ivy.zhang@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Brightwave Labs",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Kubernetes"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skills_affirmed": [
+        "Kubernetes"
+      ],
+      "skills_denied": []
+    },
+    "acceptable_alternate_interpretations": [
+      "denied skills absent, or present but tagged negative/low; affirmed skills present"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources / provenance)",
+    "confirmed_failure_if": "n/a (affirmative: develops on Kubernetes)",
+    "partial_information_loss_if": "Kubernetes present but management-vs-development provenance not distinguished",
+    "inconclusive_if": "Kubernetes present as a used skill — correct (MULTI-VARIABLE: ownership + affirmation)",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R410": {
+    "test_id": "R410",
+    "filename": "R410.pdf",
+    "category": "negated_skills",
+    "controlled_variable": "positive control (all affirmed)",
+    "exact_source_statement": "Expertise in Python, Kubernetes, SQL and Azure.",
+    "candidate_identity": {
+      "name": "Hana Blake",
+      "title": "Software Engineer",
+      "email": "hana.blake@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Software Engineer",
+        "employer": "Brightwave Labs",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Python",
+      "Kubernetes",
+      "SQL",
+      "Azure"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skills_affirmed": [
+        "Python",
+        "Kubernetes",
+        "SQL",
+        "Azure"
+      ],
+      "skills_denied": []
+    },
+    "acceptable_alternate_interpretations": [
+      "all four skills extracted"
+    ],
+    "relevant_existing_affinda_field": "skills",
+    "confirmed_failure_if": "an affirmed skill is missing",
+    "partial_information_loss_if": "an affirmed skill is missing",
+    "inconclusive_if": "n/a",
+    "paired_test_id": "R401",
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R411": {
+    "test_id": "R411",
+    "filename": "R411.pdf",
+    "category": "skill_ownership",
+    "controlled_variable": "personal (positive control)",
+    "exact_source_statement": "\"Personally developed Python services.\"",
+    "candidate_identity": {
+      "name": "Jade Cole",
+      "title": "Engineering Manager",
+      "email": "jade.cole@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Engineering Manager",
+        "employer": "Northwind Tech",
+        "date_display": "2017 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Leadership",
+      "Python"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skill": "Python",
+      "true_owner": "candidate"
+    },
+    "acceptable_alternate_interpretations": [
+      "ownership not modelled; attribution may be defensible for managers"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources); no ownership dimension",
+    "confirmed_failure_if": "Python not attributed (missed personal skill)",
+    "partial_information_loss_if": "skill attributed to candidate though owned by candidate — record provenance gap",
+    "inconclusive_if": "Python attributed — correct",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R412": {
+    "test_id": "R412",
+    "filename": "R412.pdf",
+    "category": "skill_ownership",
+    "controlled_variable": "managed engineers, no coding",
+    "exact_source_statement": "\"Managed Python engineers without writing Python.\"",
+    "candidate_identity": {
+      "name": "Kiran Das",
+      "title": "Engineering Manager",
+      "email": "kiran.das@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Engineering Manager",
+        "employer": "Northwind Tech",
+        "date_display": "2017 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Leadership"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skill": "Python",
+      "true_owner": "team"
+    },
+    "acceptable_alternate_interpretations": [
+      "ownership not modelled; attribution may be defensible for managers"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources); no ownership dimension",
+    "confirmed_failure_if": "n/a (over-attribution expected; record it)",
+    "partial_information_loss_if": "skill attributed to candidate though owned by team — record provenance gap",
+    "inconclusive_if": "over-attribution of a managed skill — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R413": {
+    "test_id": "R413",
+    "filename": "R413.pdf",
+    "category": "skill_ownership",
+    "controlled_variable": "team used tool; candidate did finance",
+    "exact_source_statement": "\"Led a team whose engineers used Kubernetes; my responsibilities were financial management.\"",
+    "candidate_identity": {
+      "name": "Lena Ruiz",
+      "title": "Finance Lead",
+      "email": "lena.ruiz@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Finance Lead",
+        "employer": "Northwind Tech",
+        "date_display": "2017 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Leadership"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skill": "Kubernetes",
+      "true_owner": "team"
+    },
+    "acceptable_alternate_interpretations": [
+      "ownership not modelled; attribution may be defensible for managers"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources); no ownership dimension",
+    "confirmed_failure_if": "n/a",
+    "partial_information_loss_if": "skill attributed to candidate though owned by team — record provenance gap",
+    "inconclusive_if": "over-attribution — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R414": {
+    "test_id": "R414",
+    "filename": "R414.pdf",
+    "category": "skill_ownership",
+    "controlled_variable": "personally configured (positive)",
+    "exact_source_statement": "\"Personally configured Kubernetes clusters.\"",
+    "candidate_identity": {
+      "name": "Milo Schwarz",
+      "title": "DevOps Engineer",
+      "email": "milo.schwarz@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "DevOps Engineer",
+        "employer": "Northwind Tech",
+        "date_display": "2017 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Leadership",
+      "Kubernetes"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skill": "Kubernetes",
+      "true_owner": "candidate"
+    },
+    "acceptable_alternate_interpretations": [
+      "ownership not modelled; attribution may be defensible for managers"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources); no ownership dimension",
+    "confirmed_failure_if": "Kubernetes not attributed (missed personal skill)",
+    "partial_information_loss_if": "skill attributed to candidate though owned by candidate — record provenance gap",
+    "inconclusive_if": "Kubernetes attributed — correct",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R415": {
+    "test_id": "R415",
+    "filename": "R415.pdf",
+    "category": "skill_ownership",
+    "controlled_variable": "external contractor",
+    "exact_source_statement": "\"Coordinated work performed by an external Java development agency.\"",
+    "candidate_identity": {
+      "name": "Noor Haddad",
+      "title": "Program Manager",
+      "email": "noor.haddad@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Program Manager",
+        "employer": "Northwind Tech",
+        "date_display": "2017 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Leadership"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skill": "Java",
+      "true_owner": "external_contractor"
+    },
+    "acceptable_alternate_interpretations": [
+      "ownership not modelled; attribution may be defensible for managers"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources); no ownership dimension",
+    "confirmed_failure_if": "n/a",
+    "partial_information_loss_if": "skill attributed to candidate though owned by external_contractor — record provenance gap",
+    "inconclusive_if": "Java attributed to candidate though an external agency did it — provenance gap",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R416": {
+    "test_id": "R416",
+    "filename": "R416.pdf",
+    "category": "skill_ownership",
+    "controlled_variable": "reviewed, did not write",
+    "exact_source_statement": "\"Reviewed Java pull requests without writing implementation code.\"",
+    "candidate_identity": {
+      "name": "Omar Blake",
+      "title": "Tech Lead",
+      "email": "omar.blake@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Tech Lead",
+        "employer": "Northwind Tech",
+        "date_display": "2017 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Leadership"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skill": "Java",
+      "true_owner": "team"
+    },
+    "acceptable_alternate_interpretations": [
+      "ownership not modelled; attribution may be defensible for managers"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources); no ownership dimension",
+    "confirmed_failure_if": "n/a",
+    "partial_information_loss_if": "skill attributed to candidate though owned by team — record provenance gap",
+    "inconclusive_if": "Java attributed as hands-on though candidate only reviewed — provenance gap",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R417": {
+    "test_id": "R417",
+    "filename": "R417.pdf",
+    "category": "skill_ownership",
+    "controlled_variable": "personal Go (positive)",
+    "exact_source_statement": "\"Personally developed backend services in Go.\"",
+    "candidate_identity": {
+      "name": "Piper Nolan",
+      "title": "Backend Engineer",
+      "email": "piper.nolan@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Backend Engineer",
+        "employer": "Northwind Tech",
+        "date_display": "2017 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Leadership",
+      "Go"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skill": "Go",
+      "true_owner": "candidate"
+    },
+    "acceptable_alternate_interpretations": [
+      "ownership not modelled; attribution may be defensible for managers"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources); no ownership dimension",
+    "confirmed_failure_if": "Go not attributed (missed personal skill)",
+    "partial_information_loss_if": "skill attributed to candidate though owned by candidate — record provenance gap",
+    "inconclusive_if": "Go attributed — correct",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R418": {
+    "test_id": "R418",
+    "filename": "R418.pdf",
+    "category": "skill_ownership",
+    "controlled_variable": "managed team, explicitly never used",
+    "exact_source_statement": "\"Managed a Go development team but explicitly never used Go.\"",
+    "candidate_identity": {
+      "name": "Quinn Abara",
+      "title": "Engineering Manager",
+      "email": "quinn.abara@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Engineering Manager",
+        "employer": "Northwind Tech",
+        "date_display": "2017 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Leadership"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skill": "Go",
+      "true_owner": "team"
+    },
+    "acceptable_alternate_interpretations": [
+      "ownership not modelled; attribution may be defensible for managers"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources); no ownership dimension",
+    "confirmed_failure_if": "n/a (but explicit denial of personal use)",
+    "partial_information_loss_if": "skill attributed to candidate though owned by team — record provenance gap",
+    "inconclusive_if": "Go attributed to candidate despite explicit 'never used Go' — strongest ownership/negation gap",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R419": {
+    "test_id": "R419",
+    "filename": "R419.pdf",
+    "category": "skill_ownership",
+    "controlled_variable": "both personal and supervised",
+    "exact_source_statement": "\"Both personally used SQL and supervised SQL analysts.\"",
+    "candidate_identity": {
+      "name": "Rhea Kapoor",
+      "title": "Data Lead",
+      "email": "rhea.kapoor@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Data Lead",
+        "employer": "Northwind Tech",
+        "date_display": "2017 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Leadership",
+      "SQL"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skill": "SQL",
+      "true_owner": "candidate"
+    },
+    "acceptable_alternate_interpretations": [
+      "ownership not modelled; attribution may be defensible for managers"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources); no ownership dimension",
+    "confirmed_failure_if": "SQL not attributed (it IS personal here)",
+    "partial_information_loss_if": "skill attributed to candidate though owned by candidate — record provenance gap",
+    "inconclusive_if": "SQL attributed — correct (candidate personally used it)",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R420": {
+    "test_id": "R420",
+    "filename": "R420.pdf",
+    "category": "skill_ownership",
+    "controlled_variable": "competitor-tech mention only",
+    "exact_source_statement": "\"Evaluated React only as a competitor technology; no proficiency claimed.\"",
+    "candidate_identity": {
+      "name": "Sami Oduya",
+      "title": "Product Manager",
+      "email": "sami.oduya@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Product Manager",
+        "employer": "Northwind Tech",
+        "date_display": "2017 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Leadership"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "skill": "React",
+      "true_owner": "none_context"
+    },
+    "acceptable_alternate_interpretations": [
+      "ownership not modelled; attribution may be defensible for managers"
+    ],
+    "relevant_existing_affinda_field": "skills (+ sources); no ownership dimension",
+    "confirmed_failure_if": "React attributed as a candidate skill from a competitor-context mention",
+    "partial_information_loss_if": "skill attributed to candidate though owned by none_context — record provenance gap",
+    "inconclusive_if": "React attributed despite no proficiency claim — context/provenance gap",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R421": {
+    "test_id": "R421",
+    "filename": "R421.pdf",
+    "category": "certification_validity",
+    "controlled_variable": "active (positive)",
+    "exact_source_statement": "Certifications: \"AWS Certified Solutions Architect — active, valid through 2027\"",
+    "candidate_identity": {
+      "name": "Tariq Bello",
+      "title": "IT Specialist",
+      "email": "tariq.bello@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "IT Specialist",
+        "employer": "Northwind Tech",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Networking",
+      "Linux"
+    ],
+    "skills_line_note": null,
+    "certifications": [
+      "AWS Certified Solutions Architect — active, valid through 2027"
+    ],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "certification": "AWS Certified Solutions Architect — active, valid through 2027",
+      "status": "active"
+    },
+    "acceptable_alternate_interpretations": [
+      "certification captured; status/validity represented in a field OR preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "certifications",
+    "confirmed_failure_if": "certification missing from the certifications field",
+    "partial_information_loss_if": "no status field but active cert captured — acceptable",
+    "inconclusive_if": "n/a",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R422": {
+    "test_id": "R422",
+    "filename": "R422.pdf",
+    "category": "certification_validity",
+    "controlled_variable": "expired",
+    "exact_source_statement": "Certifications: \"AWS Certified Solutions Architect — expired 2022\"",
+    "candidate_identity": {
+      "name": "Uma Castellano",
+      "title": "IT Specialist",
+      "email": "uma.castellano@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "IT Specialist",
+        "employer": "Northwind Tech",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Networking",
+      "Linux"
+    ],
+    "skills_line_note": null,
+    "certifications": [
+      "AWS Certified Solutions Architect — expired 2022"
+    ],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "certification": "AWS Certified Solutions Architect — expired 2022",
+      "status": "expired"
+    },
+    "acceptable_alternate_interpretations": [
+      "certification captured; status/validity represented in a field OR preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "certifications",
+    "confirmed_failure_if": "shown as active/current with expiry dropped",
+    "partial_information_loss_if": "date captured but no 'expired' status",
+    "inconclusive_if": "expiry only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R423": {
+    "test_id": "R423",
+    "filename": "R423.pdf",
+    "category": "certification_validity",
+    "controlled_variable": "renewed (positive)",
+    "exact_source_statement": "Certifications: \"PMP — renewed 2025 (current)\"",
+    "candidate_identity": {
+      "name": "Vikram Shah",
+      "title": "IT Specialist",
+      "email": "vikram.shah@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "IT Specialist",
+        "employer": "Northwind Tech",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Networking",
+      "Linux"
+    ],
+    "skills_line_note": null,
+    "certifications": [
+      "PMP — renewed 2025 (current)"
+    ],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "certification": "PMP — renewed 2025 (current)",
+      "status": "active"
+    },
+    "acceptable_alternate_interpretations": [
+      "certification captured; status/validity represented in a field OR preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "certifications",
+    "confirmed_failure_if": "PMP not captured",
+    "partial_information_loss_if": "no explicit validity field but renewal date captured — acceptable",
+    "inconclusive_if": "n/a",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R424": {
+    "test_id": "R424",
+    "filename": "R424.pdf",
+    "category": "certification_validity",
+    "controlled_variable": "revoked",
+    "exact_source_statement": "Certifications: \"Chartered Engineer licence — revoked 2024\"",
+    "candidate_identity": {
+      "name": "Wren Alvarez",
+      "title": "IT Specialist",
+      "email": "wren.alvarez@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "IT Specialist",
+        "employer": "Northwind Tech",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Networking",
+      "Linux"
+    ],
+    "skills_line_note": null,
+    "certifications": [
+      "Chartered Engineer licence — revoked 2024"
+    ],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "certification": "Chartered Engineer licence — revoked 2024",
+      "status": "revoked"
+    },
+    "acceptable_alternate_interpretations": [
+      "certification captured; status/validity represented in a field OR preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "certifications",
+    "confirmed_failure_if": "licence shown as currently held",
+    "partial_information_loss_if": "revocation not represented as status",
+    "inconclusive_if": "revocation only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R425": {
+    "test_id": "R425",
+    "filename": "R425.pdf",
+    "category": "certification_validity",
+    "controlled_variable": "scheduled, not attempted",
+    "exact_source_statement": "Certifications: \"Security+ — exam scheduled, not yet attempted\"",
+    "candidate_identity": {
+      "name": "Xena Ford",
+      "title": "IT Specialist",
+      "email": "xena.ford@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "IT Specialist",
+        "employer": "Northwind Tech",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Networking",
+      "Linux"
+    ],
+    "skills_line_note": null,
+    "certifications": [
+      "Security+ — exam scheduled, not yet attempted"
+    ],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "certification": "Security+ — exam scheduled, not yet attempted",
+      "status": "pending"
+    },
+    "acceptable_alternate_interpretations": [
+      "certification captured; status/validity represented in a field OR preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "certifications",
+    "confirmed_failure_if": "shown as a held/earned certification",
+    "partial_information_loss_if": "pending not distinguished from held",
+    "inconclusive_if": "pending only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R426": {
+    "test_id": "R426",
+    "filename": "R426.pdf",
+    "category": "certification_validity",
+    "controlled_variable": "attempted, failed",
+    "exact_source_statement": "Certifications: \"Security+ — exam attempted, did not pass\"",
+    "candidate_identity": {
+      "name": "Yuki Brenner",
+      "title": "IT Specialist",
+      "email": "yuki.brenner@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "IT Specialist",
+        "employer": "Northwind Tech",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Networking",
+      "Linux"
+    ],
+    "skills_line_note": null,
+    "certifications": [
+      "Security+ — exam attempted, did not pass"
+    ],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "certification": "Security+ — exam attempted, did not pass",
+      "status": "failed"
+    },
+    "acceptable_alternate_interpretations": [
+      "certification captured; status/validity represented in a field OR preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "certifications",
+    "confirmed_failure_if": "shown as an earned certification",
+    "partial_information_loss_if": "failure not represented",
+    "inconclusive_if": "failure only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R427": {
+    "test_id": "R427",
+    "filename": "R427.pdf",
+    "category": "certification_validity",
+    "controlled_variable": "training only, no exam",
+    "exact_source_statement": "Certifications: \"AWS certification training completed; exam never taken\"",
+    "candidate_identity": {
+      "name": "Zane Okoro",
+      "title": "IT Specialist",
+      "email": "zane.okoro@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "IT Specialist",
+        "employer": "Northwind Tech",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Networking",
+      "Linux"
+    ],
+    "skills_line_note": null,
+    "certifications": [
+      "AWS certification training completed; exam never taken"
+    ],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "certification": "AWS certification training completed; exam never taken",
+      "status": "training_only"
+    },
+    "acceptable_alternate_interpretations": [
+      "certification captured; status/validity represented in a field OR preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "certifications",
+    "confirmed_failure_if": "recorded as a held certification",
+    "partial_information_loss_if": "training-vs-certified not distinguished",
+    "inconclusive_if": "distinction only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R428": {
+    "test_id": "R428",
+    "filename": "R428.pdf",
+    "category": "certification_validity",
+    "controlled_variable": "suspended temporarily",
+    "exact_source_statement": "Certifications: \"Professional licence — temporarily suspended\"",
+    "candidate_identity": {
+      "name": "Aria Lund",
+      "title": "IT Specialist",
+      "email": "aria.lund@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "IT Specialist",
+        "employer": "Northwind Tech",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Networking",
+      "Linux"
+    ],
+    "skills_line_note": null,
+    "certifications": [
+      "Professional licence — temporarily suspended"
+    ],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "certification": "Professional licence — temporarily suspended",
+      "status": "suspended"
+    },
+    "acceptable_alternate_interpretations": [
+      "certification captured; status/validity represented in a field OR preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "certifications",
+    "confirmed_failure_if": "licence shown as active",
+    "partial_information_loss_if": "suspension not represented (and not distinguished from revoked)",
+    "inconclusive_if": "suspension only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R429": {
+    "test_id": "R429",
+    "filename": "R429.pdf",
+    "category": "certification_validity",
+    "controlled_variable": "two certs: active + expired",
+    "exact_source_statement": "Certifications: \"CISSP — active (2026)\"",
+    "candidate_identity": {
+      "name": "Beau Castellano",
+      "title": "IT Specialist",
+      "email": "beau.castellano@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "IT Specialist",
+        "employer": "Northwind Tech",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Networking",
+      "Linux"
+    ],
+    "skills_line_note": null,
+    "certifications": [
+      "CISSP — active (2026)",
+      "PMP — expired 2021"
+    ],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "certification": "CISSP — active (2026)",
+      "status": "active"
+    },
+    "acceptable_alternate_interpretations": [
+      "certification captured; status/validity represented in a field OR preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "certifications",
+    "confirmed_failure_if": "the expired one shown as active, or one dropped",
+    "partial_information_loss_if": "no per-cert status to tell them apart",
+    "inconclusive_if": "status only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R430": {
+    "test_id": "R430",
+    "filename": "R430.pdf",
+    "category": "certification_validity",
+    "controlled_variable": "expiry date, no validity statement",
+    "exact_source_statement": "Certifications: \"ITIL Foundation — expires 2024\"",
+    "candidate_identity": {
+      "name": "Cleo Marsh",
+      "title": "IT Specialist",
+      "email": "cleo.marsh@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "IT Specialist",
+        "employer": "Northwind Tech",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Networking",
+      "Linux"
+    ],
+    "skills_line_note": null,
+    "certifications": [
+      "ITIL Foundation — expires 2024"
+    ],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "certification": "ITIL Foundation — expires 2024",
+      "status": "expiry_only"
+    },
+    "acceptable_alternate_interpretations": [
+      "certification captured; status/validity represented in a field OR preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "certifications",
+    "confirmed_failure_if": "treated as currently valid despite a past expiry date",
+    "partial_information_loss_if": "no current-validity inference from a past expiry",
+    "inconclusive_if": "ambiguous — expiry present, validity unstated",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R431": {
+    "test_id": "R431",
+    "filename": "R431.pdf",
+    "category": "employment_classification",
+    "controlled_variable": "permanent full-time (control)",
+    "exact_source_statement": "Role labelled \"Permanent, full-time\".",
+    "candidate_identity": {
+      "name": "Dana Pryce",
+      "title": "Associate",
+      "email": "dana.pryce@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Associate",
+        "employer": "Cedar Foods",
+        "date_display": "2021 – 2023",
+        "employment_type_label": "Permanent, full-time"
+      }
+    ],
+    "skills_affirmed": [
+      "Project Management"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "label": "Permanent, full-time",
+      "dimensions": {
+        "schedule": "full_time",
+        "relationship": "employee",
+        "permanence": "permanent"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentType reflects as many dimensions as it can; rest preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "workExperience[].employmentType (single enum — dimensions may compress)",
+    "confirmed_failure_if": "mis-typed as non-permanent/non-full-time",
+    "partial_information_loss_if": "independent dimensions compressed into one enum / mislabelled",
+    "inconclusive_if": "n/a",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R432": {
+    "test_id": "R432",
+    "filename": "R432.pdf",
+    "category": "employment_classification",
+    "controlled_variable": "fixed-term full-time contract",
+    "exact_source_statement": "Role labelled \"Fixed-term 6-month full-time contract\".",
+    "candidate_identity": {
+      "name": "Ewan Sato",
+      "title": "Associate",
+      "email": "ewan.sato@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Associate",
+        "employer": "Cedar Foods",
+        "date_display": "2021 – 2023",
+        "employment_type_label": "Fixed-term 6-month full-time contract"
+      }
+    ],
+    "skills_affirmed": [
+      "Project Management"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "label": "Fixed-term 6-month full-time contract",
+      "dimensions": {
+        "schedule": "full_time",
+        "relationship": "contractor",
+        "permanence": "fixed_term"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentType reflects as many dimensions as it can; rest preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "workExperience[].employmentType (single enum — dimensions may compress)",
+    "confirmed_failure_if": "typed as part_time (schedule) losing the contract/fixed-term dimensions",
+    "partial_information_loss_if": "independent dimensions compressed into one enum / mislabelled",
+    "inconclusive_if": "contract/fixed-term only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R433": {
+    "test_id": "R433",
+    "filename": "R433.pdf",
+    "category": "employment_classification",
+    "controlled_variable": "permanent part-time",
+    "exact_source_statement": "Role labelled \"Permanent, part-time\".",
+    "candidate_identity": {
+      "name": "Farah Nolan",
+      "title": "Associate",
+      "email": "farah.nolan@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Associate",
+        "employer": "Cedar Foods",
+        "date_display": "2021 – 2023",
+        "employment_type_label": "Permanent, part-time"
+      }
+    ],
+    "skills_affirmed": [
+      "Project Management"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "label": "Permanent, part-time",
+      "dimensions": {
+        "schedule": "part_time",
+        "relationship": "employee",
+        "permanence": "permanent"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentType reflects as many dimensions as it can; rest preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "workExperience[].employmentType (single enum — dimensions may compress)",
+    "confirmed_failure_if": "permanence lost (typed merely part_time with no permanent signal)",
+    "partial_information_loss_if": "independent dimensions compressed into one enum / mislabelled",
+    "inconclusive_if": "permanence only in rawText — inconclusive",
+    "paired_test_id": "R431",
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R434": {
+    "test_id": "R434",
+    "filename": "R434.pdf",
+    "category": "employment_classification",
+    "controlled_variable": "unpaid volunteer",
+    "exact_source_statement": "Role labelled \"Volunteer (unpaid) at a charity\".",
+    "candidate_identity": {
+      "name": "Gus Rahman",
+      "title": "Associate",
+      "email": "gus.rahman@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Associate",
+        "employer": "Cedar Foods",
+        "date_display": "2021 – 2023",
+        "employment_type_label": "Volunteer (unpaid) at a charity"
+      }
+    ],
+    "skills_affirmed": [
+      "Project Management"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "label": "Volunteer (unpaid) at a charity",
+      "dimensions": {
+        "schedule": "part_time",
+        "relationship": "volunteer",
+        "permanence": "temporary"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentType reflects as many dimensions as it can; rest preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "workExperience[].employmentType (single enum — dimensions may compress)",
+    "confirmed_failure_if": "volunteer typed as internship or paid employment",
+    "partial_information_loss_if": "independent dimensions compressed into one enum / mislabelled",
+    "inconclusive_if": "volunteer only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R435": {
+    "test_id": "R435",
+    "filename": "R435.pdf",
+    "category": "employment_classification",
+    "controlled_variable": "paid summer internship",
+    "exact_source_statement": "Role labelled \"Paid summer internship\".",
+    "candidate_identity": {
+      "name": "Hira Costa",
+      "title": "Associate",
+      "email": "hira.costa@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Associate",
+        "employer": "Cedar Foods",
+        "date_display": "2021 – 2023",
+        "employment_type_label": "Paid summer internship"
+      }
+    ],
+    "skills_affirmed": [
+      "Project Management"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "label": "Paid summer internship",
+      "dimensions": {
+        "schedule": "full_time",
+        "relationship": "intern",
+        "permanence": "fixed_term"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentType reflects as many dimensions as it can; rest preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "workExperience[].employmentType (single enum — dimensions may compress)",
+    "confirmed_failure_if": "internship typed as permanent/full-time employee",
+    "partial_information_loss_if": "independent dimensions compressed into one enum / mislabelled",
+    "inconclusive_if": "internship captured but paid/unpaid not distinguished — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R436": {
+    "test_id": "R436",
+    "filename": "R436.pdf",
+    "category": "employment_classification",
+    "controlled_variable": "independent consulting contract",
+    "exact_source_statement": "Role labelled \"Independent consulting contract\".",
+    "candidate_identity": {
+      "name": "Ike Varga",
+      "title": "Associate",
+      "email": "ike.varga@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Associate",
+        "employer": "Cedar Foods",
+        "date_display": "2021 – 2023",
+        "employment_type_label": "Independent consulting contract"
+      }
+    ],
+    "skills_affirmed": [
+      "Project Management"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "label": "Independent consulting contract",
+      "dimensions": {
+        "schedule": "full_time",
+        "relationship": "contractor",
+        "permanence": "fixed_term"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentType reflects as many dimensions as it can; rest preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "workExperience[].employmentType (single enum — dimensions may compress)",
+    "confirmed_failure_if": "typed as permanent employee",
+    "partial_information_loss_if": "independent dimensions compressed into one enum / mislabelled",
+    "inconclusive_if": "contractor only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R437": {
+    "test_id": "R437",
+    "filename": "R437.pdf",
+    "category": "employment_classification",
+    "controlled_variable": "temporary agency employment",
+    "exact_source_statement": "Role labelled \"Temporary role via staffing agency\".",
+    "candidate_identity": {
+      "name": "Jina Peral",
+      "title": "Associate",
+      "email": "jina.peral@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Associate",
+        "employer": "Cedar Foods",
+        "date_display": "2021 – 2023",
+        "employment_type_label": "Temporary role via staffing agency"
+      }
+    ],
+    "skills_affirmed": [
+      "Project Management"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "label": "Temporary role via staffing agency",
+      "dimensions": {
+        "schedule": "full_time",
+        "relationship": "agency_temp",
+        "permanence": "temporary"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentType reflects as many dimensions as it can; rest preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "workExperience[].employmentType (single enum — dimensions may compress)",
+    "confirmed_failure_if": "typed as permanent; agency/temp lost",
+    "partial_information_loss_if": "independent dimensions compressed into one enum / mislabelled",
+    "inconclusive_if": "agency/temp only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R438": {
+    "test_id": "R438",
+    "filename": "R438.pdf",
+    "category": "employment_classification",
+    "controlled_variable": "casual, variable hours",
+    "exact_source_statement": "Role labelled \"Casual employment, variable hours\".",
+    "candidate_identity": {
+      "name": "Kofi Mensah",
+      "title": "Associate",
+      "email": "kofi.mensah@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Associate",
+        "employer": "Cedar Foods",
+        "date_display": "2021 – 2023",
+        "employment_type_label": "Casual employment, variable hours"
+      }
+    ],
+    "skills_affirmed": [
+      "Project Management"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "label": "Casual employment, variable hours",
+      "dimensions": {
+        "schedule": "casual",
+        "relationship": "employee",
+        "permanence": "ongoing"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentType reflects as many dimensions as it can; rest preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "workExperience[].employmentType (single enum — dimensions may compress)",
+    "confirmed_failure_if": "casual typed as full_time/part_time losing the casual schedule",
+    "partial_information_loss_if": "independent dimensions compressed into one enum / mislabelled",
+    "inconclusive_if": "casual only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R439": {
+    "test_id": "R439",
+    "filename": "R439.pdf",
+    "category": "employment_classification",
+    "controlled_variable": "volunteer alongside permanent (two roles)",
+    "exact_source_statement": "Role labelled \"Permanent role + volunteer role\".",
+    "candidate_identity": {
+      "name": "Lara Pune",
+      "title": "Associate",
+      "email": "lara.pune@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Operations Associate",
+        "employer": "Cedar Foods",
+        "date_display": "2021 – Present",
+        "employment_type_label": "Permanent, full-time"
+      },
+      {
+        "jobTitle": "Community Volunteer",
+        "employer": "Helping Hands Charity",
+        "date_display": "2020 – Present",
+        "employment_type_label": "Volunteer (unpaid)"
+      }
+    ],
+    "skills_affirmed": [
+      "Project Management"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "label": "Permanent role + volunteer role",
+      "dimensions": {
+        "note": "two roles: one permanent employee, one volunteer"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentType reflects as many dimensions as it can; rest preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "workExperience[].employmentType (single enum — dimensions may compress)",
+    "confirmed_failure_if": "both roles typed identically (volunteer not distinguished from permanent)",
+    "partial_information_loss_if": "independent dimensions compressed into one enum / mislabelled",
+    "inconclusive_if": "volunteer vs permanent only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R440": {
+    "test_id": "R440",
+    "filename": "R440.pdf",
+    "category": "employment_classification",
+    "controlled_variable": "contract-to-permanent conversion",
+    "exact_source_statement": "Role labelled \"Contract-to-permanent (converted within one employer)\".",
+    "candidate_identity": {
+      "name": "Milan Rost",
+      "title": "Associate",
+      "email": "milan.rost@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer": "Cedar Foods",
+        "date_display": "2021 – Present",
+        "employment_type_label": "Contract-to-permanent"
+      }
+    ],
+    "skills_affirmed": [
+      "Project Management"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "label": "Contract-to-permanent (converted within one employer)",
+      "dimensions": {
+        "note": "one employer, converted from contract to permanent"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentType reflects as many dimensions as it can; rest preserved in rawText"
+    ],
+    "relevant_existing_affinda_field": "workExperience[].employmentType (single enum — dimensions may compress)",
+    "confirmed_failure_if": "conversion represented as a single flat type with no transition",
+    "partial_information_loss_if": "independent dimensions compressed into one enum / mislabelled",
+    "inconclusive_if": "conversion only in rawText — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R441": {
+    "test_id": "R441",
+    "filename": "R441.pdf",
+    "category": "work_authorisation",
+    "controlled_variable": "citizen",
+    "exact_source_statement": "\"Australian citizen\"",
+    "candidate_identity": {
+      "name": "Nadia Oren",
+      "title": "Operations Analyst",
+      "email": "nadia.oren@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Operations Analyst",
+        "employer": "Keystone Group",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Excel",
+      "SQL"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": "Australian citizen",
+    "correct_intended_interpretation": {
+      "stated": "Australian citizen",
+      "dimensions": {
+        "jurisdiction": "AU",
+        "category": "citizen"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "workAuthorization field preserves the stated claim's key dimensions"
+    ],
+    "relevant_existing_affinda_field": "workAuthorization",
+    "confirmed_failure_if": "status inverted/misclassified",
+    "partial_information_loss_if": "jurisdiction or category dropped",
+    "inconclusive_if": "field absent — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R442": {
+    "test_id": "R442",
+    "filename": "R442.pdf",
+    "category": "work_authorisation",
+    "controlled_variable": "permanent resident",
+    "exact_source_statement": "\"Australian permanent resident\"",
+    "candidate_identity": {
+      "name": "Oscar Blum",
+      "title": "Operations Analyst",
+      "email": "oscar.blum@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Operations Analyst",
+        "employer": "Keystone Group",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Excel",
+      "SQL"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": "Australian permanent resident",
+    "correct_intended_interpretation": {
+      "stated": "Australian permanent resident",
+      "dimensions": {
+        "jurisdiction": "AU",
+        "category": "permanent_resident"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "workAuthorization field preserves the stated claim's key dimensions"
+    ],
+    "relevant_existing_affinda_field": "workAuthorization",
+    "confirmed_failure_if": "status inverted",
+    "partial_information_loss_if": "category dropped",
+    "inconclusive_if": "field absent — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R443": {
+    "test_id": "R443",
+    "filename": "R443.pdf",
+    "category": "work_authorisation",
+    "controlled_variable": "temp visa with expiry",
+    "exact_source_statement": "\"Temporary work visa valid until 2028\"",
+    "candidate_identity": {
+      "name": "Petra Nunez",
+      "title": "Operations Analyst",
+      "email": "petra.nunez@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Operations Analyst",
+        "employer": "Keystone Group",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Excel",
+      "SQL"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": "Temporary work visa valid until 2028",
+    "correct_intended_interpretation": {
+      "stated": "Temporary work visa valid until 2028",
+      "dimensions": {
+        "category": "temporary_visa",
+        "expiry": "2028"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "workAuthorization field preserves the stated claim's key dimensions"
+    ],
+    "relevant_existing_affinda_field": "workAuthorization",
+    "confirmed_failure_if": "shown as permanent/unrestricted",
+    "partial_information_loss_if": "expiry 2028 dropped",
+    "inconclusive_if": "field absent — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R444": {
+    "test_id": "R444",
+    "filename": "R444.pdf",
+    "category": "work_authorisation",
+    "controlled_variable": "expired",
+    "exact_source_statement": "\"Work authorisation expired in 2023\"",
+    "candidate_identity": {
+      "name": "Quincy Hart",
+      "title": "Operations Analyst",
+      "email": "quincy.hart@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Operations Analyst",
+        "employer": "Keystone Group",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Excel",
+      "SQL"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": "Work authorisation expired in 2023",
+    "correct_intended_interpretation": {
+      "stated": "Work authorisation expired in 2023",
+      "dimensions": {
+        "status": "expired",
+        "expiry": "2023"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "workAuthorization field preserves the stated claim's key dimensions"
+    ],
+    "relevant_existing_affinda_field": "workAuthorization",
+    "confirmed_failure_if": "shown as currently authorised",
+    "partial_information_loss_if": "expiry/expired status dropped (as in Round 3 R314)",
+    "inconclusive_if": "field absent — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R445": {
+    "test_id": "R445",
+    "filename": "R445.pdf",
+    "category": "work_authorisation",
+    "controlled_variable": "needs sponsorship",
+    "exact_source_statement": "\"Requires employer sponsorship\"",
+    "candidate_identity": {
+      "name": "Rania Vale",
+      "title": "Operations Analyst",
+      "email": "rania.vale@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Operations Analyst",
+        "employer": "Keystone Group",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Excel",
+      "SQL"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": "Requires employer sponsorship",
+    "correct_intended_interpretation": {
+      "stated": "Requires employer sponsorship",
+      "dimensions": {
+        "sponsorship": "required"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "workAuthorization field preserves the stated claim's key dimensions"
+    ],
+    "relevant_existing_affinda_field": "workAuthorization",
+    "confirmed_failure_if": "shown as not requiring sponsorship",
+    "partial_information_loss_if": "sponsorship requirement dropped",
+    "inconclusive_if": "field absent — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R446": {
+    "test_id": "R446",
+    "filename": "R446.pdf",
+    "category": "work_authorisation",
+    "controlled_variable": "no sponsorship",
+    "exact_source_statement": "\"Does not require sponsorship\"",
+    "candidate_identity": {
+      "name": "Sten Ohara",
+      "title": "Operations Analyst",
+      "email": "sten.ohara@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Operations Analyst",
+        "employer": "Keystone Group",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Excel",
+      "SQL"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": "Does not require sponsorship",
+    "correct_intended_interpretation": {
+      "stated": "Does not require sponsorship",
+      "dimensions": {
+        "sponsorship": "not_required"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "workAuthorization field preserves the stated claim's key dimensions"
+    ],
+    "relevant_existing_affinda_field": "workAuthorization",
+    "confirmed_failure_if": "shown as requiring sponsorship",
+    "partial_information_loss_if": "sponsorship dimension dropped",
+    "inconclusive_if": "field absent — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R447": {
+    "test_id": "R447",
+    "filename": "R447.pdf",
+    "category": "work_authorisation",
+    "controlled_variable": "hours restriction",
+    "exact_source_statement": "\"Work rights restricted to 24 hours per week\"",
+    "candidate_identity": {
+      "name": "Tomi Adeyemi",
+      "title": "Operations Analyst",
+      "email": "tomi.adeyemi@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Operations Analyst",
+        "employer": "Keystone Group",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Excel",
+      "SQL"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": "Work rights restricted to 24 hours per week",
+    "correct_intended_interpretation": {
+      "stated": "Work rights restricted to 24 hours per week",
+      "dimensions": {
+        "restriction": "24h/week"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "workAuthorization field preserves the stated claim's key dimensions"
+    ],
+    "relevant_existing_affinda_field": "workAuthorization",
+    "confirmed_failure_if": "shown as unrestricted",
+    "partial_information_loss_if": "the 24h/week restriction dropped",
+    "inconclusive_if": "field absent — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R448": {
+    "test_id": "R448",
+    "filename": "R448.pdf",
+    "category": "work_authorisation",
+    "controlled_variable": "unknown current status",
+    "exact_source_statement": "\"Previously authorised to work; current status unknown\"",
+    "candidate_identity": {
+      "name": "Ula Petit",
+      "title": "Operations Analyst",
+      "email": "ula.petit@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Operations Analyst",
+        "employer": "Keystone Group",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Excel",
+      "SQL"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": "Previously authorised to work; current status unknown",
+    "correct_intended_interpretation": {
+      "stated": "Previously authorised to work; current status unknown",
+      "dimensions": {
+        "status": "unknown"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "workAuthorization field preserves the stated claim's key dimensions"
+    ],
+    "relevant_existing_affinda_field": "workAuthorization",
+    "confirmed_failure_if": "a definite status invented where source says unknown",
+    "partial_information_loss_if": "'unknown' flattened to a definite status",
+    "inconclusive_if": "field absent — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R449": {
+    "test_id": "R449",
+    "filename": "R449.pdf",
+    "category": "work_authorisation",
+    "controlled_variable": "eligible, not obtained",
+    "exact_source_statement": "\"Eligible for a visa but has not obtained one\"",
+    "candidate_identity": {
+      "name": "Viktor Mraz",
+      "title": "Operations Analyst",
+      "email": "viktor.mraz@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Operations Analyst",
+        "employer": "Keystone Group",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Excel",
+      "SQL"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": "Eligible for a visa but has not obtained one",
+    "correct_intended_interpretation": {
+      "stated": "Eligible for a visa but has not obtained one",
+      "dimensions": {
+        "status": "eligible_not_obtained"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "workAuthorization field preserves the stated claim's key dimensions"
+    ],
+    "relevant_existing_affinda_field": "workAuthorization",
+    "confirmed_failure_if": "shown as currently holding a visa",
+    "partial_information_loss_if": "eligible-vs-held distinction dropped",
+    "inconclusive_if": "field absent — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R450": {
+    "test_id": "R450",
+    "filename": "R450.pdf",
+    "category": "work_authorisation",
+    "controlled_variable": "CONFLICTING statements",
+    "exact_source_statement": "\"Authorised to work with no restrictions // Requires sponsorship (conflicting)\"",
+    "candidate_identity": {
+      "name": "Wanda Ilori",
+      "title": "Operations Analyst",
+      "email": "wanda.ilori@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Operations Analyst",
+        "employer": "Keystone Group",
+        "date_display": "2018 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Excel",
+      "SQL"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": "Authorised to work with no restrictions // Requires sponsorship (conflicting)",
+    "correct_intended_interpretation": {
+      "stated": "Authorised to work with no restrictions // Requires sponsorship (conflicting)",
+      "dimensions": {
+        "status": "conflicting"
+      }
+    },
+    "acceptable_alternate_interpretations": [
+      "workAuthorization field preserves the stated claim's key dimensions"
+    ],
+    "relevant_existing_affinda_field": "workAuthorization",
+    "confirmed_failure_if": "silently picks one with no conflict signal",
+    "partial_information_loss_if": "only one statement preserved",
+    "inconclusive_if": "field absent — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R451": {
+    "test_id": "R451",
+    "filename": "R451.pdf",
+    "category": "employment_duration",
+    "controlled_variable": "two ENTIRELY overlapping jobs (same dates)",
+    "exact_source_statement": "two ENTIRELY overlapping jobs (same dates)",
+    "candidate_identity": {
+      "name": "Xavi Rome",
+      "title": "Consultant",
+      "email": "xavi.rome@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Consultant",
+        "employer": "Northwind Tech",
+        "date_display": "2020 – 2023",
+        "employment_type_label": ""
+      },
+      {
+        "jobTitle": "Advisor",
+        "employer": "Cedar Foods",
+        "date_display": "2020 – 2023",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Strategy"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "calendar_span": "2020-2023 (~3y)",
+      "no_double_count": true
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentMetrics reflects calendar experience; overlaps not double-counted"
+    ],
+    "relevant_existing_affinda_field": "employmentMetrics / dateRange.durationMonths",
+    "confirmed_failure_if": "total experience double-counts (≈6y instead of ≈3y)",
+    "partial_information_loss_if": "both roles kept but total unclear",
+    "inconclusive_if": "no aggregate field — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R452": {
+    "test_id": "R452",
+    "filename": "R452.pdf",
+    "category": "employment_duration",
+    "controlled_variable": "three PARTIALLY overlapping jobs",
+    "exact_source_statement": "three PARTIALLY overlapping jobs",
+    "candidate_identity": {
+      "name": "Yara Cole",
+      "title": "Consultant",
+      "email": "yara.cole@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Lead",
+        "employer": "Alpha Co",
+        "date_display": "2019 – 2023",
+        "employment_type_label": ""
+      },
+      {
+        "jobTitle": "Advisor",
+        "employer": "Beta Co",
+        "date_display": "2021 – 2024",
+        "employment_type_label": ""
+      },
+      {
+        "jobTitle": "Consultant",
+        "employer": "Gamma Co",
+        "date_display": "2022 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Strategy"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "calendar_span": "2019-present",
+      "no_double_count": true
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentMetrics reflects calendar experience; overlaps not double-counted"
+    ],
+    "relevant_existing_affinda_field": "employmentMetrics / dateRange.durationMonths",
+    "confirmed_failure_if": "total double-counts overlapping spans",
+    "partial_information_loss_if": "partial handling",
+    "inconclusive_if": "inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R453": {
+    "test_id": "R453",
+    "filename": "R453.pdf",
+    "category": "employment_duration",
+    "controlled_variable": "full-time + freelance weekend work (concurrent)",
+    "exact_source_statement": "full-time + freelance weekend work (concurrent)",
+    "candidate_identity": {
+      "name": "Zola Byrne",
+      "title": "Consultant",
+      "email": "zola.byrne@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Engineer",
+        "employer": "Alpha Co",
+        "date_display": "2019 – Present",
+        "employment_type_label": "Full-time"
+      },
+      {
+        "jobTitle": "Freelance Designer",
+        "employer": "Self-Employed",
+        "date_display": "2019 – Present",
+        "employment_type_label": "Freelance"
+      }
+    ],
+    "skills_affirmed": [
+      "Strategy"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "concurrent": true,
+      "fte_vs_calendar": "calendar overlaps; FTE not promised"
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentMetrics reflects calendar experience; overlaps not double-counted"
+    ],
+    "relevant_existing_affinda_field": "employmentMetrics / dateRange.durationMonths",
+    "confirmed_failure_if": "calendar experience double-counted for the concurrent freelance",
+    "partial_information_loss_if": "concurrency captured but hours/FTE not",
+    "inconclusive_if": "FTE not promised — do not penalise; inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R454": {
+    "test_id": "R454",
+    "filename": "R454.pdf",
+    "category": "employment_duration",
+    "controlled_variable": "multiple short contracts with gaps",
+    "exact_source_statement": "multiple short contracts with gaps",
+    "candidate_identity": {
+      "name": "Aron Diaz",
+      "title": "Consultant",
+      "email": "aron.diaz@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Contractor",
+        "employer": "Alpha Co",
+        "date_display": "Jan 2020 – Jun 2020",
+        "employment_type_label": ""
+      },
+      {
+        "jobTitle": "Contractor",
+        "employer": "Beta Co",
+        "date_display": "Jan 2021 – Jun 2021",
+        "employment_type_label": ""
+      },
+      {
+        "jobTitle": "Contractor",
+        "employer": "Gamma Co",
+        "date_display": "Jan 2023 – Jun 2023",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Strategy"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "gaps_expected": true,
+      "sum_of_tenures": "~18 months across 3 contracts"
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentMetrics reflects calendar experience; overlaps not double-counted"
+    ],
+    "relevant_existing_affinda_field": "employmentMetrics / dateRange.durationMonths",
+    "confirmed_failure_if": "gaps erased / continuous employment fabricated",
+    "partial_information_loss_if": "gaps not surfaced but dates correct",
+    "inconclusive_if": "no gap field — inconclusive (dates still correct)",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R455": {
+    "test_id": "R455",
+    "filename": "R455.pdf",
+    "category": "employment_duration",
+    "controlled_variable": "three promotions, one employer, continuous",
+    "exact_source_statement": "three promotions, one employer, continuous",
+    "candidate_identity": {
+      "name": "Bina Oke",
+      "title": "Consultant",
+      "email": "bina.oke@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Director",
+        "employer": "Lakeshore Ltd",
+        "date_display": "2022 – Present",
+        "employment_type_label": ""
+      },
+      {
+        "jobTitle": "Manager",
+        "employer": "Lakeshore Ltd",
+        "date_display": "2019 – 2022",
+        "employment_type_label": ""
+      },
+      {
+        "jobTitle": "Coordinator",
+        "employer": "Lakeshore Ltd",
+        "date_display": "2017 – 2019",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Strategy"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "continuous_tenure": "2017-present at one employer",
+      "no_double_count": true
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentMetrics reflects calendar experience; overlaps not double-counted"
+    ],
+    "relevant_existing_affinda_field": "employmentMetrics / dateRange.durationMonths",
+    "confirmed_failure_if": "continuous tenure double-counted or employer fragmented",
+    "partial_information_loss_if": "roles kept but tenure mis-aggregated",
+    "inconclusive_if": "inconclusive",
+    "paired_test_id": "R451",
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R456": {
+    "test_id": "R456",
+    "filename": "R456.pdf",
+    "category": "employment_duration",
+    "controlled_variable": "role 2021 – Present (open current)",
+    "exact_source_statement": "role 2021 – Present (open current)",
+    "candidate_identity": {
+      "name": "Caro Vance",
+      "title": "Consultant",
+      "email": "caro.vance@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Engineer",
+        "employer": "Alpha Co",
+        "date_display": "2021 – Present",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Strategy"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "current": true,
+      "no_fabricated_end": true
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentMetrics reflects calendar experience; overlaps not double-counted"
+    ],
+    "relevant_existing_affinda_field": "employmentMetrics / dateRange.durationMonths",
+    "confirmed_failure_if": "a fabricated end date (end==start / 1-month) as in Round 2 D04",
+    "partial_information_loss_if": "current but tenure to reference date not computed",
+    "inconclusive_if": "inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R457": {
+    "test_id": "R457",
+    "filename": "R457.pdf",
+    "category": "employment_duration",
+    "controlled_variable": "explicit career break",
+    "exact_source_statement": "explicit career break",
+    "candidate_identity": {
+      "name": "Dax Oyelaran",
+      "title": "Consultant",
+      "email": "dax.oyelaran@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Engineer",
+        "employer": "Alpha Co",
+        "date_display": "2022 – Present",
+        "employment_type_label": ""
+      },
+      {
+        "jobTitle": "Career break (caregiving)",
+        "employer": "",
+        "date_display": "2020 – 2022",
+        "employment_type_label": ""
+      },
+      {
+        "jobTitle": "Engineer",
+        "employer": "Beta Co",
+        "date_display": "2015 – 2020",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Strategy"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "gap_or_break": "2020-2022 explicitly labelled a break"
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentMetrics reflects calendar experience; overlaps not double-counted"
+    ],
+    "relevant_existing_affinda_field": "employmentMetrics / dateRange.durationMonths",
+    "confirmed_failure_if": "the break is counted as employment",
+    "partial_information_loss_if": "break not represented but dates correct",
+    "inconclusive_if": "no break field — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R458": {
+    "test_id": "R458",
+    "filename": "R458.pdf",
+    "category": "employment_duration",
+    "controlled_variable": "part-time over five years",
+    "exact_source_statement": "part-time over five years",
+    "candidate_identity": {
+      "name": "Effie Lund",
+      "title": "Consultant",
+      "email": "effie.lund@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Analyst",
+        "employer": "Alpha Co",
+        "date_display": "2019 – 2024",
+        "employment_type_label": "Part-time"
+      }
+    ],
+    "skills_affirmed": [
+      "Strategy"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "calendar": "~5y",
+      "fte_vs_calendar": "calendar 5y; FTE lower, not promised"
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentMetrics reflects calendar experience; overlaps not double-counted"
+    ],
+    "relevant_existing_affinda_field": "employmentMetrics / dateRange.durationMonths",
+    "confirmed_failure_if": "n/a (FTE not promised)",
+    "partial_information_loss_if": "part-time not reflected in type/metrics",
+    "inconclusive_if": "FTE not promised — inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  },
+  "R459": {
+    "test_id": "R459",
+    "filename": "R459.pdf",
+    "category": "employment_duration",
+    "controlled_variable": "concurrent internships + university employment",
+    "exact_source_statement": "concurrent internships + university employment",
+    "candidate_identity": {
+      "name": "Fynn Castellano",
+      "title": "Consultant",
+      "email": "fynn.castellano@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Intern",
+        "employer": "Alpha Co",
+        "date_display": "Summer 2021",
+        "employment_type_label": "Internship"
+      },
+      {
+        "jobTitle": "Research Assistant",
+        "employer": "State University",
+        "date_display": "2020 – 2022",
+        "employment_type_label": "Part-time"
+      },
+      {
+        "jobTitle": "Intern",
+        "employer": "Beta Co",
+        "date_display": "Summer 2022",
+        "employment_type_label": "Internship"
+      }
+    ],
+    "skills_affirmed": [
+      "Strategy"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "concurrent_overlaps": true
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentMetrics reflects calendar experience; overlaps not double-counted"
+    ],
+    "relevant_existing_affinda_field": "employmentMetrics / dateRange.durationMonths",
+    "confirmed_failure_if": "overlapping internships/university work double-counted",
+    "partial_information_loss_if": "roles kept but overlap handling unclear",
+    "inconclusive_if": "inconclusive",
+    "paired_test_id": null,
+    "multi_variable_cannot_isolate": true,
+    "expected_pages": 1
+  },
+  "R460": {
+    "test_id": "R460",
+    "filename": "R460.pdf",
+    "category": "employment_duration",
+    "controlled_variable": "one completed + one unspecified end date",
+    "exact_source_statement": "one completed + one unspecified end date",
+    "candidate_identity": {
+      "name": "Gaby Nunez",
+      "title": "Consultant",
+      "email": "gaby.nunez@examplemail.com"
+    },
+    "work_experience": [
+      {
+        "jobTitle": "Engineer",
+        "employer": "Alpha Co",
+        "date_display": "2023 –",
+        "employment_type_label": ""
+      },
+      {
+        "jobTitle": "Engineer",
+        "employer": "Beta Co",
+        "date_display": "2019 – 2022",
+        "employment_type_label": ""
+      }
+    ],
+    "skills_affirmed": [
+      "Strategy"
+    ],
+    "skills_line_note": null,
+    "certifications": [],
+    "work_authorisation_text": null,
+    "correct_intended_interpretation": {
+      "open_role": "2023 – (no end)",
+      "no_fabricated_end": true
+    },
+    "acceptable_alternate_interpretations": [
+      "employmentMetrics reflects calendar experience; overlaps not double-counted"
+    ],
+    "relevant_existing_affinda_field": "employmentMetrics / dateRange.durationMonths",
+    "confirmed_failure_if": "the open-ended role gets a fabricated end date (Round 2 D04 pattern)",
+    "partial_information_loss_if": "open role flagged current but no duration",
+    "inconclusive_if": "inconclusive",
+    "paired_test_id": "R456",
+    "multi_variable_cannot_isolate": false,
+    "expected_pages": 1
+  }
+}

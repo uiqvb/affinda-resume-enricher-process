@@ -1,0 +1,814 @@
+{
+  "tally": {
+    "pass": 30,
+    "acceptable": 0,
+    "inconclusive": 7,
+    "fail": 8,
+    "no_response": 0
+  },
+  "patterns": {
+    "invented_end_date": 2,
+    "status_absent": 6,
+    "misleading_completion": 6,
+    "education_dropped": 1
+  },
+  "per_test": {
+    "T01": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "",
+          "current": true,
+          "durationMonths": 62,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "explicit 'Present'"
+    },
+    "T02": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "",
+          "current": true,
+          "durationMonths": 62,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "explicit 'Current'"
+    },
+    "T03": {
+      "verdict": "fail",
+      "reason": "invented end date 2021-10 for an open-ended role",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "2021-10",
+          "current": false,
+          "durationMonths": 1,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "pattern": "invented_end_date",
+      "phase": 1,
+      "controlled": "open-ended dash, NO keyword (ambiguous)"
+    },
+    "T04": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "",
+          "current": true,
+          "durationMonths": 62,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "'to date' idiom"
+    },
+    "T05": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "",
+          "current": true,
+          "durationMonths": 62,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "'Since' prefix, no range"
+    },
+    "T06": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-01",
+          "end": "",
+          "current": true,
+          "durationMonths": 71,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "year-only start + 'Present'"
+    },
+    "T07": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "",
+          "current": true,
+          "durationMonths": 62,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "'Ongoing' keyword"
+    },
+    "T08": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "",
+          "current": true,
+          "durationMonths": 62,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "'onwards' keyword"
+    },
+    "T09": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "",
+          "current": true,
+          "durationMonths": 62,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "prose 'currently employed'"
+    },
+    "T10": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "",
+          "current": true,
+          "durationMonths": 62,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "'Now' keyword"
+    },
+    "T11": {
+      "verdict": "pass",
+      "reason": "expected end 2024-10/not-current; got end=2024-10 current=False",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "2024-10",
+          "current": false,
+          "durationMonths": 37,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "COMPLETED control (explicit end)"
+    },
+    "T12": {
+      "verdict": "fail",
+      "reason": "invented end date 2021-10 for an open-ended role",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "2021-10",
+          "current": false,
+          "durationMonths": 1,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "pattern": "invented_end_date",
+      "phase": 1,
+      "controlled": "single date only (ambiguous)"
+    },
+    "T13": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "",
+          "current": true,
+          "durationMonths": 62,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "clear current INSIDE two-column layout"
+    },
+    "T14": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "",
+          "current": true,
+          "durationMonths": 62,
+          "description": ""
+        }
+      },
+      "phase": 1,
+      "controlled": "clear current INSIDE employment table"
+    },
+    "T15": {
+      "verdict": "pass",
+      "reason": "current recognised (current=True, end=null)",
+      "evidence": {
+        "parsed_role": {
+          "org": "Thamesworks Cloud",
+          "title": "DevOps Engineer",
+          "start": "2021-10",
+          "end": "",
+          "current": true,
+          "durationMonths": 62,
+          "description": "• Maintain CI/CD across 40+ repositories.\n• Own infrastructure-as-code for the platform team.\n• Lead incident response and postmortems."
+        }
+      },
+      "phase": 1,
+      "controlled": "clear current WITH a second overlapping role"
+    },
+    "T16": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Freelance Illustrator",
+          "expected_employer": "Self-Employed",
+          "got_employer": "Self-Employed",
+          "result": "pass",
+          "why": "employer='Self-Employed'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "freelance labelled 'Self-Employed'"
+    },
+    "T17": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Freelance Illustrator",
+          "expected_employer": "Independent",
+          "got_employer": "Independent",
+          "result": "pass",
+          "why": "employer='Independent'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "freelance labelled 'Independent'"
+    },
+    "T18": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Illustrator",
+          "expected_employer": "Independent Contractor",
+          "got_employer": "Independent Contractor",
+          "result": "pass",
+          "why": "employer='Independent Contractor'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "role labelled 'Independent Contractor'"
+    },
+    "T19": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Illustrator",
+          "expected_employer": "Sole Trader",
+          "got_employer": "Sole Trader",
+          "result": "pass",
+          "why": "employer='Sole Trader'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "role labelled 'Sole Trader'"
+    },
+    "T20": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Freelance Illustrator",
+          "expected_employer": null,
+          "got_employer": "",
+          "result": "acceptable",
+          "why": "no employer preserved / self-employment",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "freelance role with NO employer line"
+    },
+    "T21": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "expected_employer": "Meadowlark Software",
+          "got_employer": "Meadowlark Software",
+          "result": "pass",
+          "why": "employer='Meadowlark Software'",
+          "pattern": null
+        },
+        {
+          "title": "Freelance Illustrator",
+          "expected_employer": "Self-Employed",
+          "got_employer": "Self-Employed",
+          "result": "pass",
+          "why": "employer='Self-Employed'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "freelance ALONGSIDE permanent (perm first)"
+    },
+    "T22": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Freelance Illustrator",
+          "expected_employer": "Self-Employed",
+          "got_employer": "Self-Employed",
+          "result": "pass",
+          "why": "employer='Self-Employed'",
+          "pattern": null
+        },
+        {
+          "title": "Senior Designer",
+          "expected_employer": "Meadowlark Software",
+          "got_employer": "Meadowlark Software",
+          "result": "pass",
+          "why": "employer='Meadowlark Software'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "freelance ABOVE permanent"
+    },
+    "T23": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "expected_employer": "Meadowlark Software",
+          "got_employer": "Meadowlark Software",
+          "result": "pass",
+          "why": "employer='Meadowlark Software'",
+          "pattern": null
+        },
+        {
+          "title": "Freelance Illustrator",
+          "expected_employer": "Self-Employed",
+          "got_employer": "Self-Employed",
+          "result": "pass",
+          "why": "employer='Self-Employed'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "freelance BELOW permanent"
+    },
+    "T24": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "expected_employer": "Meadowlark Software",
+          "got_employer": "Meadowlark Software",
+          "result": "pass",
+          "why": "employer='Meadowlark Software'",
+          "pattern": null
+        },
+        {
+          "title": "Design Lecturer (0.4 FTE)",
+          "expected_employer": "Pratt Institute",
+          "got_employer": "Pratt Institute",
+          "result": "pass",
+          "why": "employer='Pratt Institute'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "two simultaneous PERMANENT employers"
+    },
+    "T25": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Design Consultant",
+          "expected_employer": "Self-Employed",
+          "got_employer": "Self-Employed",
+          "result": "pass",
+          "why": "employer='Self-Employed'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "consulting role with MULTIPLE CLIENTS"
+    },
+    "T26": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Founder & Designer",
+          "expected_employer": "Chen Creative Studio",
+          "got_employer": "Chen Creative Studio",
+          "result": "pass",
+          "why": "employer='Chen Creative Studio'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "self-employment listed as a BUSINESS NAME"
+    },
+    "T27": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Contract Designer (via TechStaff Inc.)",
+          "expected_employer": "TechStaff Inc.",
+          "got_employer": "TechStaff Inc.",
+          "result": "pass",
+          "why": "employer='TechStaff Inc.'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "contract THROUGH A STAFFING AGENCY"
+    },
+    "T28": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "expected_employer": "Meadowlark Software",
+          "got_employer": "Meadowlark Software",
+          "result": "pass",
+          "why": "employer='Meadowlark Software'",
+          "pattern": null
+        },
+        {
+          "title": "Freelance Illustrator",
+          "expected_employer": "Self-Employed",
+          "got_employer": "Self-Employed",
+          "result": "pass",
+          "why": "employer='Self-Employed'",
+          "pattern": null
+        },
+        {
+          "title": "Design Mentor",
+          "expected_employer": "Hatch Collective",
+          "got_employer": "Hatch Collective",
+          "result": "pass",
+          "why": "employer='Hatch Collective'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "THREE concurrent employment records"
+    },
+    "T29": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "expected_employer": "Meadowlark Software",
+          "got_employer": "Meadowlark Software",
+          "result": "pass",
+          "why": "employer='Meadowlark Software'",
+          "pattern": null
+        },
+        {
+          "title": "Freelance Illustrator",
+          "expected_employer": "Self-Employed",
+          "got_employer": "Self-Employed",
+          "result": "pass",
+          "why": "employer='Self-Employed'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "freelance + permanent in TWO-COLUMN layout"
+    },
+    "T30": {
+      "verdict": "pass",
+      "roles": [
+        {
+          "title": "Senior Designer",
+          "expected_employer": "Meadowlark Software",
+          "got_employer": "Meadowlark Software",
+          "result": "pass",
+          "why": "employer='Meadowlark Software'",
+          "pattern": null
+        },
+        {
+          "title": "Freelance Illustrator",
+          "expected_employer": "Self-Employed",
+          "got_employer": "Self-Employed",
+          "result": "pass",
+          "why": "employer='Self-Employed'",
+          "pattern": null
+        }
+      ],
+      "phase": 2,
+      "controlled": "SAME records as T29 in SINGLE-COLUMN layout (paired control)"
+    },
+    "T31": {
+      "verdict": "pass",
+      "education": [
+        {
+          "qualification": "Bachelor of Science in Economics",
+          "result": "pass",
+          "why": "completed control; end=2023-01"
+        }
+      ],
+      "phase": 3,
+      "controlled": "completed (control)"
+    },
+    "T32": {
+      "verdict": "inconclusive",
+      "education": [
+        {
+          "qualification": "Bachelor of Science in Economics",
+          "status_expected": "in_progress",
+          "end_got": "",
+          "structured_status": false,
+          "status_in_rawtext": false,
+          "result": "inconclusive",
+          "why": "status absent from structured output (no end date)",
+          "pattern": "status_absent"
+        }
+      ],
+      "phase": 3,
+      "controlled": "currently studying"
+    },
+    "T33": {
+      "verdict": "fail",
+      "education": [
+        {
+          "qualification": "Bachelor of Science in Economics",
+          "status_expected": "expected",
+          "end_got": "2027-01",
+          "structured_status": false,
+          "status_in_rawtext": true,
+          "result": "fail",
+          "why": "end date 2027-01 emitted with no status field — reads as conferred (misleading for a 'expected' qualification)",
+          "pattern": "misleading_completion"
+        }
+      ],
+      "phase": 3,
+      "controlled": "expected graduation 2027"
+    },
+    "T34": {
+      "verdict": "inconclusive",
+      "education": [
+        {
+          "qualification": "Master of Engineering",
+          "status_expected": "in_progress",
+          "end_got": "",
+          "structured_status": false,
+          "status_in_rawtext": true,
+          "result": "inconclusive",
+          "why": "status absent from structured output; recoverable only from rawText",
+          "pattern": "status_absent"
+        }
+      ],
+      "phase": 3,
+      "controlled": "master in progress"
+    },
+    "T35": {
+      "verdict": "fail",
+      "education": [
+        {
+          "qualification": "Master of Engineering",
+          "status_expected": "discontinued",
+          "end_got": "2023-01",
+          "structured_status": false,
+          "status_in_rawtext": false,
+          "result": "fail",
+          "why": "end date 2023-01 emitted with no status field — reads as conferred (misleading for a 'discontinued' qualification)",
+          "pattern": "misleading_completion"
+        }
+      ],
+      "phase": 3,
+      "controlled": "master NOT completed"
+    },
+    "T36": {
+      "verdict": "fail",
+      "education": [
+        {
+          "qualification": "Juris Doctor",
+          "status_expected": "discontinued",
+          "end_got": "2023-01",
+          "structured_status": false,
+          "status_in_rawtext": true,
+          "result": "fail",
+          "why": "end date 2023-01 emitted with no status field — reads as conferred (misleading for a 'discontinued' qualification)",
+          "pattern": "misleading_completion"
+        }
+      ],
+      "phase": 3,
+      "controlled": "J.D. incomplete"
+    },
+    "T37": {
+      "verdict": "fail",
+      "education": [
+        {
+          "qualification": "Juris Doctor",
+          "status_expected": "expected",
+          "end_got": "2027-01",
+          "structured_status": false,
+          "status_in_rawtext": true,
+          "result": "fail",
+          "why": "end date 2027-01 emitted with no status field — reads as conferred (misleading for a 'expected' qualification)",
+          "pattern": "misleading_completion"
+        }
+      ],
+      "phase": 3,
+      "controlled": "J.D. expected completion 2027"
+    },
+    "T38": {
+      "verdict": "inconclusive",
+      "education": [
+        {
+          "qualification": "PhD candidate in Chemistry",
+          "status_expected": "in_progress",
+          "end_got": "",
+          "structured_status": false,
+          "status_in_rawtext": true,
+          "result": "inconclusive",
+          "why": "status absent from structured output; recoverable only from rawText",
+          "pattern": "status_absent"
+        }
+      ],
+      "phase": 3,
+      "controlled": "PhD candidate, research ongoing"
+    },
+    "T39": {
+      "verdict": "pass",
+      "education": [
+        {
+          "qualification": "PhD in Chemistry",
+          "result": "pass",
+          "why": "completed control; end=2024-01"
+        }
+      ],
+      "phase": 3,
+      "controlled": "PhD awarded 2024 (control)"
+    },
+    "T40": {
+      "verdict": "fail",
+      "education": [
+        {
+          "qualification": "Bachelor of Commerce",
+          "status_expected": "discontinued",
+          "end_got": "2020-01",
+          "structured_status": false,
+          "status_in_rawtext": true,
+          "result": "fail",
+          "why": "end date 2020-01 emitted with no status field — reads as conferred (misleading for a 'discontinued' qualification)",
+          "pattern": "misleading_completion"
+        }
+      ],
+      "phase": 3,
+      "controlled": "withdrawn"
+    },
+    "T41": {
+      "verdict": "inconclusive",
+      "education": [
+        {
+          "qualification": "Bachelor of Commerce",
+          "status_expected": "deferred",
+          "end_got": "",
+          "structured_status": false,
+          "status_in_rawtext": true,
+          "result": "inconclusive",
+          "why": "status absent from structured output; recoverable only from rawText",
+          "pattern": "status_absent"
+        }
+      ],
+      "phase": 3,
+      "controlled": "deferred"
+    },
+    "T42": {
+      "verdict": "fail",
+      "education": [
+        {
+          "qualification": "Diploma of Information Technology",
+          "status_expected": "not_awarded",
+          "end_got": "2020-01",
+          "structured_status": false,
+          "status_in_rawtext": true,
+          "result": "fail",
+          "why": "end date 2020-01 emitted with no status field — reads as conferred (misleading for a 'not_awarded' qualification)",
+          "pattern": "misleading_completion"
+        }
+      ],
+      "phase": 3,
+      "controlled": "coursework completed, qualification NOT awarded"
+    },
+    "T43": {
+      "verdict": "inconclusive",
+      "education": [
+        {
+          "qualification": "Certificate IV in Cybersecurity",
+          "result": "inconclusive",
+          "why": "education entry DROPPED (not present in structured output)",
+          "pattern": "education_dropped"
+        }
+      ],
+      "phase": 3,
+      "controlled": "certificate currently enrolled"
+    },
+    "T44": {
+      "verdict": "inconclusive",
+      "education": [
+        {
+          "qualification": "Bachelor of Science in Economics",
+          "result": "pass",
+          "why": "completed control; end=2020-01"
+        },
+        {
+          "qualification": "Master of Engineering",
+          "status_expected": "in_progress",
+          "end_got": "",
+          "structured_status": false,
+          "status_in_rawtext": true,
+          "result": "inconclusive",
+          "why": "status absent from structured output; recoverable only from rawText",
+          "pattern": "status_absent"
+        }
+      ],
+      "phase": 3,
+      "controlled": "TWO qualifications: one completed + one in progress"
+    },
+    "T45": {
+      "verdict": "inconclusive",
+      "education": [
+        {
+          "qualification": "Bachelor of Science in Economics",
+          "result": "pass",
+          "why": "completed control; end=2020-01"
+        },
+        {
+          "qualification": "Master of Engineering",
+          "status_expected": "in_progress",
+          "end_got": "",
+          "structured_status": false,
+          "status_in_rawtext": true,
+          "result": "inconclusive",
+          "why": "status absent from structured output; recoverable only from rawText",
+          "pattern": "status_absent"
+        }
+      ],
+      "phase": 3,
+      "controlled": "SAME as T44 in a TABLE layout (paired control)"
+    }
+  }
+}

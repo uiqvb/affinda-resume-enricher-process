@@ -1,0 +1,282 @@
+{
+  "summary": {
+    "total": 10,
+    "pass": 10,
+    "warn": 0,
+    "fail": 0
+  },
+  "results": [
+    {
+      "test_id": "B01",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "size_bytes": 3193,
+      "page_count": 1,
+      "has_ocg": false,
+      "page_chars": 1001,
+      "marker": "VISIBILITY_TEST_B01",
+      "marker_in_page_text": true,
+      "marker_in_annotation": false,
+      "marker_in_content_stream": true,
+      "marker_anywhere": true,
+      "sections_found": [
+        "SUMMARY",
+        "EXPERIENCE",
+        "EDUCATION",
+        "SKILLS"
+      ],
+      "preview_png": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-security-tests\\previews\\B01.png",
+      "preview_size_px": [
+        1020,
+        1320
+      ],
+      "human_visible_marker": false
+    },
+    {
+      "test_id": "B02",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "size_bytes": 3175,
+      "page_count": 1,
+      "has_ocg": false,
+      "page_chars": 928,
+      "marker": "VISIBILITY_TEST_B02",
+      "marker_in_page_text": true,
+      "marker_in_annotation": false,
+      "marker_in_content_stream": true,
+      "marker_anywhere": true,
+      "sections_found": [
+        "SUMMARY",
+        "EXPERIENCE",
+        "EDUCATION",
+        "SKILLS"
+      ],
+      "preview_png": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-security-tests\\previews\\B02.png",
+      "preview_size_px": [
+        1020,
+        1320
+      ],
+      "human_visible_marker": false
+    },
+    {
+      "test_id": "B03",
+      "status": "PASS",
+      "problems": [],
+      "notes": [
+        "off-page marker is in the content stream but NOT surfaced by default get_text() (which honours the CropBox). Parsers that respect the CropBox will NOT see it; parsers that ignore it will. This is the intended, extractor-dependent behaviour."
+      ],
+      "size_bytes": 3139,
+      "page_count": 1,
+      "has_ocg": false,
+      "page_chars": 895,
+      "marker": "VISIBILITY_TEST_B03",
+      "marker_in_page_text": false,
+      "marker_in_annotation": false,
+      "marker_in_content_stream": true,
+      "marker_anywhere": true,
+      "sections_found": [
+        "SUMMARY",
+        "EXPERIENCE",
+        "EDUCATION",
+        "SKILLS"
+      ],
+      "preview_png": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-security-tests\\previews\\B03.png",
+      "preview_size_px": [
+        1020,
+        1240
+      ],
+      "human_visible_marker": false
+    },
+    {
+      "test_id": "B04",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "size_bytes": 3276,
+      "page_count": 1,
+      "has_ocg": false,
+      "page_chars": 891,
+      "marker": "VISIBILITY_TEST_B04",
+      "marker_in_page_text": true,
+      "marker_in_annotation": false,
+      "marker_in_content_stream": true,
+      "marker_anywhere": true,
+      "sections_found": [
+        "SUMMARY",
+        "EXPERIENCE",
+        "EDUCATION",
+        "SKILLS"
+      ],
+      "preview_png": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-security-tests\\previews\\B04.png",
+      "preview_size_px": [
+        1020,
+        1320
+      ],
+      "human_visible_marker": false
+    },
+    {
+      "test_id": "B05",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "size_bytes": 3108,
+      "page_count": 1,
+      "has_ocg": false,
+      "page_chars": 886,
+      "marker": "VISIBILITY_TEST_B05",
+      "marker_in_page_text": true,
+      "marker_in_annotation": false,
+      "marker_in_content_stream": true,
+      "marker_anywhere": true,
+      "sections_found": [
+        "SUMMARY",
+        "EXPERIENCE",
+        "EDUCATION",
+        "SKILLS"
+      ],
+      "preview_png": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-security-tests\\previews\\B05.png",
+      "preview_size_px": [
+        1020,
+        1320
+      ],
+      "human_visible_marker": false
+    },
+    {
+      "test_id": "C01",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "size_bytes": 2707,
+      "page_count": 1,
+      "has_ocg": false,
+      "page_chars": 1005,
+      "marker": "QUARTZ-PENGUIN",
+      "marker_in_page_text": true,
+      "marker_in_annotation": false,
+      "marker_in_content_stream": true,
+      "marker_anywhere": true,
+      "sections_found": [
+        "SUMMARY",
+        "EXPERIENCE",
+        "EDUCATION",
+        "SKILLS"
+      ],
+      "preview_png": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-security-tests\\previews\\C01.png",
+      "preview_size_px": [
+        1020,
+        1320
+      ],
+      "human_visible_marker": true
+    },
+    {
+      "test_id": "C02",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "size_bytes": 3208,
+      "page_count": 1,
+      "has_ocg": false,
+      "page_chars": 960,
+      "marker": "QUARTZ-PENGUIN",
+      "marker_in_page_text": true,
+      "marker_in_annotation": false,
+      "marker_in_content_stream": true,
+      "marker_anywhere": true,
+      "sections_found": [
+        "SUMMARY",
+        "EXPERIENCE",
+        "EDUCATION",
+        "SKILLS"
+      ],
+      "preview_png": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-security-tests\\previews\\C02.png",
+      "preview_size_px": [
+        1020,
+        1320
+      ],
+      "human_visible_marker": false
+    },
+    {
+      "test_id": "C03",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "size_bytes": 3344,
+      "page_count": 1,
+      "has_ocg": false,
+      "page_chars": 960,
+      "marker": "QUARTZ-PENGUIN",
+      "marker_in_page_text": true,
+      "marker_in_annotation": false,
+      "marker_in_content_stream": true,
+      "marker_anywhere": true,
+      "sections_found": [
+        "SUMMARY",
+        "EXPERIENCE",
+        "EDUCATION",
+        "SKILLS"
+      ],
+      "preview_png": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-security-tests\\previews\\C03.png",
+      "preview_size_px": [
+        1020,
+        1320
+      ],
+      "human_visible_marker": true
+    },
+    {
+      "test_id": "C04",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "size_bytes": 3501,
+      "page_count": 1,
+      "has_ocg": false,
+      "page_chars": 981,
+      "marker": "QUARTZ-PENGUIN",
+      "marker_in_page_text": true,
+      "marker_in_annotation": true,
+      "marker_in_content_stream": true,
+      "marker_anywhere": true,
+      "sections_found": [
+        "SUMMARY",
+        "EXPERIENCE",
+        "EDUCATION",
+        "SKILLS"
+      ],
+      "preview_png": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-security-tests\\previews\\C04.png",
+      "preview_size_px": [
+        1020,
+        1320
+      ],
+      "human_visible_marker": true
+    },
+    {
+      "test_id": "C05",
+      "status": "PASS",
+      "problems": [],
+      "notes": [],
+      "size_bytes": 3481,
+      "page_count": 1,
+      "has_ocg": true,
+      "page_chars": 984,
+      "marker": "QUARTZ-PENGUIN",
+      "marker_in_page_text": true,
+      "marker_in_annotation": false,
+      "marker_in_content_stream": true,
+      "marker_anywhere": true,
+      "sections_found": [
+        "SUMMARY",
+        "EXPERIENCE",
+        "EDUCATION",
+        "SKILLS"
+      ],
+      "preview_png": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-security-tests\\previews\\C05.png",
+      "preview_size_px": [
+        1020,
+        1320
+      ],
+      "human_visible_marker": true
+    }
+  ]
+}

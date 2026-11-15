@@ -1,0 +1,101 @@
+test_id,filename,issue,category,layout,realism,is_control,is_distractor,exact_source_line,failure_if
+C001,C001.pdf,certification_status,active,flow,very common,True,,"AWS Certified Solutions Architect — active, valid through 2027","valid cert dropped, or shown as expired"
+C002,C002.pdf,certification_status,active,bulleted,very common,True,,PMP (current),"valid cert dropped, or shown as expired"
+C003,C003.pdf,certification_status,active,table,very common,True,,CISSP — in good standing,"valid cert dropped, or shown as expired"
+C004,C004.pdf,certification_status,active,two_column,very common,True,,"Registered Nurse (RN) license — active, valid through 2027","valid cert dropped, or shown as expired"
+C005,C005.pdf,certification_status,active,flow,very common,True,,CPA (current),"valid cert dropped, or shown as expired"
+C006,C006.pdf,certification_status,active,bulleted,very common,True,,Medical license — in good standing,"valid cert dropped, or shown as expired"
+C007,C007.pdf,certification_status,active,table,very common,True,,"Forklift operator licence — active, valid through 2027","valid cert dropped, or shown as expired"
+C008,C008.pdf,certification_status,active,two_column,very common,True,,Security Clearance (Baseline) (current),"valid cert dropped, or shown as expired"
+C009,C009.pdf,certification_status,renewed,flow,common,True,,CPR / First Aid certification — renewed 2021 (current),"valid cert dropped, or shown as expired"
+C010,C010.pdf,certification_status,renewed,bulleted,common,True,,"Bar admission, recertified 2022","valid cert dropped, or shown as expired"
+C011,C011.pdf,certification_status,renewed,table,common,True,,CCNA — renewed 2018 (current),"valid cert dropped, or shown as expired"
+C012,C012.pdf,certification_status,renewed,two_column,common,True,,"Six Sigma Black Belt, recertified 2019","valid cert dropped, or shown as expired"
+C013,C013.pdf,certification_status,renewed,flow,common,True,,AWS Certified Solutions Architect — renewed 2020 (current),"valid cert dropped, or shown as expired"
+C014,C014.pdf,certification_status,renewed,bulleted,common,True,,"PMP, recertified 2021","valid cert dropped, or shown as expired"
+C015,C015.pdf,certification_status,expired,table,very common,False,,CISSP — expired 2022,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C016,C016.pdf,certification_status,expired,two_column,very common,False,,"Registered Nurse (RN) license, lapsed 2018",status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C017,C017.pdf,certification_status,expired,flow,very common,False,,CPA — no longer valid,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C018,C018.pdf,certification_status,expired,bulleted,very common,False,,Medical license (expired),status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C019,C019.pdf,certification_status,expired,table,very common,False,,"Forklift operator licence — expired, renewal pending",status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C020,C020.pdf,certification_status,expired,two_column,very common,False,,Security Clearance (Baseline) — expired 2022,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C021,C021.pdf,certification_status,expired,flow,very common,False,,"CPR / First Aid certification, lapsed 2018",status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C022,C022.pdf,certification_status,expired,bulleted,very common,False,,Bar admission — no longer valid,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C023,C023.pdf,certification_status,expired,table,very common,False,,CCNA (expired),status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C024,C024.pdf,certification_status,expired,two_column,very common,False,,"Six Sigma Black Belt — expired, renewal pending",status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C025,C025.pdf,certification_status,expired,flow,very common,False,,AWS Certified Solutions Architect — expired 2022,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C026,C026.pdf,certification_status,expired,bulleted,very common,False,,"PMP, lapsed 2018",status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C027,C027.pdf,certification_status,expired,table,very common,False,,CISSP — no longer valid,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C028,C028.pdf,certification_status,expired,two_column,very common,False,,Registered Nurse (RN) license (expired),status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C029,C029.pdf,certification_status,expired,flow,very common,False,,"CPA — expired, renewal pending",status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C030,C030.pdf,certification_status,expired,bulleted,very common,False,,Medical license — expired 2022,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C031,C031.pdf,certification_status,revoked,table,rare,False,,Forklift operator licence — revoked 2018,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C032,C032.pdf,certification_status,revoked,two_column,rare,False,,Security Clearance (Baseline) — licence revoked,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C033,C033.pdf,certification_status,revoked,flow,rare,False,,CPR / First Aid certification — withdrawn by issuer,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C034,C034.pdf,certification_status,revoked,bulleted,rare,False,,Bar admission — revoked 2021,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C035,C035.pdf,certification_status,revoked,table,rare,False,,CCNA — licence revoked,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C036,C036.pdf,certification_status,revoked,two_column,rare,False,,Six Sigma Black Belt — withdrawn by issuer,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C037,C037.pdf,certification_status,revoked,flow,rare,False,,AWS Certified Solutions Architect — revoked 2019,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C038,C038.pdf,certification_status,revoked,bulleted,rare,False,,PMP — licence revoked,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C039,C039.pdf,certification_status,revoked,table,rare,False,,CISSP — withdrawn by issuer,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C040,C040.pdf,certification_status,revoked,two_column,rare,False,,Registered Nurse (RN) license — revoked 2022,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C041,C041.pdf,certification_status,revoked,flow,rare,False,,CPA — licence revoked,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C042,C042.pdf,certification_status,revoked,bulleted,rare,False,,Medical license — withdrawn by issuer,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C043,C043.pdf,certification_status,suspended,table,rare,False,,Forklift operator licence — temporarily suspended,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C044,C044.pdf,certification_status,suspended,two_column,rare,False,,Security Clearance (Baseline) (under suspension),status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C045,C045.pdf,certification_status,suspended,flow,rare,False,,CPR / First Aid certification — temporarily suspended,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C046,C046.pdf,certification_status,suspended,bulleted,rare,False,,Bar admission (under suspension),status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C047,C047.pdf,certification_status,suspended,table,rare,False,,CCNA — temporarily suspended,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C048,C048.pdf,certification_status,suspended,two_column,rare,False,,Six Sigma Black Belt (under suspension),status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C049,C049.pdf,certification_status,suspended,flow,rare,False,,AWS Certified Solutions Architect — temporarily suspended,status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C050,C050.pdf,certification_status,suspended,bulleted,rare,False,,PMP (under suspension),status absent — the invalid cert is indistinguishable from a valid one (name+date only)
+C051,C051.pdf,certification_status,pending_scheduled,table,occasional,False,,CISSP — exam scheduled 2029,treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C052,C052.pdf,certification_status,pending_scheduled,two_column,occasional,False,,Registered Nurse (RN) license (pending),treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C053,C053.pdf,certification_status,pending_scheduled,flow,occasional,False,,CPA — awaiting results,treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C054,C054.pdf,certification_status,pending_scheduled,bulleted,occasional,False,,"Candidate, Medical license",treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C055,C055.pdf,certification_status,pending_scheduled,table,occasional,False,,Forklift operator licence — exam scheduled 2027,treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C056,C056.pdf,certification_status,pending_scheduled,two_column,occasional,False,,Security Clearance (Baseline) (pending),treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C057,C057.pdf,certification_status,pending_scheduled,flow,occasional,False,,CPR / First Aid certification — awaiting results,treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C058,C058.pdf,certification_status,pending_scheduled,bulleted,occasional,False,,"Candidate, Bar admission",treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C059,C059.pdf,certification_status,pending_scheduled,table,occasional,False,,CCNA — exam scheduled 2028,treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C060,C060.pdf,certification_status,pending_scheduled,two_column,occasional,False,,Six Sigma Black Belt (pending),treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C061,C061.pdf,certification_status,failed,flow,occasional,False,,"AWS Certified Solutions Architect — attempted, did not pass",treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C062,C062.pdf,certification_status,failed,bulleted,occasional,False,,"PMP, unsuccessful attempt 2019",treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C063,C063.pdf,certification_status,failed,table,occasional,False,,"CISSP — attempted, did not pass",treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C064,C064.pdf,certification_status,failed,two_column,occasional,False,,"Registered Nurse (RN) license, unsuccessful attempt 2021",treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C065,C065.pdf,certification_status,failed,flow,occasional,False,,"CPA — attempted, did not pass",treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C066,C066.pdf,certification_status,failed,bulleted,occasional,False,,"Medical license, unsuccessful attempt 2018",treated as a held credential (no not-held signal); OR wrongly surfaced in 'has {cert}' matches
+C067,C067.pdf,certification_status,expires_future_valid,table,common,True,,Forklift operator licence — valid until 2027,"valid cert dropped, or shown as expired"
+C068,C068.pdf,certification_status,expires_future_valid,two_column,common,True,,"Security Clearance (Baseline), expires 2028","valid cert dropped, or shown as expired"
+C069,C069.pdf,certification_status,expires_future_valid,flow,common,True,,"CPR / First Aid certification — current, expires 2029","valid cert dropped, or shown as expired"
+C070,C070.pdf,certification_status,expires_future_valid,bulleted,common,True,,Bar admission — valid until 2027,"valid cert dropped, or shown as expired"
+C071,C071.pdf,certification_status,expires_future_valid,table,common,True,,"CCNA, expires 2028","valid cert dropped, or shown as expired"
+C072,C072.pdf,certification_status,expires_future_valid,two_column,common,True,,"Six Sigma Black Belt — current, expires 2029","valid cert dropped, or shown as expired"
+C073,C073.pdf,certification_status,expires_future_valid,flow,common,True,,AWS Certified Solutions Architect — valid until 2027,"valid cert dropped, or shown as expired"
+C074,C074.pdf,certification_status,expires_future_valid,bulleted,common,True,,"PMP, expires 2028","valid cert dropped, or shown as expired"
+C075,C075.pdf,certification_status,expires_future_valid,table,common,True,,"CISSP — current, expires 2029","valid cert dropped, or shown as expired"
+C076,C076.pdf,certification_status,expires_future_valid,two_column,common,True,,Registered Nurse (RN) license — valid until 2027,"valid cert dropped, or shown as expired"
+C077,C077.pdf,certification_status,no_status,flow,common,False,,CPA — 2019,"cert dropped, or date misread as validity"
+C078,C078.pdf,certification_status,no_status,bulleted,common,False,,Medical license,"cert dropped, or date misread as validity"
+C079,C079.pdf,certification_status,no_status,table,common,False,,Forklift operator licence — 2021,"cert dropped, or date misread as validity"
+C080,C080.pdf,certification_status,no_status,two_column,common,False,,Security Clearance (Baseline),"cert dropped, or date misread as validity"
+C081,C081.pdf,certification_status,no_status,flow,common,False,,CPR / First Aid certification — 2018,"cert dropped, or date misread as validity"
+C082,C082.pdf,certification_status,no_status,bulleted,common,False,,Bar admission,"cert dropped, or date misread as validity"
+C083,C083.pdf,certification_status,no_status,table,common,False,,CCNA — 2020,"cert dropped, or date misread as validity"
+C084,C084.pdf,certification_status,no_status,two_column,common,False,,Six Sigma Black Belt,"cert dropped, or date misread as validity"
+C085,C085.pdf,certification_status,held_out_formats,flow,common,False,,AWS Certified Solutions Architect — valid 2022–2027,status/validity lost because the form is unusual (format brittleness)
+C086,C086.pdf,certification_status,held_out_formats,bulleted,common,False,,PMP (caducado 2018),status/validity lost because the form is unusual (format brittleness)
+C087,C087.pdf,certification_status,held_out_formats,table,common,False,,CISSP — exp. 2019,status/validity lost because the form is unusual (format brittleness)
+C088,C088.pdf,certification_status,held_out_formats,two_column,common,False,,Registered Nurse (RN) license: status inactive,status/validity lost because the form is unusual (format brittleness)
+C089,C089.pdf,certification_status,held_out_formats,flow,common,False,,CPA — valid 2021–2028,status/validity lost because the form is unusual (format brittleness)
+C090,C090.pdf,certification_status,held_out_formats,bulleted,common,False,,Medical license (caducado 2022),status/validity lost because the form is unusual (format brittleness)
+C091,C091.pdf,certification_status,held_out_formats,table,common,False,,Forklift operator licence — exp. 2018,status/validity lost because the form is unusual (format brittleness)
+C092,C092.pdf,certification_status,held_out_formats,two_column,common,False,,Security Clearance (Baseline): status inactive,status/validity lost because the form is unusual (format brittleness)
+C093,C093.pdf,certification_status,multi_mixed,flow,occasional,False,,AWS Certified Solutions Architect — active (renewed 2027)  ||  AWS Certified Solutions Architect — expired 2018,"collapsed to one, or valid one dropped, or statuses swapped/absent"
+C094,C094.pdf,certification_status,multi_mixed,bulleted,occasional,False,,PMP — active (renewed 2028)  ||  PMP — expired 2019,"collapsed to one, or valid one dropped, or statuses swapped/absent"
+C095,C095.pdf,certification_status,multi_mixed,table,occasional,False,,CISSP — active (renewed 2029)  ||  CISSP — expired 2020,"collapsed to one, or valid one dropped, or statuses swapped/absent"
+C096,C096.pdf,certification_status,multi_mixed,two_column,occasional,False,,Registered Nurse (RN) license — active (renewed 2027)  ||  Registered Nurse (RN) license — expired 2021,"collapsed to one, or valid one dropped, or statuses swapped/absent"
+C097,C097.pdf,certification_status,multi_mixed,flow,occasional,False,,CPA — active (renewed 2028)  ||  CPA — expired 2022,"collapsed to one, or valid one dropped, or statuses swapped/absent"
+C098,C098.pdf,certification_status,multi_mixed,bulleted,occasional,False,,Medical license — active (renewed 2029)  ||  Medical license — expired 2018,"collapsed to one, or valid one dropped, or statuses swapped/absent"
+C099,C099.pdf,certification_status,multi_mixed,table,occasional,False,,Forklift operator licence — active (renewed 2027)  ||  Forklift operator licence — expired 2019,"collapsed to one, or valid one dropped, or statuses swapped/absent"
+C100,C100.pdf,certification_status,multi_mixed,two_column,occasional,False,,Security Clearance (Baseline) — active (renewed 2028)  ||  Security Clearance (Baseline) — expired 2020,"collapsed to one, or valid one dropped, or statuses swapped/absent"

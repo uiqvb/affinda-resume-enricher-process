@@ -1,0 +1,12 @@
+# The finished product lives in its OWN repo (affinda-resumeenricher), not here.
+affinda-resumeenricher/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

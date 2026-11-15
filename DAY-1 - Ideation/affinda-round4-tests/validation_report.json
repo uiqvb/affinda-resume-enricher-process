@@ -1,0 +1,551 @@
+{
+  "summary": {
+    "total": 60,
+    "pass": 60,
+    "fail": 0
+  },
+  "render_dpi": 150,
+  "contact_sheet": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-round4-tests\\contact_sheet.png",
+  "results": [
+    {
+      "id": "R401",
+      "category": "negated_skills",
+      "controlled": "negation: \"No hands-on experience with Kubernetes.\"",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2399
+    },
+    {
+      "id": "R402",
+      "category": "negated_skills",
+      "controlled": "negation: \"Python: advanced. Java: none.\"",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2394
+    },
+    {
+      "id": "R403",
+      "category": "negated_skills",
+      "controlled": "negation: \"Experienced in AWS, but have never used Azure.\"",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2401
+    },
+    {
+      "id": "R404",
+      "category": "negated_skills",
+      "controlled": "negation: \"Theoretical knowledge of Docker but no practical Docker experience.\"",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2421
+    },
+    {
+      "id": "R405",
+      "category": "negated_skills",
+      "controlled": "negation: \"Previously used React, but have not used it in five years.\"",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2413
+    },
+    {
+      "id": "R406",
+      "category": "negated_skills",
+      "controlled": "negation: \"Without any SQL background.\"",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2397
+    },
+    {
+      "id": "R407",
+      "category": "negated_skills",
+      "controlled": "negation: \"Not certified in AWS, but use AWS daily.\"",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2399
+    },
+    {
+      "id": "R408",
+      "category": "negated_skills",
+      "controlled": "negation: \"No experience with JavaScript. Extensive Java experience.\"",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2406
+    },
+    {
+      "id": "R409",
+      "category": "negated_skills",
+      "controlled": "negation: \"I do not manage Kubernetes clusters, but develop applications deployed to Kubernetes.\"",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2436
+    },
+    {
+      "id": "R410",
+      "category": "negated_skills",
+      "controlled": "positive control (all affirmed)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2433
+    },
+    {
+      "id": "R411",
+      "category": "skill_ownership",
+      "controlled": "personal (positive control)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2392
+    },
+    {
+      "id": "R412",
+      "category": "skill_ownership",
+      "controlled": "managed engineers, no coding",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2382
+    },
+    {
+      "id": "R413",
+      "category": "skill_ownership",
+      "controlled": "team used tool; candidate did finance",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2422
+    },
+    {
+      "id": "R414",
+      "category": "skill_ownership",
+      "controlled": "personally configured (positive)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2396
+    },
+    {
+      "id": "R415",
+      "category": "skill_ownership",
+      "controlled": "external contractor",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2408
+    },
+    {
+      "id": "R416",
+      "category": "skill_ownership",
+      "controlled": "reviewed, did not write",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2399
+    },
+    {
+      "id": "R417",
+      "category": "skill_ownership",
+      "controlled": "personal Go (positive)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2389
+    },
+    {
+      "id": "R418",
+      "category": "skill_ownership",
+      "controlled": "managed team, explicitly never used",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2404
+    },
+    {
+      "id": "R419",
+      "category": "skill_ownership",
+      "controlled": "both personal and supervised",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2389
+    },
+    {
+      "id": "R420",
+      "category": "skill_ownership",
+      "controlled": "competitor-tech mention only",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2404
+    },
+    {
+      "id": "R421",
+      "category": "certification_validity",
+      "controlled": "active (positive)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2468
+    },
+    {
+      "id": "R422",
+      "category": "certification_validity",
+      "controlled": "expired",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2457
+    },
+    {
+      "id": "R423",
+      "category": "certification_validity",
+      "controlled": "renewed (positive)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2435
+    },
+    {
+      "id": "R424",
+      "category": "certification_validity",
+      "controlled": "revoked",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2448
+    },
+    {
+      "id": "R425",
+      "category": "certification_validity",
+      "controlled": "scheduled, not attempted",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2446
+    },
+    {
+      "id": "R426",
+      "category": "certification_validity",
+      "controlled": "attempted, failed",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2446
+    },
+    {
+      "id": "R427",
+      "category": "certification_validity",
+      "controlled": "training only, no exam",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2454
+    },
+    {
+      "id": "R428",
+      "category": "certification_validity",
+      "controlled": "suspended temporarily",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2445
+    },
+    {
+      "id": "R429",
+      "category": "certification_validity",
+      "controlled": "two certs: active + expired",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2464
+    },
+    {
+      "id": "R430",
+      "category": "certification_validity",
+      "controlled": "expiry date, no validity statement",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2432
+    },
+    {
+      "id": "R431",
+      "category": "employment_classification",
+      "controlled": "permanent full-time (control)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2407
+    },
+    {
+      "id": "R432",
+      "category": "employment_classification",
+      "controlled": "fixed-term full-time contract",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2417
+    },
+    {
+      "id": "R433",
+      "category": "employment_classification",
+      "controlled": "permanent part-time",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2405
+    },
+    {
+      "id": "R434",
+      "category": "employment_classification",
+      "controlled": "unpaid volunteer",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2417
+    },
+    {
+      "id": "R435",
+      "category": "employment_classification",
+      "controlled": "paid summer internship",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2407
+    },
+    {
+      "id": "R436",
+      "category": "employment_classification",
+      "controlled": "independent consulting contract",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2410
+    },
+    {
+      "id": "R437",
+      "category": "employment_classification",
+      "controlled": "temporary agency employment",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2416
+    },
+    {
+      "id": "R438",
+      "category": "employment_classification",
+      "controlled": "casual, variable hours",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2410
+    },
+    {
+      "id": "R439",
+      "category": "employment_classification",
+      "controlled": "volunteer alongside permanent (two roles)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2552
+    },
+    {
+      "id": "R440",
+      "category": "employment_classification",
+      "controlled": "contract-to-permanent conversion",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2466
+    },
+    {
+      "id": "R441",
+      "category": "work_authorisation",
+      "controlled": "citizen",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2399
+    },
+    {
+      "id": "R442",
+      "category": "work_authorisation",
+      "controlled": "permanent resident",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2406
+    },
+    {
+      "id": "R443",
+      "category": "work_authorisation",
+      "controlled": "temp visa with expiry",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2419
+    },
+    {
+      "id": "R444",
+      "category": "work_authorisation",
+      "controlled": "expired",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2408
+    },
+    {
+      "id": "R445",
+      "category": "work_authorisation",
+      "controlled": "needs sponsorship",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2413
+    },
+    {
+      "id": "R446",
+      "category": "work_authorisation",
+      "controlled": "no sponsorship",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2408
+    },
+    {
+      "id": "R447",
+      "category": "work_authorisation",
+      "controlled": "hours restriction",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2424
+    },
+    {
+      "id": "R448",
+      "category": "work_authorisation",
+      "controlled": "unknown current status",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2427
+    },
+    {
+      "id": "R449",
+      "category": "work_authorisation",
+      "controlled": "eligible, not obtained",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2430
+    },
+    {
+      "id": "R450",
+      "category": "work_authorisation",
+      "controlled": "CONFLICTING statements",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2448
+    },
+    {
+      "id": "R451",
+      "category": "employment_duration",
+      "controlled": "two ENTIRELY overlapping jobs (same dates)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2396
+    },
+    {
+      "id": "R452",
+      "category": "employment_duration",
+      "controlled": "three PARTIALLY overlapping jobs",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2472
+    },
+    {
+      "id": "R453",
+      "category": "employment_duration",
+      "controlled": "full-time + freelance weekend work (concurrent)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2513
+    },
+    {
+      "id": "R454",
+      "category": "employment_duration",
+      "controlled": "multiple short contracts with gaps",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2451
+    },
+    {
+      "id": "R455",
+      "category": "employment_duration",
+      "controlled": "three promotions, one employer, continuous",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2472
+    },
+    {
+      "id": "R456",
+      "category": "employment_duration",
+      "controlled": "role 2021 – Present (open current)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2343
+    },
+    {
+      "id": "R457",
+      "category": "employment_duration",
+      "controlled": "explicit career break",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2499
+    },
+    {
+      "id": "R458",
+      "category": "employment_duration",
+      "controlled": "part-time over five years",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2384
+    },
+    {
+      "id": "R459",
+      "category": "employment_duration",
+      "controlled": "concurrent internships + university employment",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2562
+    },
+    {
+      "id": "R460",
+      "category": "employment_duration",
+      "controlled": "one completed + one unspecified end date",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2441
+    }
+  ]
+}

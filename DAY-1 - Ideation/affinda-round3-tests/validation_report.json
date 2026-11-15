@@ -1,0 +1,443 @@
+{
+  "summary": {
+    "total": 48,
+    "pass": 48,
+    "fail": 0
+  },
+  "render_dpi": 150,
+  "contact_sheet": "C:\\Users\\Manit Khera\\Documents\\Projects\\Affinda\\affinda-round3-tests\\contact_sheet.png",
+  "results": [
+    {
+      "id": "R301",
+      "category": "negated_skills",
+      "controlled": "positive control: plain skills list",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2403
+    },
+    {
+      "id": "R302",
+      "category": "negated_skills",
+      "controlled": "negative control: denied skill in prose",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2421
+    },
+    {
+      "id": "R303",
+      "category": "negated_skills",
+      "controlled": "negated proficiency",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2422
+    },
+    {
+      "id": "R304",
+      "category": "negated_skills",
+      "controlled": "AMBIGUOUS partial exposure",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2407
+    },
+    {
+      "id": "R305",
+      "category": "negated_skills",
+      "controlled": "paired: expert + denied in one line",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2413
+    },
+    {
+      "id": "R306",
+      "category": "negated_skills",
+      "controlled": "contrastive 'but not'",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2412
+    },
+    {
+      "id": "R307",
+      "category": "negated_skills",
+      "controlled": "AMBIGUOUS past/discontinued use",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2427
+    },
+    {
+      "id": "R308",
+      "category": "negated_skills",
+      "controlled": "negation inside the skills list",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2425
+    },
+    {
+      "id": "R309",
+      "category": "work_authorisation",
+      "controlled": "citizen",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2451
+    },
+    {
+      "id": "R310",
+      "category": "work_authorisation",
+      "controlled": "permanent resident",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2477
+    },
+    {
+      "id": "R311",
+      "category": "work_authorisation",
+      "controlled": "needs sponsorship",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2483
+    },
+    {
+      "id": "R312",
+      "category": "work_authorisation",
+      "controlled": "authorised, no sponsorship",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2486
+    },
+    {
+      "id": "R313",
+      "category": "work_authorisation",
+      "controlled": "visa with expiry",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2469
+    },
+    {
+      "id": "R314",
+      "category": "work_authorisation",
+      "controlled": "expired authorisation",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2461
+    },
+    {
+      "id": "R315",
+      "category": "work_authorisation",
+      "controlled": "unknown (no statement)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2402
+    },
+    {
+      "id": "R316",
+      "category": "work_authorisation",
+      "controlled": "AMBIGUOUS non-statement",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2442
+    },
+    {
+      "id": "R317",
+      "category": "skill_ownership",
+      "controlled": "personal (positive control)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2375
+    },
+    {
+      "id": "R318",
+      "category": "skill_ownership",
+      "controlled": "managed others (negative)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2362
+    },
+    {
+      "id": "R319",
+      "category": "skill_ownership",
+      "controlled": "led team using tool",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2376
+    },
+    {
+      "id": "R320",
+      "category": "skill_ownership",
+      "controlled": "oversaw work by others",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2398
+    },
+    {
+      "id": "R321",
+      "category": "skill_ownership",
+      "controlled": "paired personal",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2375
+    },
+    {
+      "id": "R322",
+      "category": "skill_ownership",
+      "controlled": "paired managed",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2367
+    },
+    {
+      "id": "R323",
+      "category": "skill_ownership",
+      "controlled": "AMBIGUOUS responsibility",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2374
+    },
+    {
+      "id": "R324",
+      "category": "skill_ownership",
+      "controlled": "mixed in one role",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2384
+    },
+    {
+      "id": "R325",
+      "category": "experience_duration",
+      "controlled": "explicit claim vs computable dates",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2452
+    },
+    {
+      "id": "R326",
+      "category": "experience_duration",
+      "controlled": "part-time hours",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2411
+    },
+    {
+      "id": "R327",
+      "category": "experience_duration",
+      "controlled": "overlapping roles (double-count risk)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2441
+    },
+    {
+      "id": "R328",
+      "category": "experience_duration",
+      "controlled": "career gap",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2406
+    },
+    {
+      "id": "R329",
+      "category": "experience_duration",
+      "controlled": "approximate duration",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2361
+    },
+    {
+      "id": "R330",
+      "category": "experience_duration",
+      "controlled": "explicit claim contradicts dates",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2334
+    },
+    {
+      "id": "R331",
+      "category": "experience_duration",
+      "controlled": "seasonal/intermittent",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2368
+    },
+    {
+      "id": "R332",
+      "category": "experience_duration",
+      "controlled": "paired full-time vs part-time (same dates)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2368
+    },
+    {
+      "id": "R333",
+      "category": "certification_status",
+      "controlled": "active (positive control)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2456
+    },
+    {
+      "id": "R334",
+      "category": "certification_status",
+      "controlled": "expired",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2427
+    },
+    {
+      "id": "R335",
+      "category": "certification_status",
+      "controlled": "pending",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2450
+    },
+    {
+      "id": "R336",
+      "category": "certification_status",
+      "controlled": "failed",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2446
+    },
+    {
+      "id": "R337",
+      "category": "certification_status",
+      "controlled": "revoked",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2431
+    },
+    {
+      "id": "R338",
+      "category": "certification_status",
+      "controlled": "training only",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2450
+    },
+    {
+      "id": "R339",
+      "category": "certification_status",
+      "controlled": "coursework, not awarded",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2448
+    },
+    {
+      "id": "R340",
+      "category": "certification_status",
+      "controlled": "paired active vs expired (same cert)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2431
+    },
+    {
+      "id": "R341",
+      "category": "employment_type",
+      "controlled": "permanent (control)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2406
+    },
+    {
+      "id": "R342",
+      "category": "employment_type",
+      "controlled": "contract",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2400
+    },
+    {
+      "id": "R343",
+      "category": "employment_type",
+      "controlled": "internship",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2399
+    },
+    {
+      "id": "R344",
+      "category": "employment_type",
+      "controlled": "volunteer (unpaid)",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2409
+    },
+    {
+      "id": "R345",
+      "category": "employment_type",
+      "controlled": "freelance",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2396
+    },
+    {
+      "id": "R346",
+      "category": "employment_type",
+      "controlled": "temporary/seasonal",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2409
+    },
+    {
+      "id": "R347",
+      "category": "employment_type",
+      "controlled": "AMBIGUOUS 'Consultant'",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2398
+    },
+    {
+      "id": "R348",
+      "category": "employment_type",
+      "controlled": "paired: SAME role as internship vs permanent",
+      "status": "PASS",
+      "problems": [],
+      "page_count": 1,
+      "size_bytes": 2394
+    }
+  ]
+}

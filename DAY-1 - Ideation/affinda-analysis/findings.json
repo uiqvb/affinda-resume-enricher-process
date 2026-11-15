@@ -1,0 +1,2194 @@
+{
+  "per_test": {
+    "A01": {
+      "category": "A",
+      "layout": "flow",
+      "parseMs": 235,
+      "quality": {
+        "band": "high",
+        "score": 0.9542,
+        "doc_label": "resume",
+        "doc_confidence": 0.5138
+      },
+      "rawText_chars": 1190,
+      "name": {
+        "expected": "Daniel Okafor",
+        "got": "Daniel Okafor",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "daniel.okafor@examplemail.com"
+        ],
+        "got": [
+          "daniel.okafor@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (415) 555-0142",
+        "got": [
+          "+1 (415) 555-0142"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 3,
+        "returned_roles": 3,
+        "roles": [
+          {
+            "employer": "Northwind Technologies",
+            "matched": true,
+            "title_expected": "Senior Software Engineer",
+            "title_got": "Senior Software Engineer",
+            "title_match": true,
+            "start_expected": "2021-03",
+            "start_got": "2021-03",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Brightwave Labs",
+            "matched": true,
+            "title_expected": "Software Engineer",
+            "title_got": "Software Engineer",
+            "title_match": true,
+            "start_expected": "2017-07",
+            "start_got": "2017-07",
+            "start_match": true,
+            "end_expected": "2021-02",
+            "end_got": "2021-02",
+            "end_match": true
+          },
+          {
+            "employer": "Cobalt Systems",
+            "matched": true,
+            "title_expected": "Junior Developer",
+            "title_got": "Junior Developer",
+            "title_match": true,
+            "start_expected": "2015-08",
+            "start_got": "2015-08",
+            "start_match": true,
+            "end_expected": "2017-06",
+            "end_got": "2017-06",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "University of California, Davis"
+        ],
+        "detail": [
+          {
+            "institution": "University of California, Davis",
+            "qualification": "B.S.",
+            "level": "bachelor",
+            "end": "2015-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 8,
+        "returned": 21,
+        "matched_expected": 7,
+        "missing": [
+          "CI/CD"
+        ],
+        "recall": 0.875,
+        "precision": 0.3333333333333333,
+        "f1": 0.48275862068965514
+      }
+    },
+    "A02": {
+      "category": "A",
+      "layout": "flow",
+      "parseMs": 300,
+      "quality": {
+        "band": "high",
+        "score": 0.9565,
+        "doc_label": "resume",
+        "doc_confidence": 0.6042
+      },
+      "rawText_chars": 980,
+      "name": {
+        "expected": "Priya Nair",
+        "got": "Priya Nair",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "priya.nair@examplemail.com"
+        ],
+        "got": [
+          "priya.nair@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (617) 555-0188",
+        "got": [
+          "+1 (617) 555-0188"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Charles River Medical Center",
+            "matched": true,
+            "title_expected": "Registered Nurse, Medical-Surgical Unit",
+            "title_got": "Registered Nurse, Medical-Surgical Unit",
+            "title_match": true,
+            "start_expected": "2020-06",
+            "start_got": "2020-06",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Granite State Hospital",
+            "matched": true,
+            "title_expected": "Staff Nurse, Telemetry",
+            "title_got": "Staff Nurse, Telemetry",
+            "title_match": true,
+            "start_expected": "2018-08",
+            "start_got": "2018-08",
+            "start_match": true,
+            "end_expected": "2020-05",
+            "end_got": "2020-05",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "Northeastern University"
+        ],
+        "detail": [
+          {
+            "institution": "Northeastern University",
+            "qualification": "Bachelor of Science in Nursing",
+            "level": "bachelor",
+            "end": "2018-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 8,
+        "returned": 20,
+        "matched_expected": 7,
+        "missing": [
+          "Acute Care"
+        ],
+        "recall": 0.875,
+        "precision": 0.4,
+        "f1": 0.5490196078431373
+      }
+    },
+    "A03": {
+      "category": "A",
+      "layout": "flow",
+      "parseMs": 172,
+      "quality": {
+        "band": "high",
+        "score": 0.9632,
+        "doc_label": "resume",
+        "doc_confidence": 0.4156
+      },
+      "rawText_chars": 989,
+      "name": {
+        "expected": "Thomas Belanger",
+        "got": "Thomas Belanger",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "thomas.belanger@examplemail.com"
+        ],
+        "got": [
+          "thomas.belanger@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (212) 555-0173",
+        "got": [
+          "+1 (212) 555-0173"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Hudson Capital Partners",
+            "matched": true,
+            "title_expected": "Financial Analyst",
+            "title_got": "Financial Analyst",
+            "title_match": true,
+            "start_expected": "2020-09",
+            "start_got": "2020-09",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Meridian Securities",
+            "matched": true,
+            "title_expected": "Investment Banking Analyst",
+            "title_got": "Investment Banking Analyst",
+            "title_match": true,
+            "start_expected": "2018-07",
+            "start_got": "2018-07",
+            "start_match": true,
+            "end_expected": "2020-08",
+            "end_got": "2020-08",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "New York University, Stern School of Business"
+        ],
+        "detail": [
+          {
+            "institution": "New York University, Stern School of Business",
+            "qualification": "B.B.A.",
+            "level": "bachelor",
+            "end": "2018-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 7,
+        "returned": 18,
+        "matched_expected": 7,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.3888888888888889,
+        "f1": 0.56
+      }
+    },
+    "A04": {
+      "category": "A",
+      "layout": "flow",
+      "parseMs": 272,
+      "quality": {
+        "band": "high",
+        "score": 0.9687,
+        "doc_label": "resume",
+        "doc_confidence": 0.4468
+      },
+      "rawText_chars": 940,
+      "name": {
+        "expected": "Sofia Reyes",
+        "got": "Sofia Reyes",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "sofia.reyes@examplemail.com"
+        ],
+        "got": [
+          "sofia.reyes@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (305) 555-0129",
+        "got": [
+          "+1 (305) 555-0129"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Coral Bay Brands",
+            "matched": true,
+            "title_expected": "Marketing Specialist",
+            "title_got": "Marketing Specialist",
+            "title_match": true,
+            "start_expected": "2021-01",
+            "start_got": "2021-01",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Sunline Media",
+            "matched": true,
+            "title_expected": "Digital Marketing Coordinator",
+            "title_got": "Digital Marketing Coordinator",
+            "title_match": true,
+            "start_expected": "2018-03",
+            "start_got": "2018-03",
+            "start_match": true,
+            "end_expected": "2020-12",
+            "end_got": "2020-12",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "University of Florida"
+        ],
+        "detail": [
+          {
+            "institution": "University of Florida",
+            "qualification": "B.A.",
+            "level": "bachelor",
+            "end": "2017-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 7,
+        "returned": 19,
+        "matched_expected": 7,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.3684210526315789,
+        "f1": 0.5384615384615384
+      }
+    },
+    "A05": {
+      "category": "A",
+      "layout": "flow",
+      "parseMs": 733,
+      "quality": {
+        "band": "high",
+        "score": 0.9355,
+        "doc_label": "resume",
+        "doc_confidence": 0.7598
+      },
+      "rawText_chars": 1043,
+      "name": {
+        "expected": "Marcus Lindqvist",
+        "got": "Marcus Lindqvist",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "marcus.lindqvist@examplemail.com"
+        ],
+        "got": [
+          "marcus.lindqvist@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (206) 555-0164",
+        "got": [
+          "+1 (206) 555-0164"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Cascade Digital",
+            "matched": true,
+            "title_expected": "Senior Project Manager",
+            "title_got": "Senior Project Manager",
+            "title_match": true,
+            "start_expected": "2019-04",
+            "start_got": "2019-04",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Rainier Software",
+            "matched": true,
+            "title_expected": "Project Manager",
+            "title_got": "Project Manager",
+            "title_match": true,
+            "start_expected": "2015-06",
+            "start_got": "2015-06",
+            "start_match": true,
+            "end_expected": "2019-03",
+            "end_got": "2019-03",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "University of Washington"
+        ],
+        "detail": [
+          {
+            "institution": "University of Washington",
+            "qualification": "B.S.",
+            "level": "bachelor",
+            "end": "2014-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 8,
+        "returned": 15,
+        "matched_expected": 8,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.8,
+        "f1": 0.888888888888889
+      }
+    },
+    "D01": {
+      "category": "D",
+      "layout": "flow",
+      "parseMs": 366,
+      "quality": {
+        "band": "high",
+        "score": 0.9369,
+        "doc_label": "resume",
+        "doc_confidence": 0.6986
+      },
+      "rawText_chars": 1144,
+      "name": {
+        "expected": "Elena Visser",
+        "got": "Elena Visser",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "elena.visser@examplemail.com"
+        ],
+        "got": [
+          "elena.visser@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+31 20 555 0197",
+        "got": [
+          "+31 20 555 0197"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 3,
+        "returned_roles": 3,
+        "roles": [
+          {
+            "employer": "Tulip Analytics",
+            "matched": true,
+            "title_expected": "Senior Data Scientist",
+            "title_got": "Senior Data Scientist",
+            "title_match": true,
+            "start_expected": "2021-02",
+            "start_got": "2021-02",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Amsterdam Data Institute",
+            "matched": true,
+            "title_expected": "Part-Time Lecturer, Statistics (0.4 FTE)",
+            "title_got": "Part-Time Lecturer, Statistics",
+            "title_match": true,
+            "start_expected": "2022-09",
+            "start_got": "2022-09",
+            "start_match": true,
+            "end_expected": "2023-07",
+            "end_got": "2023-07",
+            "end_match": true
+          },
+          {
+            "employer": "Canalpoint BV",
+            "matched": true,
+            "title_expected": "Data Analyst",
+            "title_got": "Data Analyst",
+            "title_match": true,
+            "start_expected": "2018-06",
+            "start_got": "2018-06",
+            "start_match": true,
+            "end_expected": "2021-01",
+            "end_got": "2021-01",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 2,
+        "returned": 2,
+        "institutions_got": [
+          "Utrecht University",
+          "Utrecht University"
+        ],
+        "detail": [
+          {
+            "institution": "Utrecht University",
+            "qualification": "M.Sc.",
+            "level": "master",
+            "end": "2018-01",
+            "current": false
+          },
+          {
+            "institution": "Utrecht University",
+            "qualification": "B.Sc.",
+            "level": "bachelor",
+            "end": "2016-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 7,
+        "returned": 16,
+        "matched_expected": 7,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.8125,
+        "f1": 0.896551724137931
+      }
+    },
+    "D02": {
+      "category": "D",
+      "layout": "flow",
+      "parseMs": 708,
+      "quality": {
+        "band": "high",
+        "score": 0.9668,
+        "doc_label": "resume",
+        "doc_confidence": 0.3408
+      },
+      "rawText_chars": 986,
+      "name": {
+        "expected": "Kwame Mensah",
+        "got": "Kwame Mensah",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "kwame.mensah@examplemail.com"
+        ],
+        "got": [
+          "kwame.mensah@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (312) 555-0151",
+        "got": [
+          "+1 (312) 555-0151"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 3,
+        "returned_roles": 3,
+        "roles": [
+          {
+            "employer": "Lakeshore Logistics",
+            "matched": true,
+            "title_expected": "Director of Operations",
+            "title_got": "Director of Operations",
+            "title_match": true,
+            "start_expected": "2022-01",
+            "start_got": "2022-01",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Lakeshore Logistics",
+            "matched": true,
+            "title_expected": "Operations Manager",
+            "title_got": "Operations Manager",
+            "title_match": true,
+            "start_expected": "2019-03",
+            "start_got": "2019-03",
+            "start_match": true,
+            "end_expected": "2021-12",
+            "end_got": "2021-12",
+            "end_match": true
+          },
+          {
+            "employer": "Lakeshore Logistics",
+            "matched": true,
+            "title_expected": "Operations Coordinator",
+            "title_got": "Operations Coordinator",
+            "title_match": true,
+            "start_expected": "2017-06",
+            "start_got": "2017-06",
+            "start_match": true,
+            "end_expected": "2019-02",
+            "end_got": "2019-02",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "University of Illinois · Urbana-"
+        ],
+        "detail": [
+          {
+            "institution": "University of Illinois · Urbana-",
+            "qualification": "B.S.",
+            "level": "bachelor",
+            "end": "2016-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 6,
+        "returned": 18,
+        "matched_expected": 5,
+        "missing": [
+          "Process Improvement"
+        ],
+        "recall": 0.8333333333333334,
+        "precision": 0.2777777777777778,
+        "f1": 0.4166666666666667
+      }
+    },
+    "D03": {
+      "category": "D",
+      "layout": "flow",
+      "parseMs": 793,
+      "quality": {
+        "band": "high",
+        "score": 0.9264,
+        "doc_label": "resume",
+        "doc_confidence": 0.7351
+      },
+      "rawText_chars": 1027,
+      "name": {
+        "expected": "Hana Takahashi",
+        "got": "Hana Takahashi",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "hana.takahashi@examplemail.com"
+        ],
+        "got": [
+          "hana.takahashi@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (408) 555-0138",
+        "got": [
+          "+1 (408) 555-0138"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 3,
+        "returned_roles": 3,
+        "roles": [
+          {
+            "employer": "Meadowlark Software",
+            "matched": true,
+            "title_expected": "Senior UX Designer",
+            "title_got": "Senior UX Designer",
+            "title_match": true,
+            "start_expected": "2020-05",
+            "start_got": "2020-05",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Independent",
+            "matched": false
+          },
+          {
+            "employer": "Pinecrest Digital",
+            "matched": true,
+            "title_expected": "UX Designer",
+            "title_got": "UX Designer",
+            "title_match": true,
+            "start_expected": "2017-08",
+            "start_got": "2017-08",
+            "start_match": true,
+            "end_expected": "2020-04",
+            "end_got": "2020-04",
+            "end_match": true
+          }
+        ],
+        "extra_roles": [
+          {
+            "org": "Meadowlark Software",
+            "title": "Freelance Illustrator (Self-Employed)"
+          }
+        ]
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "California College of the Arts"
+        ],
+        "detail": [
+          {
+            "institution": "California College of the Arts",
+            "qualification": "B.F.A.",
+            "level": "bachelor",
+            "end": "2017-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 6,
+        "returned": 18,
+        "matched_expected": 6,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.4444444444444444,
+        "f1": 0.6153846153846153
+      }
+    },
+    "D04": {
+      "category": "D",
+      "layout": "flow",
+      "parseMs": 395,
+      "quality": {
+        "band": "high",
+        "score": 0.9533,
+        "doc_label": "resume",
+        "doc_confidence": 0.4326
+      },
+      "rawText_chars": 763,
+      "name": {
+        "expected": "Oliver Grant",
+        "got": "Oliver Grant",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "oliver.grant@examplemail.com"
+        ],
+        "got": [
+          "oliver.grant@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+44 20 7946 0320",
+        "got": [
+          "+44 20 7946 0320"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Thamesworks Cloud",
+            "matched": true,
+            "title_expected": "DevOps Engineer",
+            "title_got": "DevOps Engineer",
+            "title_match": true,
+            "start_expected": "2021-10",
+            "start_got": "2021-10",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "2021-10",
+            "end_match": false
+          },
+          {
+            "employer": "Borough Systems",
+            "matched": true,
+            "title_expected": "Systems Administrator",
+            "title_got": "Systems Administrator",
+            "title_match": true,
+            "start_expected": "2018-02",
+            "start_got": "2018-02",
+            "start_match": true,
+            "end_expected": "2021-09",
+            "end_got": "2021-09",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "University of Manchester"
+        ],
+        "detail": [
+          {
+            "institution": "University of Manchester",
+            "qualification": "B.Eng.",
+            "level": "bachelor",
+            "end": "2017-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 7,
+        "returned": 9,
+        "matched_expected": 6,
+        "missing": [
+          "CI/CD"
+        ],
+        "recall": 0.8571428571428571,
+        "precision": 0.7777777777777778,
+        "f1": 0.8155339805825242
+      }
+    },
+    "D05": {
+      "category": "D",
+      "layout": "flow",
+      "parseMs": 422,
+      "quality": {
+        "band": "high",
+        "score": 0.953,
+        "doc_label": "resume",
+        "doc_confidence": 0.5735
+      },
+      "rawText_chars": 1014,
+      "name": {
+        "expected": "Natalia Kowalski",
+        "got": "Natalia Kowalski",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "natalia.kowalski@examplemail.com"
+        ],
+        "got": [
+          "natalia.kowalski@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+48 22 555 0176",
+        "got": [
+          "+48 22 555 0176"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 3,
+        "returned_roles": 3,
+        "roles": [
+          {
+            "employer": "Vistula Industrial",
+            "matched": true,
+            "title_expected": "Mechanical Engineer",
+            "title_got": "Mechanical Engineer Q2",
+            "title_match": true,
+            "start_expected": "2021-04",
+            "start_got": "2021-01",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Baltic Manufacturing",
+            "matched": true,
+            "title_expected": "Design Engineer",
+            "title_got": "Design Engineer",
+            "title_match": true,
+            "start_expected": "2018-03",
+            "start_got": "2018-03",
+            "start_match": true,
+            "end_expected": "2021-03",
+            "end_got": "2021-03",
+            "end_match": true
+          },
+          {
+            "employer": "Carpathia Motors",
+            "matched": true,
+            "title_expected": "Graduate Engineer",
+            "title_got": "Graduate Engineer",
+            "title_match": true,
+            "start_expected": "2016-09",
+            "start_got": "2016-09",
+            "start_match": true,
+            "end_expected": "2018-02",
+            "end_got": "2018-02",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "Warsaw University of Technology"
+        ],
+        "detail": [
+          {
+            "institution": "Warsaw University of Technology",
+            "qualification": "M.Sc.",
+            "level": "master",
+            "end": "2016-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 6,
+        "returned": 10,
+        "matched_expected": 5,
+        "missing": [
+          "Manufacturing"
+        ],
+        "recall": 0.8333333333333334,
+        "precision": 0.5,
+        "f1": 0.625
+      }
+    },
+    "E01": {
+      "category": "E",
+      "layout": "two-column",
+      "parseMs": 764,
+      "quality": {
+        "band": "high",
+        "score": 0.9284,
+        "doc_label": "resume",
+        "doc_confidence": 0.4269
+      },
+      "rawText_chars": 824,
+      "name": {
+        "expected": "Ravi Subramanian",
+        "got": "Ravi Subramanian",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "ravi.subramanian@examplemail.com"
+        ],
+        "got": [
+          "ravi.subramanian@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (737) 555-0119",
+        "got": [
+          "+1 (737) 555-0119"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Lonestar Apps",
+            "matched": true,
+            "title_expected": "Full-Stack Developer",
+            "title_got": "Full-Stack Developer",
+            "title_match": true,
+            "start_expected": "2020-07",
+            "start_got": "2020-07",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Hill Country Digital",
+            "matched": true,
+            "title_expected": "Web Developer",
+            "title_got": "Web Developer",
+            "title_match": true,
+            "start_expected": "2018-06",
+            "start_got": "2018-06",
+            "start_match": true,
+            "end_expected": "2020-06",
+            "end_got": "2020-06",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "University of Texas at Austin"
+        ],
+        "detail": [
+          {
+            "institution": "University of Texas at Austin",
+            "qualification": "B.S.",
+            "level": "bachelor",
+            "end": "2018-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 8,
+        "returned": 17,
+        "matched_expected": 8,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.47058823529411764,
+        "f1": 0.6399999999999999
+      }
+    },
+    "E02": {
+      "category": "E",
+      "layout": "table",
+      "parseMs": 661,
+      "quality": {
+        "band": "high",
+        "score": 0.9493,
+        "doc_label": "resume",
+        "doc_confidence": 0.7609
+      },
+      "rawText_chars": 690,
+      "name": {
+        "expected": "Grace Bennett",
+        "got": "Grace Bennett",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "grace.bennett@examplemail.com"
+        ],
+        "got": [
+          "grace.bennett@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (614) 555-0145",
+        "got": [
+          "+1 (614) 555-0145"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 3,
+        "returned_roles": 3,
+        "roles": [
+          {
+            "employer": "Buckeye Financial Group",
+            "matched": true,
+            "title_expected": "Senior Accountant",
+            "title_got": "Senior Accountant",
+            "title_match": true,
+            "start_expected": "2020-03",
+            "start_got": "2020-03",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Scioto Advisors",
+            "matched": true,
+            "title_expected": "Staff Accountant",
+            "title_got": "Staff Accountant",
+            "title_match": true,
+            "start_expected": "2017-07",
+            "start_got": "2017-07",
+            "start_match": true,
+            "end_expected": "2020-02",
+            "end_got": "2020-02",
+            "end_match": true
+          },
+          {
+            "employer": "Olentangy Books",
+            "matched": true,
+            "title_expected": "Junior Accountant",
+            "title_got": "Junior Accountant",
+            "title_match": true,
+            "start_expected": "2015-08",
+            "start_got": "2015-08",
+            "start_match": true,
+            "end_expected": "2017-06",
+            "end_got": "2017-06",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "Ohio State University"
+        ],
+        "detail": [
+          {
+            "institution": "Ohio State University",
+            "qualification": "B.S.",
+            "level": "bachelor",
+            "end": "2015-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 6,
+        "returned": 8,
+        "matched_expected": 6,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.75,
+        "f1": 0.8571428571428571
+      }
+    },
+    "E03": {
+      "category": "E",
+      "layout": "scanned",
+      "parseMs": 5244,
+      "quality": {
+        "band": "high",
+        "score": 0.941,
+        "doc_label": "resume",
+        "doc_confidence": 0.5116
+      },
+      "rawText_chars": 754,
+      "name": {
+        "expected": "Jonas Weber",
+        "got": "Jonas Weber",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "jonas.weber@examplemail.com"
+        ],
+        "got": [
+          "jonas.weber@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+49 30 555 0162",
+        "got": [
+          "+49 30 555 0162"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Spree Infrastructure GmbH",
+            "matched": true,
+            "title_expected": "Civil Engineer",
+            "title_got": "Civil Engineer",
+            "title_match": true,
+            "start_expected": "2019-04",
+            "start_got": "2019-04",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Rhein Bau AG",
+            "matched": true,
+            "title_expected": "Structural Engineer",
+            "title_got": "Structural Engineer",
+            "title_match": true,
+            "start_expected": "2015-09",
+            "start_got": "2015-09",
+            "start_match": true,
+            "end_expected": "2019-03",
+            "end_got": "2019-03",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "Technical University of Berlin"
+        ],
+        "detail": [
+          {
+            "institution": "Technical University of Berlin",
+            "qualification": "Dipl.-Ing.",
+            "level": "master",
+            "end": "2015-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 5,
+        "returned": 13,
+        "matched_expected": 5,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.38461538461538464,
+        "f1": 0.5555555555555556
+      }
+    },
+    "E04": {
+      "category": "E",
+      "layout": "three-page",
+      "parseMs": 216,
+      "quality": {
+        "band": "high",
+        "score": 0.9436,
+        "doc_label": "resume",
+        "doc_confidence": 0.4755
+      },
+      "rawText_chars": 2151,
+      "name": {
+        "expected": "Amara Diallo",
+        "got": "Amara Diallo",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "amara.diallo@examplemail.com"
+        ],
+        "got": [
+          "amara.diallo@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (919) 555-0183",
+        "got": [
+          "+1 (919) 555-0183"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Triangle Biosciences",
+            "matched": true,
+            "title_expected": "Senior Research Scientist",
+            "title_got": "Senior Research Scientist",
+            "title_match": true,
+            "start_expected": "2020-01",
+            "start_got": "2020-01",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Duke University",
+            "matched": true,
+            "title_expected": "Postdoctoral Fellow",
+            "title_got": "Postdoctoral Fellow",
+            "title_match": true,
+            "start_expected": "2016-08",
+            "start_got": "2016-08",
+            "start_match": true,
+            "end_expected": "2019-12",
+            "end_got": "2019-12",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 2,
+        "returned": 2,
+        "institutions_got": [
+          "Duke University",
+          "Spelman College"
+        ],
+        "detail": [
+          {
+            "institution": "Duke University",
+            "qualification": "Ph.D. in Biochemistry",
+            "level": "master",
+            "end": "2016-01",
+            "current": false
+          },
+          {
+            "institution": "Spelman College",
+            "qualification": "B.S.",
+            "level": "bachelor",
+            "end": "2011-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 7,
+        "returned": 19,
+        "matched_expected": 7,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.8421052631578947,
+        "f1": 0.9142857142857143
+      }
+    },
+    "E05": {
+      "category": "E",
+      "layout": "unusual-order",
+      "parseMs": 701,
+      "quality": {
+        "band": "high",
+        "score": 0.9284,
+        "doc_label": "resume",
+        "doc_confidence": 0.7156
+      },
+      "rawText_chars": 646,
+      "name": {
+        "expected": "Felix Andersson",
+        "got": "Felix Andersson",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "felix.andersson@examplemail.com"
+        ],
+        "got": [
+          "felix.andersson@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+46 8 555 0190",
+        "got": [
+          "+46 8 555 0190"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Nordic Interfaces",
+            "matched": true,
+            "title_expected": "Product Designer",
+            "title_got": "Product Designer",
+            "title_match": true,
+            "start_expected": "2021-03",
+            "start_got": "2021-03",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Baltic Studio",
+            "matched": true,
+            "title_expected": "UX/UI Designer",
+            "title_got": "UX/UI Designer",
+            "title_match": true,
+            "start_expected": "2018-06",
+            "start_got": "2018-06",
+            "start_match": true,
+            "end_expected": "2021-02",
+            "end_got": "2021-02",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "Konstfack University"
+        ],
+        "detail": [
+          {
+            "institution": "Konstfack University",
+            "qualification": "M.A. in Design",
+            "level": "master",
+            "end": "2018-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 6,
+        "returned": 10,
+        "matched_expected": 6,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.6,
+        "f1": 0.7499999999999999
+      }
+    },
+    "F01": {
+      "category": "F",
+      "layout": "flow",
+      "parseMs": 785,
+      "quality": {
+        "band": "high",
+        "score": 0.9187,
+        "doc_label": "resume",
+        "doc_confidence": 0.3699
+      },
+      "rawText_chars": 900,
+      "name": {
+        "expected": "Isabelle Moreau",
+        "got": "Isabelle Moreau",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "isabelle.moreau@examplemail.com"
+        ],
+        "got": [
+          "isabelle.moreau@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+33 1 55 50 01 99",
+        "got": [
+          "+33 1 55 50 01 99"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Seine Consulting Group",
+            "matched": true,
+            "title_expected": "HR Business Partner",
+            "title_got": "HR Business Partner",
+            "title_match": true,
+            "start_expected": "2019-01",
+            "start_got": "2019-01",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Rive Gauche Media",
+            "matched": true,
+            "title_expected": "HR Generalist",
+            "title_got": "HR Generalist",
+            "title_match": true,
+            "start_expected": "2015-09",
+            "start_got": "2015-09",
+            "start_match": true,
+            "end_expected": "2018-12",
+            "end_got": "2018-12",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "Sorbonne University"
+        ],
+        "detail": [
+          {
+            "institution": "Sorbonne University",
+            "qualification": "Master in Human Resources",
+            "level": "master",
+            "end": "2015-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 5,
+        "returned": 9,
+        "matched_expected": 5,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.5555555555555556,
+        "f1": 0.7142857142857143
+      }
+    },
+    "F02": {
+      "category": "F",
+      "layout": "flow",
+      "parseMs": 255,
+      "quality": {
+        "band": "high",
+        "score": 0.9714,
+        "doc_label": "resume",
+        "doc_confidence": 0.4482
+      },
+      "rawText_chars": 712,
+      "name": {
+        "expected": "Daniel Park",
+        "got": "Daniel Park",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "daniel.park@examplemail.com",
+          "d.park.work@examplemail.com"
+        ],
+        "got": [
+          "daniel.park@examplemail.com",
+          "d.park.work@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (213) 555-0147",
+        "got": [
+          "+1 (213) 555-0147"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Pacific Crest Solutions",
+            "matched": true,
+            "title_expected": "Sales Manager",
+            "title_got": "Sales Manager",
+            "title_match": true,
+            "start_expected": "2020-02",
+            "start_got": "2020-02",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Sunset Systems",
+            "matched": true,
+            "title_expected": "Account Executive",
+            "title_got": "Account Executive",
+            "title_match": true,
+            "start_expected": "2016-06",
+            "start_got": "2016-06",
+            "start_match": true,
+            "end_expected": "2020-01",
+            "end_got": "2020-01",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "UCLA"
+        ],
+        "detail": [
+          {
+            "institution": "UCLA",
+            "qualification": "B.A.",
+            "level": "bachelor",
+            "end": "2016-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 5,
+        "returned": 11,
+        "matched_expected": 5,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.45454545454545453,
+        "f1": 0.625
+      }
+    },
+    "F03": {
+      "category": "F",
+      "layout": "flow",
+      "parseMs": 337,
+      "quality": {
+        "band": "high",
+        "score": 0.9611,
+        "doc_label": "resume",
+        "doc_confidence": 0.4277
+      },
+      "rawText_chars": 855,
+      "name": {
+        "expected": "Lucia Romano",
+        "got": "Lucia Romano",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "lucia.romano@examplemail.com"
+        ],
+        "got": [
+          "lucia.romano@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+39 06 555 0121",
+        "got": [
+          "+39 06 555 0121"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Tiber Media House",
+            "matched": true,
+            "title_expected": "Communications Lead (formerly Communications Manager)",
+            "title_got": "Communications Lead (formerly Communications Manager)",
+            "title_match": true,
+            "start_expected": "2019-03",
+            "start_got": "2019-03",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Forum Communications",
+            "matched": true,
+            "title_expected": "PR Specialist",
+            "title_got": "PR Specialist",
+            "title_match": true,
+            "start_expected": "2015-09",
+            "start_got": "2015-09",
+            "start_match": true,
+            "end_expected": "2019-02",
+            "end_got": "2019-02",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "Sapienza University of Rome"
+        ],
+        "detail": [
+          {
+            "institution": "Sapienza University of Rome",
+            "qualification": "B.A.",
+            "level": "bachelor",
+            "end": "2015-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 4,
+        "returned": 10,
+        "matched_expected": 4,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.6666666666666666
+      }
+    },
+    "F04": {
+      "category": "F",
+      "layout": "flow",
+      "parseMs": 355,
+      "quality": {
+        "band": "high",
+        "score": 0.9603,
+        "doc_label": "resume",
+        "doc_confidence": 0.5071
+      },
+      "rawText_chars": 865,
+      "name": {
+        "expected": "Omar Haddad",
+        "got": "Omar Haddad",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "omar.haddad@examplemail.com"
+        ],
+        "got": [
+          "omar.haddad@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (647) 555-0115",
+        "got": [
+          "+1 (647) 555-0115"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Maple Grid Technologies",
+            "matched": true,
+            "title_expected": "Software Engineer",
+            "title_got": "Software Engineer",
+            "title_match": true,
+            "start_expected": "2020-05",
+            "start_got": "2020-05",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Lakeview Software",
+            "matched": true,
+            "title_expected": "Junior Developer",
+            "title_got": "Junior Developer",
+            "title_match": true,
+            "start_expected": "2018-08",
+            "start_got": "2018-08",
+            "start_match": true,
+            "end_expected": "2020-04",
+            "end_got": "2020-04",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 1,
+        "returned": 1,
+        "institutions_got": [
+          "University of Toronto"
+        ],
+        "detail": [
+          {
+            "institution": "University of Toronto",
+            "qualification": "B.A.Sc.",
+            "level": "bachelor",
+            "end": "2018-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 8,
+        "returned": 17,
+        "matched_expected": 8,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.5882352941176471,
+        "f1": 0.7407407407407407
+      }
+    },
+    "F05": {
+      "category": "F",
+      "layout": "flow",
+      "parseMs": 879,
+      "quality": {
+        "band": "high",
+        "score": 0.9602,
+        "doc_label": "resume",
+        "doc_confidence": 0.685
+      },
+      "rawText_chars": 898,
+      "name": {
+        "expected": "Chloe Fitzgerald",
+        "got": "Chloe Fitzgerald",
+        "match": true
+      },
+      "emails": {
+        "expected": [
+          "chloe.fitzgerald@examplemail.com"
+        ],
+        "got": [
+          "chloe.fitzgerald@examplemail.com"
+        ],
+        "all_found": true,
+        "missing": []
+      },
+      "phone": {
+        "expected": "+1 (773) 555-0158",
+        "got": [
+          "+1 (773) 555-0158"
+        ],
+        "match": true
+      },
+      "work": {
+        "expected_roles": 2,
+        "returned_roles": 2,
+        "roles": [
+          {
+            "employer": "Harbor & Vance LLP",
+            "matched": true,
+            "title_expected": "Senior Paralegal",
+            "title_got": "Senior Paralegal",
+            "title_match": true,
+            "start_expected": "2019-01",
+            "start_got": "2019-01",
+            "start_match": true,
+            "end_expected": "current",
+            "end_got": "current",
+            "end_match": true
+          },
+          {
+            "employer": "Lakeside Legal",
+            "matched": true,
+            "title_expected": "Paralegal",
+            "title_got": "Paralegal",
+            "title_match": true,
+            "start_expected": "2016-07",
+            "start_got": "2016-07",
+            "start_match": true,
+            "end_expected": "2018-12",
+            "end_got": "2018-12",
+            "end_match": true
+          }
+        ],
+        "extra_roles": []
+      },
+      "education": {
+        "expected": 2,
+        "returned": 2,
+        "institutions_got": [
+          "DePaul University College of Law",
+          "Loyola University Chicago"
+        ],
+        "detail": [
+          {
+            "institution": "DePaul University College of Law",
+            "qualification": "J.D. (Juris Doctor",
+            "level": "master",
+            "end": "2026-01",
+            "current": false
+          },
+          {
+            "institution": "Loyola University Chicago",
+            "qualification": "B.A.",
+            "level": "bachelor",
+            "end": "2016-01",
+            "current": false
+          }
+        ]
+      },
+      "skills": {
+        "expected": 5,
+        "returned": 11,
+        "matched_expected": 5,
+        "missing": [],
+        "recall": 1.0,
+        "precision": 0.45454545454545453,
+        "f1": 0.625
+      }
+    },
+    "B01": {
+      "category": "B",
+      "technique": "White text (RGB 1,1,1) on white page background",
+      "marker": "VISIBILITY_TEST_B01",
+      "parseMs": 272,
+      "quality": {
+        "band": "high",
+        "score": 0.972,
+        "doc_label": "resume",
+        "doc_confidence": 0.4967
+      },
+      "rawText_chars": 1000,
+      "marker_in_rawText": true,
+      "marker_in_structured_fields": false,
+      "marker_in_summary_field": false,
+      "name_got": "Dana Whitfield",
+      "name_match": true,
+      "emails_got": [
+        "dana.whitfield@example.com"
+      ],
+      "email_match": true,
+      "skills_returned": 19
+    },
+    "B02": {
+      "category": "B",
+      "technique": "0.5pt font size (sub-visible but real glyphs)",
+      "marker": "VISIBILITY_TEST_B02",
+      "parseMs": 211,
+      "quality": {
+        "band": "high",
+        "score": 0.9536,
+        "doc_label": "resume",
+        "doc_confidence": 0.5684
+      },
+      "rawText_chars": 927,
+      "marker_in_rawText": true,
+      "marker_in_structured_fields": false,
+      "marker_in_summary_field": false,
+      "name_got": "Marcus Ellery",
+      "name_match": true,
+      "emails_got": [
+        "m.ellery@example.com"
+      ],
+      "email_match": true,
+      "skills_returned": 21
+    },
+    "B03": {
+      "category": "B",
+      "technique": "Text inside MediaBox but below the CropBox (off the visible page)",
+      "marker": "VISIBILITY_TEST_B03",
+      "parseMs": 126,
+      "quality": {
+        "band": "high",
+        "score": 0.963,
+        "doc_label": "resume",
+        "doc_confidence": 0.5205
+      },
+      "rawText_chars": 915,
+      "marker_in_rawText": true,
+      "marker_in_structured_fields": false,
+      "marker_in_summary_field": false,
+      "name_got": "Priya Nair",
+      "name_match": true,
+      "emails_got": [
+        "priya.nair@example.com"
+      ],
+      "email_match": true,
+      "skills_returned": 12
+    },
+    "B04": {
+      "category": "B",
+      "technique": "Text underneath a fully opaque (opacity 1.0) filled rectangle",
+      "marker": "VISIBILITY_TEST_B04",
+      "parseMs": 185,
+      "quality": {
+        "band": "high",
+        "score": 0.9616,
+        "doc_label": "resume",
+        "doc_confidence": 0.33
+      },
+      "rawText_chars": 890,
+      "marker_in_rawText": true,
+      "marker_in_structured_fields": false,
+      "marker_in_summary_field": false,
+      "name_got": "Thomas Beckett",
+      "name_match": true,
+      "emails_got": [
+        "t.beckett@example.com"
+      ],
+      "email_match": true,
+      "skills_returned": 17
+    },
+    "B05": {
+      "category": "B",
+      "technique": "Text render mode 3 (invisible / neither fill nor stroke)",
+      "marker": "VISIBILITY_TEST_B05",
+      "parseMs": 734,
+      "quality": {
+        "band": "high",
+        "score": 0.9576,
+        "doc_label": "resume",
+        "doc_confidence": 0.5811
+      },
+      "rawText_chars": 885,
+      "marker_in_rawText": true,
+      "marker_in_structured_fields": false,
+      "marker_in_summary_field": false,
+      "name_got": "Sofia Alvarez",
+      "name_match": true,
+      "emails_got": [
+        "sofia.alvarez@example.com"
+      ],
+      "email_match": true,
+      "skills_returned": 12
+    },
+    "C01": {
+      "category": "C",
+      "technique": "Visible, clearly-labelled test section",
+      "marker": "QUARTZ-PENGUIN",
+      "parseMs": 143,
+      "quality": {
+        "band": "high",
+        "score": 0.9569,
+        "doc_label": "resume",
+        "doc_confidence": 0.4969
+      },
+      "rawText_chars": 1004,
+      "marker_in_rawText": true,
+      "marker_in_structured_fields": false,
+      "marker_in_summary_field": false,
+      "name_got": "Owen Fitzgerald",
+      "name_match": true,
+      "emails_got": [
+        "owen.fitzgerald@example.com"
+      ],
+      "email_match": true,
+      "skills_returned": 16
+    },
+    "C02": {
+      "category": "C",
+      "technique": "Low-contrast light-grey text (~0.92 on white)",
+      "marker": "QUARTZ-PENGUIN",
+      "parseMs": 766,
+      "quality": {
+        "band": "high",
+        "score": 0.9532,
+        "doc_label": "resume",
+        "doc_confidence": 0.478
+      },
+      "rawText_chars": 959,
+      "marker_in_rawText": true,
+      "marker_in_structured_fields": false,
+      "marker_in_summary_field": false,
+      "name_got": "Hannah Brooks",
+      "name_match": true,
+      "emails_got": [
+        "hannah.brooks@example.com"
+      ],
+      "email_match": true,
+      "skills_returned": 16
+    },
+    "C03": {
+      "category": "C",
+      "technique": "Document footer",
+      "marker": "QUARTZ-PENGUIN",
+      "parseMs": 179,
+      "quality": {
+        "band": "high",
+        "score": 0.9563,
+        "doc_label": "resume",
+        "doc_confidence": 0.5473
+      },
+      "rawText_chars": 959,
+      "marker_in_rawText": true,
+      "marker_in_structured_fields": false,
+      "marker_in_summary_field": false,
+      "name_got": "Daniel Okafor",
+      "name_match": true,
+      "emails_got": [
+        "d.okafor@example.com"
+      ],
+      "email_match": true,
+      "skills_returned": 13
+    },
+    "C04": {
+      "category": "C",
+      "technique": "PDF FreeText annotation (not part of the page content stream)",
+      "marker": "QUARTZ-PENGUIN",
+      "parseMs": 629,
+      "quality": {
+        "band": "high",
+        "score": 0.9546,
+        "doc_label": "resume",
+        "doc_confidence": 0.5014
+      },
+      "rawText_chars": 893,
+      "marker_in_rawText": false,
+      "marker_in_structured_fields": false,
+      "marker_in_summary_field": false,
+      "name_got": "Isabelle Moreau",
+      "name_match": true,
+      "emails_got": [
+        "isabelle.moreau@example.com"
+      ],
+      "email_match": true,
+      "skills_returned": 10
+    },
+    "C05": {
+      "category": "C",
+      "technique": "Separate layer / Optional Content Group (OCG)",
+      "marker": "QUARTZ-PENGUIN",
+      "parseMs": 178,
+      "quality": {
+        "band": "high",
+        "score": 0.9723,
+        "doc_label": "resume",
+        "doc_confidence": 0.5266
+      },
+      "rawText_chars": 983,
+      "marker_in_rawText": true,
+      "marker_in_structured_fields": false,
+      "marker_in_summary_field": false,
+      "name_got": "Victor Lindqvist",
+      "name_match": true,
+      "emails_got": [
+        "victor.lindqvist@example.com"
+      ],
+      "email_match": true,
+      "skills_returned": 18
+    }
+  },
+  "coverage": {
+    "responses_total": 30,
+    "mapped": 30,
+    "main_scored": 20,
+    "security_scored": 10,
+    "missing_named_files": {
+      "ground_truth_security.json": true,
+      "test_manifest_security.csv": true
+    }
+  }
+}
