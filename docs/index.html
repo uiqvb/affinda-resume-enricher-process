@@ -1,5 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="claude:viewport-fit-sides" content="cover">
 <title>Affinda Resume Enricher</title>
+<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('deck-theme')||'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}</script>
 <style>
   /* Layout: a narrow reading column for the story, full width for diagrams and chart. Serif prose, grotesk headings, mono for data. */
   :root{
@@ -558,7 +564,8 @@
   // Theme toggle (saved per viewer; storage can be blocked, so wrap it)
   (function(){
     var btn=document.getElementById('themeBtn'),root=document.documentElement;
-    try{var s=localStorage.getItem('deck-theme');if(s)root.setAttribute('data-theme',s);}catch(e){}
+    var s=null;try{s=localStorage.getItem('deck-theme');}catch(e){}
+    root.setAttribute('data-theme',s||'light');
     btn.addEventListener('click',function(){
       var cur=root.getAttribute('data-theme');
       var next=cur==='dark'?'light':cur==='light'?'dark':(window.matchMedia('(prefers-color-scheme: dark)').matches?'light':'dark');
@@ -602,3 +609,5 @@
     el.replaceWith(a);
   });
 </script>
+
+</html>
