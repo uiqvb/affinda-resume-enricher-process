@@ -174,6 +174,24 @@
   .vembed .play::after{content:"";position:absolute;left:29px;top:22px;border-left:24px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent}
   .vembed:hover .play{background:var(--accent)}
 
+  /* start here */
+  .start{margin:24px 0 8px;background:var(--surface);border:2px solid var(--accent);border-radius:16px;padding:18px}
+  .start-h{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+  .start-g{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:start}
+  .start .vembed{width:100%;margin:0}
+  .start-l{display:flex;flex-direction:column;gap:10px}
+  .cta{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--fg);background:var(--accent-weak);
+    border:1px solid color-mix(in srgb,var(--accent) 35%,var(--border));border-radius:12px;padding:14px 16px}
+  .cta:hover{border-color:var(--accent)}
+  .cta .cn{flex:none;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--bg);display:flex;align-items:center;
+    justify-content:center;font-family:var(--disp);font-weight:700}
+  .cta .ct{display:block;font-family:var(--disp);font-weight:600;font-size:18px}
+  .cta .cs{display:block;font-family:var(--mono);font-size:12px;color:var(--muted);word-break:break-all}
+  .cta.minor{background:transparent}
+  .cta.minor .cn{background:var(--surface-2);color:var(--muted)}
+  .cta.minor .ct{font-size:15px}
+  @media(max-width:560px){.start-g{grid-template-columns:1fr}.start .vembed{width:min(100%,240px);margin:0 auto}}
+
   /* repos */
   .repos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
   .repo{display:flex;flex-direction:column;gap:4px;background:var(--surface);border:1px solid var(--border);
@@ -217,10 +235,20 @@
         without them, but recording one after each work block left a trail of how my thinking changed as I
         went, so I've linked them in case you want to see it.</p>
     </div>
-    <div class="reels">
-      <div class="rl">The intro video</div>
-      <a class="vembed" href="https://youtube.com/shorts/LENZ3t_WVeI" target="_blank" rel="noopener" aria-label="Watch the intro video on YouTube"><img src="intro-thumb.jpg" alt="Still from the intro video"><span class="play"></span></a>
-      <div class="vlinks"><span class="vlink pending" data-key="hero">Watch on YouTube, 80 sec</span></div>
+    <div class="start">
+      <div class="start-h">Start here</div>
+      <div class="start-g">
+        <a class="vembed" href="https://youtube.com/shorts/LENZ3t_WVeI" target="_blank" rel="noopener" aria-label="Watch the intro video on YouTube"><img src="intro-thumb.jpg" alt="Still from the intro video"><span class="play"></span></a>
+        <div class="start-l">
+          <a class="cta" href="https://youtube.com/shorts/LENZ3t_WVeI" target="_blank" rel="noopener">
+            <span class="cn">1</span><span><span class="ct">Watch the intro video</span><span class="cs">80 seconds, on YouTube</span></span></a>
+          <a class="cta" href="https://github.com/uiqvb/affinda-resume-enricher" target="_blank" rel="noopener">
+            <span class="cn">2</span><span><span class="ct">See the code on GitHub</span><span class="cs">github.com/uiqvb/affinda-resume-enricher</span></span></a>
+          <a class="cta minor" href="https://github.com/uiqvb/affinda-resume-enricher-process" target="_blank" rel="noopener">
+            <span class="cn">+</span><span><span class="ct">The process and notes</span><span class="cs">github.com/uiqvb/affinda-resume-enricher-process</span></span></a>
+          <p class="note">The rest of this page is the full story, day by day, if you want more detail.</p>
+        </div>
+      </div>
     </div>
     <div class="statrow">
       <div class="stat"><div class="n">4</div><div class="l">days, recorded throughout</div></div>
