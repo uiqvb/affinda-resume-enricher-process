@@ -1,0 +1,29 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+All right. So this is the day for the final day.
+
+The introduction for that. The goals for today is quite simple although it's starting off quite late.
+
+Two sprints again. One of them is going to be for finishing up the the.
+
+The sort of the shells that I told you about which is the arguments and exposing it
+
+through exposing the actual product through command line arguments and the API.
+
+So I'm going to finish that up really quickly. Second thing is going to be testing it, testing the actual parser on real world resumes.
+
+And so in other parts of the editor on real world resumes, after I fetch the JSON from your parser,
+
+let's see if they actually if it accurately enriches the data or not in real world instances.
+
+And I'm going to create, I think I'll create a few hundred more, um, additional tests because the current tests have already been passed in the 300.
+
+Um, but yeah, that's basically the agenda for today.
+
+And once I'm done with the product, then it's ready and I guess it can be ready to be deployed somewhat.
+
+Um, scale. I'll try and test even if it's, uh, if it's able to handle a massive load of data or not.
+
+But that's the introduction today, and that's the plan that I'm going with.
+
+And yeah, I'll see you after sprint one.
+

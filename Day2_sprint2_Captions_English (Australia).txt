@@ -1,0 +1,43 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Alrighty, Andrew. This is the end of spring two.
+
+Um, wasn't the most efficient day in my opinion, because I had a lot of chores to do, dishes and other stuff.
+
+Uh, I won't be justifying it, but would I see that I completed everything?
+
+Not really. I would say I completed around 80% of what I plan to do today.
+
+Sprint two is almost finished. I have finalised quite a few of the design decisions.
+
+After consulting with GPT three or GPT Claude.
+
+I have finalised a few of the design, the design decisions.
+
+Um, and yeah, I mean, how the the structure of the actual code base is going to be the tree diagram,
+
+how the output is going to look like, um, stuff like that.
+
+What are the technologies that I'm going to use? Mainly, you know, really lightweight technologies that can integrate quite well.
+
+I'm going to keep the LM out of the scope for now. But yeah, I mean that's that's all that has been done.
+
+And the designing document.
+
+I still have to go through around 5 or 6 more checkpoints within it and approve or disapprove of them, and most of the planning is done.
+
+So tomorrow is going to be the planning slash execution phase. Um, so I'm going to first.
+
+I have already done all the big level architectural decisions and everything I will say.
+
+But now I need to do the decision making on the logical sense,
+
+on how the code is going to do what it is meant to do, that I have to understand that was meant to be done today.
+
+So the pseudo code for each and every component of the actual code base, that's important to understand.
+
+But yeah, I guess I'll do that tomorrow, and I guess I'll just understand it and execute it simultaneously as the most efficient approach.
+
+So yeah, I'm not too sad about that. But yeah, this was day two, sprint two, and that's the end of day two.
+
+But yeah, I guess I'll continue on tomorrow. Thank you.
+

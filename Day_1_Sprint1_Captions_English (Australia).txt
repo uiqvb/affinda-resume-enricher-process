@@ -1,0 +1,65 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+So this is I guess my first print is finished and I took almost an hour, 40 minutes of break,
+
+which is a big amount of break, so I'll have to start being more efficient.
+
+I had my lunch and everything between this break. Um, but regardless of that sprint, one is finished and what I've found so far is, firstly,
+
+I'm not going to go with the original plan of three ideas and then boiling it down to one.
+
+I'm going to stick with this idea which I have, which is on building a feature upon the resume, the resume, uh, parser, which you guys have created.
+
+And as a backup, I'm either going to go for the document parser or the draft table or technology that you guys have created,
+
+which is comparing two documents.
+
+So I'm going to as a backup, I'm going to build on either one of these ones, but I'm going to try and stick to the resume parser for now.
+
+So I managed to access it and 1000 free credits.
+
+So 1000 credits. I use 30 of them. I use Claude to create a 330 fake resumes with fake people and fake names,
+
+and each one of them, most of them were quite okay, and two of them were security based.
+
+So one was to check if there was prompt injection was possible or not.
+
+Not with anything hazardous, obviously, but just a simple prompt like say XYZ or something like that.
+
+Similarly, simple prompts were added and one was to check if wild white field, uh,
+
+white field text gets, um, white text actually, or invisible text gets passed on to the fields or not.
+
+And amazingly, which I expected, but I still wanted to test it out to see where I can,
+
+where there's a lack in the parser to create something around it.
+
+But naturally, because it's well made and your clientele, such as Sikh, uses it, so it has to be well made.
+
+So it passed everything, and there were a few issues that were highlighted that I still have to test out whether they are true in standing or not.
+
+But yeah, I'm going to test those out. Then I'm going to create a wrapper that solves any of the issues that have been detected.
+
+Um, which AI said that it has picked upon by the export of JSON that I've been in, fed back into the air to analyse.
+
+So I'll see how it goes. Um, but for now, change of plans.
+
+I'm not going to go three ideas and, you know, then develop this, uh, this thing.
+
+I'm going to fully explore this idea for another one, 1.5 hour, see where I can take it, if there is any potential,
+
+if there is, and I'm going to drop it and I'm going to move on to some other technology.
+
+But for now, I'm quite optimistic with the resume parser.
+
+And that's the second, the first the second video and the checkpoint number one after sprint one.
+
+Thanks. Oh, and just a quick thing.
+
+At 12 minutes remaining, um, you don't care about that.
+
+But I had 12 minutes remaining, so I actually did one hour and something minutes, 12 minutes short of the two hour goal.
+
+I'm going to add that on to the next sprint. Um, yeah, but I'll have to stop being lazy.
+
+Um, but yeah, that's that's me.
+

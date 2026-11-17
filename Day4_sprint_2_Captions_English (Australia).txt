@@ -1,0 +1,103 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Hi, Andrew. This is going to be my final video for the game and it's going to be in bed.
+
+Unfortunately, I've fallen sick during these four days.
+
+Um, what? I post through it and this is going to be my end of notes, I guess, of a video.
+
+Um, this was one, uh, I don't know what to think, but yeah, I mean, the idea of me being able to stay consistent for four days was surprising.
+
+And even though I'm talking to a phone right now, it was still quite fun.
+
+In in the hopes that this would actually be viewed.
+
+Um, but yeah, I guess I don't have much to say.
+
+It's been a weird ride. Um, but. Yeah.
+
+I mean, four days of effort, and I think I've done a semi decent job, and I've tried to.
+
+I've tried to make the the the integer as simple as possible.
+
+I feel my approach to, uh, building with technology so far has been to keep things simple.
+
+Coding and coding is never the blocker in, in my opinion.
+
+The blocker is simplicity, and I feel like the entire industry has evolved to make things as complex as possible and as messy as possible.
+
+And I don't know what people were smoking when they were actually building these systems.
+
+Some of them are generally smart, but I feel like there's a lot of bloat in a lot of areas just to achieve a simple task.
+
+So I tried to make the documentation around the actual project as simple as possible, and something that even child can comprehend, if that makes.
+
+No, not not necessarily a child, but anybody can essentially comprehend.
+
+And I've tried to make a lot of the naming conventions as well as as easy to understand.
+
+And I kept doing this consistently throughout where I could not comprehend, even in fact, five minutes back before I finished,
+
+there was a field called severity which I could not comprehend, and I changed that to needs review.
+
+And I changed the flags to yes or no. Before it was high a warning or info, and it was severity which was the name of the flag.
+
+And I was thinking to myself what a stupid decision I was stupid naming convention that I chose
+
+and have been sticking with it throughout and now without actually understanding what it was.
+
+And when I realised, oh, it's the needs review bit that I had thought of when I was talking with Claude, I think two days back.
+
+It's just that. So I changed it and um, yeah, I guess this is my product and I think it demonstrates my thinking quite well.
+
+And I will try and create some sort of artefact that that showcases these four
+
+days as a comprehensive story of my thinking evolving throughout each stage,
+
+one at a time. And I'm not expecting you to view these videos,
+
+but these videos are more important to me because they help me channel my thought process in different points of time of development,
+
+and helps me keep track of what I'm thinking in a certain sense and what I'm accomplishing.
+
+And I tried and creating as much raw data as I could.
+
+That I seemed, was important for me to know.
+
+So now I have a bunch of unstructured data that I've put in a separate repository that showcases my thinking in in some manner.
+
+What I mean by unstructured is it's a complete dump.
+
+And that dump has is a separate repository overall, but it has helped me create the product that I was going for.
+
+So I have to structure it in a manner that is presentable to you guys.
+
+I'll be parsing these videos as well, transcribing these videos and using them as well.
+
+But here, I mean, that's the end of my journey. Um, I was yeah, that was good fun.
+
+And I really hope that at least I get you to see it and judge it.
+
+I would really love some feedback on it. If not, at least I know that this is.
+
+This is the level that I'm willing to go to.
+
+I can go up to four days of consistency to you know, it's an approach strategy that I've I've discovered four days worth of effort into one.
+
+One potential internship. This is my capabilities. So.
+
+Yeah. Um, I guess. Yeah.
+
+That's it. These are this is my final video. This has been fun.
+
+End of sprint two. Uh, I have finished documentation of the entire project.
+
+I have a separate repository that showcases and is a dump for everything, and it's going to contain the transcriptions of these videos as well.
+
+And now day five is going to be my day to relax.
+
+Sort of. I have some other work, and I'm going to basically just get you a structured output of my entire endeavour.
+
+But yeah. See ya. I hope you liked it.
+
+Hopefully. Yeah. Thanks.
+

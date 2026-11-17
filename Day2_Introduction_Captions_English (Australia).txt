@@ -1,0 +1,53 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+It's approximately 2 p.m. and this is going to be the introduction for my day two.
+
+Now the plan is quite simple for day two. I think I might not spend six hours, so it's not sustainable and it puts a lot of pressure.
+
+But I'm going to try and achieve four hours, two hours of work, then a break, then two hours.
+
+Um, this is the introduction.
+
+I'm going to do two sprints and I'll try and keep it with that, because I feel like that just puts unnecessary pressure and, uh,
+
+you know, three having three sprints every day, and I can just work, uh, beyond those four hours, as much as I feel I want to.
+
+But I'll aim for two solid sprints rather than three, just to reduce the pressure.
+
+Yeah, I've been busy for a morning, did all my chores and everything.
+
+You want to know about that? Uh, sprint?
+
+Uh, the agenda for today. Simple is just to plan.
+
+Plan the entire entire thing and we'll see how it goes.
+
+So firstly, I'm going to run the tests. I'm going to blow off 300 credits of the offender bit that I've gotten on the resume parser,
+
+blow off 300 to check and experiment and find why and how the where the weaknesses are in the current this thing.
+
+And then I'll, you know, once I have a clearer picture based on a bit of experimentation,
+
+then I'm going to start planning and how I'm going to build the part.
+
+So this is going to be not the part of the integer, um, which is going to be layered on top of the parser.
+
+So yeah. Um, that's going to be I think end of sprint one.
+
+Ehm, finish the 300, uh, use 300 credits and Finish experimenting.
+
+Find the results and then make a simple, simple plan for how the shape of the entire and which it is going to look like.
+
+And then after that end of sprint two, I'm going to lay out the entire plan.
+
+And basically each and every small and big bit of it is going to be thoroughly tested.
+
+Or I mean, I'll basically make sure that, you know, the the logic,
+
+the flow of data and everything through the integer that is understood by me and owned by me.
+
+That is the end of sprint, whose aim so clear, crystal clear, clear plan is the end of sprint two, and a rough plan is the end of sprint one.
+
+Scope has been laid out. What we're going to do, this is just the introduction, but I'll see you in the in the end of sprint one.
+
+But yeah.
+

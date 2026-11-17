@@ -1,0 +1,65 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+So, Andrew, I'm, I'm a third year of engineering student here at Deakin,
+
+and I wanted to do something different, basically because I'm applying for the internship at offender.
+
+So I was trying to do something different and I thought, you know, rather than doing what everyone else does, which is simply apply,
+
+how could I showcase my skills through a four day marathon to build a project,
+
+which I have already planned to do, and make it adjacent to the company that I'm applying to, and document that?
+
+That was the main idea. So this is the first year I haven't planned out the other three days, and for now what I've done is,
+
+um, I've, I've split it into I split the entire day and whatever I'm going to do into six hours.
+
+So that's how it's going to work. I'm going to start with an introduction, which is this.
+
+And then after each two hour sprints, I'm going to there's going to be a checkpoint where I'm going to reveal what all I've done.
+
+And basically after the first sprint, which is going to be the research sprint,
+
+I'm going to research everything about offender and all the solutions that it has, the clientele, what sort of solutions is provided.
+
+Provides. Second sprint is going to be.
+
+I'm going to use that resource to bring it down to, uh, you know, at the end of the first sprint, I'm going to have three ideas from that.
+
+I'm going to bring it down to one idea, and I'm going to scope the idea on all the features that I want to build.
+
+And after that, the last sprint is going to be creating a comprehensive plan for that one idea that I'm trying to execute.
+
+And that's basically it. And this video is the first video out of the four videos that I'm going to create.
+
+And this video is basically just going to be the introduction, like I already introduced and the assumptions that I have right now,
+
+I'm going to explain them, which I have three particular assumptions.
+
+One of them is that, um, this is just my prior knowledge before I do the research.
+
+So what I understand is it's offenders, a AI slash data solution company.
+
+So that's my first understanding. That means it provides AR solutions to other businesses or customers as well.
+
+Second thing is, um, they're looking for more AI engineers. From what I understand, my background is more towards backend engineering.
+
+So this is going to be like an uphill battle for me. But I'm going to upskill myself in these four days.
+
+what I mean by engineers. People who build things that end in air or or so.
+
+Extractors. Analysers. Any other words?
+
+If that makes sense. Um, that is what I understand by, uh.
+
+And that is my understanding of, um, AI engineer, basically somebody who builds, uh, you know, a lot of data, um, data analysis, tooling for AI.
+
+So, for example, even harnesses. I don't know what that is exactly, but I've heard that harnesses is something that I've heard of routers,
+
+which is again an E.R. term which helps, you know, choose which model is best for this particular task.
+
+So stuff like that. And the last and final assumption that I have is that it, um, you has built in Python, which is in my strong suit, to be honest.
+
+Um, but you guys use Python for quick, uh, quick development of AI adjacent tooling and yeah, that's basically my assumptions.
+
+This was the first video that was my introduction. I hope I've explained everything and I'll see you in two hours, I guess, for the second video.
+

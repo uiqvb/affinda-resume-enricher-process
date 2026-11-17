@@ -1,0 +1,83 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Okay, so have you finished the end of sprint one? I have run the final 300 tests.
+
+I have to run 100 more for one specific problem.
+
+Um, other than that, I have found a few defects.
+
+Uh, so currently what I keep referring to as problems is actually just features that I want to develop to enrich the data already existing,
+
+but I have found a few problems or defects within the parser itself as well.
+
+That's a separate list, and after going through the docs, a few of them actually got areas because they were intentional design choices,
+
+and few of them I think are unnoticed potentially, or maybe have been noticed.
+
+But just again, our, uh, when, you know, gone away.
+
+So list I have list A, which is all the features that I want to add for enriching the data and list B,
+
+which are, uh, some other defects that I've seen which I might solve or might not,
+
+that also, I'll have to see, Um, for the enrichment of the data that I have decided to add additional fields and everything.
+
+So right now I have, uh, roughly, I haven't made a map of how the thing is going to look like, uh,
+
+but I have a rough idea in my head which has been which has been, uh, saved into Claude and the session and in the MD files.
+
+But basically it's going to be a modular approach.
+
+So for each, each of the feature that we're targeting, each of the things that we're targeting,
+
+uh, whether it be skill based status fields or education or certifications, these are three.
+
+And there's a fourth one as well, which is the education date completed.
+
+So each of them modular will be one folder and one module because most of them because the status ones are quite repetitive for education.
+
+And I think for education and certifications, it's it's logical.
+
+It's going to be the same.
+
+So it will use a few helpers stored in another folder and reusability will be another folder by itself, but that's the approach I'm going to take.
+
+Feature. Not feature.
+
+I guess you can say feature by feature development, modular approach where I'm grouping things together based upon what they're solving.
+
+That makes sense to me, and that's how I've been doing a lot of my development work.
+
+And yeah, that's going to be that.
+
+And then there will be hidden logic, which is referring to other files to for the logic that's going to be separated in another folder.
+
+That's what I've done till now. Other than that some design decisions have taken care of on you know, how things are going to be.
+
+I'm not too sure if I'm going to include a mini LM to make to make, uh, you know,
+
+decisions on classification when rejects fails or when, you know, hard coded rules fail.
+
+I'm not too sure if I'm going to develop that right now, but.
+
+I have considered doing it as an additional thing, but again, um, I'll have to see how that goes.
+
+Maybe I'll host a local alum for the decisions,
+
+but right now I think it's simpler to just mark something that is worded badly and feels the rejects as unknown,
+
+and then a human can go through it and figure it out and classify it themselves wherever it's being used.
+
+That's the that's the good approach. And I think it's the scope evil approach.
+
+And I think I might be able to achieve that much only. So these small level decisions have been taken.
+
+But I still have to make the map tree and everything that will be in the start of spring two.
+
+So yeah, after spring two then I'll have a complete, crisp, clear plan how each file is going to look,
+
+how the logic is going to be laid out, everything scoped out, read through, ready.
+
+Tomorrow I'll start executing. But yeah, that's basically the end of sprint one of day one and that's what I've done till now.
+
+Thank you.
+

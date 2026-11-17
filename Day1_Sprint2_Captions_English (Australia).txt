@@ -1,0 +1,117 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Okay, so that's my second sprint finished.
+
+And now basically I have a clearer picture of what I want to do.
+
+Uh, I would say my rough scope is ready in terms of the the project that I want to build.
+
+Um, I'm going to lay out the actual scope by tonight.
+
+But essentially what I found up till now is I found a bunch of issues.
+
+Some of them are trivial and really minor edge cases and very unlikely to occur because nobody drops their resume in that specific manner.
+
+But some are possible, and I feel can be somewhat shortcomings.
+
+So the idea that I have that how it's going to work is it's just going to be a one end point system, and it's going to be quite simple.
+
+The JSON that you guys create is going to be hitting one end point called slash and rich.
+
+And once it hits their endpoint, it does all the cleaning and everything and it just sends that JSON back.
+
+So it's just a simple extension of the JSON that exists currently and which comes out as parsed JSON.
+
+So it's going to just add a few modifications and send it back. That's the basic idea behind it.
+
+Um, and yeah, I think I might keep it.
+
+I'm not too sure if I should separate out two different endpoints, or just keep it all the business logic and one one endpoint.
+
+Um, I think I'll think about how to do that, but essentially found around eight different issues.
+
+Each of them, they have um, they have partial cases failing and partial of them succeeding,
+
+which means that partial resumes are are showing issues and some of them are not.
+
+So I waited, I weighed out, uh, how many out of, let's say, if I tested out of 15 resumes for a specific problem?
+
+Um, you know how many variations of that same problem, actually.
+
+Does the current parser catch and how many? It does not. And I read it aloud, along with the likelihood of that being an actual problem,
+
+and whether a person who creates a resume will actually make that that mistake.
+
+So I have to weigh that out and do it.
+
+And but basically I have read it out sort of and I've gotten that the biggest issues is, uh, skill, not skill rejection.
+
+Yeah, it is skill detection. So if somebody says, let's say I, you know, job description mentions, um, must know Java and Python.
+
+So somebody writes very proficient in Java but not in Python.
+
+The current parser still picks it up as a skill. Um, this is one of the issues.
+
+I think it's quite likely to occur. Uh, so I'm going to keep this one.
+
+It's not that unlikely, but it is. Uh, yeah, it is.
+
+It is unlikely. What? It can happen.
+
+Somebody can, you know, negate their skill and it can still be picked up by the passes, secondly, in complete degrees.
+
+So if somebody writes that, you know, have I have uh, if they don't mention an end date and they just put incomplete or something.
+
+So that also creates an issue and the status does not come up.
+
+So somebody who was studying for law but dropped out.
+
+It does not show that he dropped he or she dropped out. So they'll still come up as a lawyer.
+
+Um, this one is really unlikely, but I think I might go for it, I don't know.
+
+I'll think about it. Expired certificates.
+
+So if somebody mentions not the end date of the certificate, but if they explicitly mentioned that they have an AWS certification and it's expired,
+
+so it will, um, it will still show them as an AWS certified individual.
+
+Uh, this is very unlikely, but I'm considering it, Because why not?
+
+You know, just fix the edge case. Um, finally end it on, provided it still extracts end date.
+
+Okay, so if somebody basically does not, um, does not mention an end date.
+
+So it's like let's say 2024 is the start to something, but there's nothing there in that last blank.
+
+So then it is still the start date. And the end date will become the same.
+
+This is an issue that I've seen in the past where it should be blank technically, or should be unmentioned or something else.
+
+But yeah, that I think should also be picked up by the parser.
+
+But essentially that's what I've scoped out till now. And I'm basically done with both the first and second sprint.
+
+And the plan after this is to finalise the problems that I've found out till now,
+
+and even further down scope it to see which problem actually makes sense to solve and which does not.
+
+For example, the expired certification. Now that I think about saying it out loud, I think I'm going to drop that idea.
+
+It seems a little stupid. Um, regardless, I'm going to scope it out even further, even more rigorously.
+
+And I'm going to run this right now. I've done like ten, 15 variations of the same thing I'm going to do on 100 variation, 100 resume variations,
+
+because I still have around 800 900 credits, so it's a good time to spend it out all along.
+
+See how many out of those hundred, maybe 50? 60? How many of them actually generate this sort of problem?
+
+And, you know, if the number is again drop down low, maybe 14, it's not worth solving then.
+
+And if it's still high, like maybe 70 out of 100, then it's definitely going to show off.
+
+That means I would I don't know if the probability is right,
+
+but I would assume that 70% of resumes with that issue might have a chance of being parsed incorrectly.
+
+But okay, that's basically my second sprint finished, and now I'll be going on to my third where I scope and rigorously.
+

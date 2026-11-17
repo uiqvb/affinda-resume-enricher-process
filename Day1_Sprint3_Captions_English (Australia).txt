@@ -1,0 +1,109 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Okay. Now it's day two around 8 p.m..
+
+And basically this is my spring reflection.
+
+I'm going to now start with the day two tasks. Introduction to the Springs today.
+
+But after spring three I would say day one was ideation day I found problems.
+
+Now I have to sort of fix like 100% test those problems and see where out of 100 how much they failed.
+
+I haven't done that yet, so I'll do that. It's going to sprint. One is going to be sort of a transitioning sprint between ideation and planning.
+
+And I'm going to put day two, which is today as planning.
+
+I'm going to, you know, plan it all out and map it out almost perfectly so that I have the understanding of how things are going to be.
+
+And I have ownership over the codebase rather than just generating some, some, uh, some nonsense.
+
+But I sort of got lazy at the end of the day because, um, six hours is the max.
+
+I can actually put mental effort into something. It's the human average. And yeah, I felt the impact of it couldn't stay focus that long.
+
+Um, and yeah. But um, regardless. Now the four issues that we're going to be fixing up, at least in these three days is firstly, the negative skills.
+
+I've changed it to like skill, strength basically. So how I'm thinking of adding status.
+
+So uh,
+
+something like claim status or something has a field that can showcase and mark out how experienced a person is on the skill that they're listing.
+
+And it can also identify in case somebody negates the skill.
+
+That's the idea. So instead of negate skill, have moved from that to skill strength as a status.
+
+Uh, Jason added, on top of what it's already producing And what else were the other ones you have read?
+
+Um, education as well as completion status, whether it's been, uh, the education has been revoked or I don't think anybody's education gets revoked.
+
+But if they dropped out or if they are, you know, still in progress, maybe they've taken a gap year.
+
+All those things, because those are, I think, important things for, um, for people to know and for the, for the ones with certificates.
+
+I think that is also a good idea. Now that I think about it, because I went back and forth whether something is good to add as a feature or not,
+
+I think it is because all of these features are good,
+
+because let's say that you're hiring for a doctor position and somebody just tries to slip their resume through,
+
+uh, by mentioning that they were in, uh, med school for two years, but then they dropped out.
+
+So that's, that's, you know, it's not it's a waste of time that a recruiter has to look through it.
+
+So it's easier to. It's better that if if you filter it out earlier that, you know, dropouts cannot matter, cannot come through, or if somebody is,
+
+you know, if something requires a certificate like a cyber cert in four or something, cyber cert food and whatever.
+
+So if it requires has some hard conditions with somebody, tries to slip through an expired cert or an expired qualification or expired something.
+
+I think the the filter should catch it rather than human having to read through it.
+
+So the parser should be able to catch it, and maybe then they can the whatever the other company businesses that is using the parser,
+
+they can do whatever they want with the field, maybe use it to um, get rid of of the candidate in ads can possibly.
+
+So yeah, that's the idea behind it that, you know, when this, um, when there's a lot of volume, we don't know.
+
+We don't we can't predict.
+
+Or at least that's what I think, that nobody can predict how a candidate is going to, how he is going to present themselves in their resume and,
+
+you know, try and slip through the sort of cracks and, you know, in a grey zone of qualifications needed or certs needed or something like that.
+
+So the idea is to make this more, more, you know, not, not, not not give a definitive answer,
+
+but just add more status and a clarity to the thing that is already existing.
+
+That's that's the only idea. So this I've done across three different things.
+
+That is the ideation. Um, on the wrap up of day one I guess, which should have happened last night, but it's happening today.
+
+Um, regardless. But that's the only one.
+
+Now I'm going to scope out day two how I'm going to work through it.
+
+But I have a rough idea today is going to be planning day and transitioning into planning.
+
+So I'm going to first have to test all of these by creating 100 fake resumes.
+
+And I created a taxonomy of the variations. So what?
+
+The variations will look like the one because each regime is essentially the same regime, but with one line changes.
+
+Um, so, you know, the 100 variations in, uh, and there will be like variations for negation,
+
+for, uh, little strength, moderate strength of, uh, you know, of technology.
+
+So if this, if you want to classify somebody has eight years experience in Python programming, they, they will come into some sort of,
+
+uh, you know, status where it marks them as very experienced towards a more directly experienced versus less experience.
+
+So that sort of market must also come into play.
+
+And yeah, I think that's what I'm going to do today. Um, create that and figure it out from there.
+
+Yeah. That's today's plan. Um, yeah, I guess that's it.
+
+And I've spent three.
+

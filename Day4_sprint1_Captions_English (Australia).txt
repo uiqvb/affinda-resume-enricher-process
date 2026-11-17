@@ -1,0 +1,41 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+All right. So Andrew this is the end of sprint one for day four which is my final day.
+
+And I'm I've finished the entire project to be honest.
+
+The only thing that's left is mainly testing everything up.
+
+And so far it performs quite well in terms of actually enriching the data into.
+
+Yeah, basically enriching it. And it does its job quite well.
+
+I've added two ways to expose it, which is to command line arguments and through an API endpoint in regards to scaling,
+
+I don't think that's necessarily a problem that I should really look for.
+
+Um, after I discussed it with Claude code and reflect upon it,
+
+rather looking at how efficiently it can parse x number of resumes or JSON, considering, uh, consisting of x number of resumes,
+
+I think knowing the speed of that is more, much more important because we don't really have databases or,
+
+you know, things like that where the data is being flow is, is being is flowing into.
+
+So that that is what I think. So yeah, just the how efficiently can it pass things.
+
+Um, that is what I'm thinking of. Just testing and yeah recording that and that should be enough.
+
+But that's basically the end of sprint one now is I have to run the tests and I'm basically done with the product, which.
+
+Yeah, which is good and coming close to the end.
+
+And I think I should, I should have everything finished by tomorrow in terms of the write ups, the documentation,
+
+creating the actual artefact that I can send through to you,
+
+and maybe recording the video that explains that I've done this project, but so far so good.
+
+I'm I'm glad I've been able to pull it off, um, through 4 to 5 days of consistent effort.
+
+So yeah.
+
